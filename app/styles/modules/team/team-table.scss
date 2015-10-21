@@ -1,0 +1,101 @@
+.table-team {
+    .row {
+        padding: .5rem;
+    }
+    .username {
+        flex-basis: 220px;
+        min-width: 25%;
+    }
+    .member-stats {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex: 6;
+        justify-content: flex-end;
+    }
+    .attribute {
+        @extend %light;
+        flex: 1;
+        position: relative;
+        text-align: center;
+        .icon {
+            color: $blackish;
+            font-size: 1.8rem;
+        }
+        .points {
+            @extend %larger;
+            @extend %light;
+            color: $grayer;
+        }
+        .top {
+            color: $fresh-taiga;
+            opacity: 1;
+        }
+        &:hover {
+            .popover {
+                display: block;
+            }
+        }
+    }
+    .leave-project {
+        @extend %small;
+        color: $gray-light;
+        display: block;
+        .icon {
+            margin-right: .2rem;
+        }
+        &:hover {
+            .icon {
+                color: $red;
+                transition: color .3s linear;
+            }
+        }
+    }
+    .team-header {
+        @extend %title;
+        @extend %bold;
+        border-bottom: 0;
+    }
+    .hero {
+        width: 100%;
+        .row {
+            background: $whitish;
+            border-bottom: 0;
+            margin: 1rem 0;
+        }
+    }
+    .avatar {
+        align-items: center;
+        display: flex;
+        img {
+            flex-basis: 66px;
+            flex-grow: 1;
+            max-width: 66px;
+        }
+        figcaption {
+            margin-left: 1rem;
+            width: 65%;
+            span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+        .name,
+        .position {
+            display: block;
+            width: 100%;
+        }
+        .name {
+            @extend %bold;
+        }
+        .position {
+            @extend %light;
+            color: $gray-light;
+        }
+    }
+    .popover {
+        @include popover(100%, '', 0, 30px, '', 15px, '', 50%, -5px);
+    }
+}

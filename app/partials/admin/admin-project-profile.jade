@@ -1,0 +1,58 @@
+doctype html
+
+div.wrapper(tg-project-profile, ng-controller="ProjectProfileController as ctrl",
+            ng-init="section='admin'; sectionName='ADMIN.PROJECT_PROFILE.PROJECT_DETAILS'")
+    tg-project-menu
+
+    sidebar.menu-secondary.sidebar.settings-nav(tg-admin-navigation="project-profile")
+        include ../includes/modules/admin-menu
+
+    sidebar.menu-tertiary.sidebar(tg-admin-navigation="details")
+        include ../includes/modules/admin-submenu-project-profile
+
+    section.main.project-details
+        header
+            include ../includes/components/mainTitle
+
+        form
+            fieldset
+                label(for="project-name", translate="ADMIN.PROJECT_PROFILE.PROJECT_NAME")
+                input(type="text", name="name", placeholder="{{'ADMIN.PROJECT_PROFILE.PROJECT_NAME' | translate}}", id="project-name",
+                      ng-model="project.name", data-required="true", maxlength="45")
+
+            fieldset
+                label(for="project-sprints", translate="ADMIN.PROJECT_PROFILE.NUMBER_SPRINTS")
+                input(type="number", name="total_milestones", min="0", placeholder="{{'ADMIN.PROJECT_PROFILE.NUMBER_SPRINTS' | translate}}",
+                      id="project-sprints", ng-model="project.total_milestones", data-type="digits")
+
+            fieldset
+                label(for="total-story-points", translate="ADMIN.PROJECT_PROFILE.NUMBER_US_POINTS")
+                input(type="number", name="total_story_points", min="0", placeholder="{{'ADMIN.PROJECT_PROFILE.NUMBER_US_POINTS' | translate}}",
+                      id="total-story-points", ng-model="project.total_story_points",
+                      data-type="digits", data-required="true")
+
+            fieldset
+                label(for="tags", translate="ADMIN.PROJECT_PROFILE.TAGS")
+                div.tags-block(ng-if="project.id", tg-lb-tag-line, ng-model="project.tags")
+
+            fieldset
+                label(for="project-description", translate="ADMIN.PROJECT_PROFILE.DESCRIPTION")
+                textarea(name="description", ng-attr-placeholder="{{'ADMIN.PROJECT_PROFILE.DESCRIPTION' | translate}}", id="project-description",
+                         ng-model="project.description", data-required="true")
+
+            div
+                div.privacy-settings
+                    div
+                        input.privacy-project(type="radio", name="private-project", ng-model="project.is_private", ng-value="false")
+                        label.trans-button(for="public-project")
+                            span(translate="ADMIN.PROJECT_PROFILE.PUBLIC_PROJECT")
+                    div
+                        input.privacy-project(type="radio", name="private-project", ng-model="project.is_private", ng-value="true")
+                        label.trans-button(for="private-project")
+                            span(translate="ADMIN.PROJECT_PROFILE.PRIVATE_PROJECT")
+
+            button.button-green.submit-button(type="submit", title="{{'COMMON.SAVE' | translate}}", translate="COMMON.SAVE")
+            a.delete-project(href="", title="{{'ADMIN.PROJECT_PROFILE.DELETE' | translate}}", ng-click="ctrl.openDeleteLightbox()", translate="ADMIN.PROJECT_PROFILE.DELETE")
+
+div.lightbox.lightbox-delete-project(tg-lb-delete-project)
+    include ../includes/modules/lightbox-delete-project

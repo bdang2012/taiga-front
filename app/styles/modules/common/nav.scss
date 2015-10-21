@@ -1,0 +1,88 @@
+$label-arrow-wh: 12px;
+
+tg-project-menu {
+    background-color: $dark-taiga;
+    background-image: url('../images/menu.png');
+    background-position: 0 -300px;
+    min-height: $main-height;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    a {
+        color: $white;
+        display: block;
+        padding: .75rem .8rem;
+        position: relative;
+    }
+    a:hover {
+        background: rgba($black, .2);
+        color: $fresh-taiga;
+        transition: color .3s linear;
+        .helper {
+            @extend %small;
+            animation: slideLeft 200ms ease-in-out both;
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8) 100%);
+            color: $white;
+            display: block;
+            left: 50px;
+            opacity: 1;
+            padding: .4rem 1rem;
+            position: absolute;
+            top: calc(50% - 1rem);
+            transition: all .2s;
+            white-space: nowrap;
+            z-index: 99;
+            &:after {
+                background: rgba($blackish, 1);
+                content: '';
+                height: $label-arrow-wh;
+                left: calc(-#{$label-arrow-wh}/2);
+                position: absolute;
+                top: calc(50% - #{$label-arrow-wh}/2);
+                transform: rotate(45deg);
+                width: $label-arrow-wh;
+                z-index: 98;
+            }
+        }
+    }
+    svg path {
+        fill: $white;
+        opacity: 1;
+    }
+    span {
+        display: block;
+    }
+    .helper {
+        display: none;
+    }
+    .icon {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+    .item {
+        @extend %large;
+    }
+    .active {
+        background: rgba($black, .2);
+        color: $fresh-taiga;
+        svg path {
+            fill: $fresh-taiga;
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

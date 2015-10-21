@@ -1,0 +1,88 @@
+section.search-result-table
+
+script(type="text/ng-template", id="search-issues")
+    div.search-result-table-container(ng-class="{'hidden': !issues.length}", tg-bind-scope)
+        div.search-result-table-header
+            div.row.title
+                div.ref(translate="COMMON.FIELDS.REF")
+                div.user-stories(translate="SEARCH.FILTER_ISSUES")
+                div.status(translate="COMMON.FIELDS.STATUS")
+                div.assigned-to(translate="COMMON.FIELDS.ASSIGNED_TO")
+        div.search-result-table-body
+            div.row.table-main(ng-repeat="issue in issues track by issue.id")
+                div.ref(tg-bo-ref="issue.ref")
+                div.user-stories
+                    div.user-story-name
+                        a(href="", tg-nav="project-issues-detail:project=project.slug,ref=issue.ref",
+                          tg-bo-bind="issue.subject")
+                div.status(tg-listitem-issue-status="issue")
+                div.assigned-to(tg-listitem-assignedto="issue")
+
+    div.empty.empty-search-results(ng-class="{'hidden': issues.length}")
+                span.icon.icon-issues
+                span.title(translate="SEARCH.EMPTY_TITLE")
+                span(translate="SEARCH.EMPTY_DESCRIPTION")
+
+
+script(type="text/ng-template", id="search-userstories")
+    div.search-result-table-container(ng-class="{'hidden': !userstories.length}", tg-bind-scope)
+        div.search-result-table-header
+            div.row.title
+                div.ref(translate="COMMON.FIELDS.REF")
+                div.user-stories(translate="SEARCH.FILTER_USER_STORIES")
+                div.status(translate="COMMON.FIELDS.STATUS")
+                div.points(translate="COMMON.FIELDS.POINTS")
+        div.search-result-table-body
+            div.row.table-main(ng-repeat="us in userstories track by us.id")
+                div.ref(tg-bo-ref="us.ref")
+                div.user-stories
+                    div.user-story-name
+                        a(href="", tg-nav="project-userstories-detail:project=project.slug,ref=us.ref",
+                            tg-bo-bind="us.subject")
+                div.status(tg-listitem-us-status="us")
+                div.points(tg-bo-bind="us.total_points")
+
+    div.empty.empty-search-results(ng-class="{'hidden': userstories.length}")
+                span.icon.icon-issues
+                span.title(translate="SEARCH.EMPTY_TITLE")
+                span(translate="SEARCH.EMPTY_DESCRIPTION")
+
+script(type="text/ng-template", id="search-tasks")
+    div.search-result-table-container(ng-class="{'hidden': !tasks.length}", tg-bind-scope)
+        div.search-result-table-header
+            div.row.title
+                div.ref(translate="COMMON.FIELDS.REF")
+                div.user-stories(translate="SEARCH.FILTER_TASKS")
+                div.status(translate="COMMON.FIELDS.STATUS")
+                div.assigned-to(translate="COMMON.FIELDS.ASSIGNED_TO")
+        div.search-result-table-body
+            div.row.table-main(ng-repeat="task in tasks track by task.id")
+                div.ref(tg-bo-ref="task.ref")
+                div.user-stories
+                    div.user-story-name
+                        a(href="", tg-nav="project-tasks-detail:project=project.slug,ref=task.ref",
+                            tg-bo-bind="task.subject")
+                div.status(tg-listitem-task-status="task")
+                div.assigned-to(tg-listitem-assignedto="task")
+
+    div.empty.empty-search-results(ng-class="{'hidden': tasks.length}")
+                span.icon.icon-issues
+                span.title(translate="SEARCH.EMPTY_TITLE")
+                span(translate="SEARCH.EMPTY_DESCRIPTION")
+
+script(type="text/ng-template", id="search-wikipages")
+    div.search-result-table-container(ng-class="{'hidden': !wikipages.length}", tg-bind-scope)
+        div.search-result-table-header
+            div.row.title
+                div.user-stories(translate="SEARCH.FILTER_WIKI")
+        div.search-result-table-body
+            div.row.table-main(ng-repeat="wikipage in wikipages track by wikipage.id")
+                div.user-stories
+                    div.user-story-name
+                        a(href="", tg-nav="project-wiki-page:project=project.slug,slug=wikipage.slug",
+                            tg-bo-bind="wikipage.slug")
+
+    div.empty.empty-search-results(ng-class="{'hidden': wikipages.length}")
+                span.icon.icon-issues
+                span.title(translate="SEARCH.EMPTY_TITLE")
+                span(translate="SEARCH.EMPTY_DESCRIPTION")

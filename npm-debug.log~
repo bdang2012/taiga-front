@@ -1,0 +1,2361 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn package.json TaigaIO@0.0.1 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/taiga/taiga-front',
+6 verbose install   [ 'angular-mocks',
+6 verbose install     'chai',
+6 verbose install     'chai-jquery',
+6 verbose install     'cli-color',
+6 verbose install     'coffee-script',
+6 verbose install     'del',
+6 verbose install     'express',
+6 verbose install     'glob',
+6 verbose install     'gulp',
+6 verbose install     'gulp-angular-templatecache',
+6 verbose install     'gulp-autoprefixer',
+6 verbose install     'gulp-cache',
+6 verbose install     'gulp-cached',
+6 verbose install     'gulp-coffee',
+6 verbose install     'gulp-coffeelint',
+6 verbose install     'gulp-concat',
+6 verbose install     'gulp-csslint',
+6 verbose install     'gulp-flatten',
+6 verbose install     'gulp-if',
+6 verbose install     'gulp-imagemin',
+6 verbose install     'gulp-insert',
+6 verbose install     'gulp-jade',
+6 verbose install     'gulp-jade-inheritance',
+6 verbose install     'gulp-minify-css',
+6 verbose install     'gulp-order',
+6 verbose install     'gulp-plumber',
+6 verbose install     'gulp-print',
+6 verbose install     'gulp-rename',
+6 verbose install     'gulp-replace',
+6 verbose install     'gulp-sass',
+6 verbose install     'gulp-scss-lint',
+6 verbose install     'gulp-sourcemaps',
+6 verbose install     'gulp-template',
+6 verbose install     'gulp-uglify',
+6 verbose install     'gulp-wrap',
+6 verbose install     'inquirer',
+6 verbose install     'karma',
+6 verbose install     'karma-chai',
+6 verbose install     'karma-chrome-launcher',
+6 verbose install     'karma-coffee-preprocessor',
+6 verbose install     'karma-mocha',
+6 verbose install     'karma-sinon',
+6 verbose install     'karma-sinon-chai',
+6 verbose install     'karma-sourcemap-loader',
+6 verbose install     'mocha',
+6 verbose install     'pre-commit',
+6 verbose install     'readable-stream',
+6 verbose install     'run-sequence',
+6 verbose install     'sinon',
+6 verbose install     'through2' ] ]
+7 info preinstall TaigaIO@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'chai-jquery@^2.0.0', null ]
+10 verbose cache add name=undefined spec="chai-jquery@^2.0.0" args=["chai-jquery@^2.0.0",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'chai-jquery@^2.0.0',
+11 verbose parsed url   path: 'chai-jquery@^2.0.0',
+11 verbose parsed url   href: 'chai-jquery@^2.0.0' }
+12 verbose cache add name="chai-jquery" spec="^2.0.0" args=["chai-jquery","^2.0.0"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '^2.0.0',
+13 verbose parsed url   path: '^2.0.0',
+13 verbose parsed url   href: '^2.0.0' }
+14 verbose addNamed [ 'chai-jquery', '^2.0.0' ]
+15 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+16 verbose cache add [ 'chai@^2.2.0', null ]
+17 verbose cache add name=undefined spec="chai@^2.2.0" args=["chai@^2.2.0",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'chai@^2.2.0',
+18 verbose parsed url   path: 'chai@^2.2.0',
+18 verbose parsed url   href: 'chai@^2.2.0' }
+19 verbose cache add name="chai" spec="^2.2.0" args=["chai","^2.2.0"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '^2.2.0',
+20 verbose parsed url   path: '^2.2.0',
+20 verbose parsed url   href: '^2.2.0' }
+21 verbose addNamed [ 'chai', '^2.2.0' ]
+22 verbose addNamed [ null, '>=2.2.0-0 <3.0.0-0' ]
+23 verbose cache add [ 'cli-color@^0.3.3', null ]
+24 verbose cache add name=undefined spec="cli-color@^0.3.3" args=["cli-color@^0.3.3",null]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: 'cli-color@^0.3.3',
+25 verbose parsed url   path: 'cli-color@^0.3.3',
+25 verbose parsed url   href: 'cli-color@^0.3.3' }
+26 verbose cache add name="cli-color" spec="^0.3.3" args=["cli-color","^0.3.3"]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: '^0.3.3',
+27 verbose parsed url   path: '^0.3.3',
+27 verbose parsed url   href: '^0.3.3' }
+28 verbose addNamed [ 'cli-color', '^0.3.3' ]
+29 verbose addNamed [ null, '>=0.3.3-0 <0.4.0-0' ]
+30 verbose cache add [ 'coffee-script@^1.9.1', null ]
+31 verbose cache add name=undefined spec="coffee-script@^1.9.1" args=["coffee-script@^1.9.1",null]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: 'coffee-script@^1.9.1',
+32 verbose parsed url   path: 'coffee-script@^1.9.1',
+32 verbose parsed url   href: 'coffee-script@^1.9.1' }
+33 verbose cache add name="coffee-script" spec="^1.9.1" args=["coffee-script","^1.9.1"]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: '^1.9.1',
+34 verbose parsed url   path: '^1.9.1',
+34 verbose parsed url   href: '^1.9.1' }
+35 verbose addNamed [ 'coffee-script', '^1.9.1' ]
+36 verbose addNamed [ null, '>=1.9.1-0 <2.0.0-0' ]
+37 verbose cache add [ 'del@^1.1.1', null ]
+38 verbose cache add name=undefined spec="del@^1.1.1" args=["del@^1.1.1",null]
+39 verbose parsed url { protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: 'del@^1.1.1',
+39 verbose parsed url   path: 'del@^1.1.1',
+39 verbose parsed url   href: 'del@^1.1.1' }
+40 verbose cache add name="del" spec="^1.1.1" args=["del","^1.1.1"]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: '^1.1.1',
+41 verbose parsed url   path: '^1.1.1',
+41 verbose parsed url   href: '^1.1.1' }
+42 verbose addNamed [ 'del', '^1.1.1' ]
+43 verbose addNamed [ null, '>=1.1.1-0 <2.0.0-0' ]
+44 verbose cache add [ 'express@^4.12.0', null ]
+45 verbose cache add name=undefined spec="express@^4.12.0" args=["express@^4.12.0",null]
+46 verbose parsed url { protocol: null,
+46 verbose parsed url   slashes: null,
+46 verbose parsed url   auth: null,
+46 verbose parsed url   host: null,
+46 verbose parsed url   port: null,
+46 verbose parsed url   hostname: null,
+46 verbose parsed url   hash: null,
+46 verbose parsed url   search: null,
+46 verbose parsed url   query: null,
+46 verbose parsed url   pathname: 'express@^4.12.0',
+46 verbose parsed url   path: 'express@^4.12.0',
+46 verbose parsed url   href: 'express@^4.12.0' }
+47 verbose cache add name="express" spec="^4.12.0" args=["express","^4.12.0"]
+48 verbose parsed url { protocol: null,
+48 verbose parsed url   slashes: null,
+48 verbose parsed url   auth: null,
+48 verbose parsed url   host: null,
+48 verbose parsed url   port: null,
+48 verbose parsed url   hostname: null,
+48 verbose parsed url   hash: null,
+48 verbose parsed url   search: null,
+48 verbose parsed url   query: null,
+48 verbose parsed url   pathname: '^4.12.0',
+48 verbose parsed url   path: '^4.12.0',
+48 verbose parsed url   href: '^4.12.0' }
+49 verbose addNamed [ 'express', '^4.12.0' ]
+50 verbose addNamed [ null, '>=4.12.0-0 <5.0.0-0' ]
+51 silly lockFile ff1294d0-chai-jquery-2-0-0 chai-jquery@^2.0.0
+52 verbose lock chai-jquery@^2.0.0 /home/taiga/.npm/ff1294d0-chai-jquery-2-0-0.lock
+53 silly lockFile 31905547-chai-2-2-0 chai@^2.2.0
+54 verbose lock chai@^2.2.0 /home/taiga/.npm/31905547-chai-2-2-0.lock
+55 silly lockFile 1faacf8b-cli-color-0-3-3 cli-color@^0.3.3
+56 verbose lock cli-color@^0.3.3 /home/taiga/.npm/1faacf8b-cli-color-0-3-3.lock
+57 silly lockFile b6e5fb94-coffee-script-1-9-1 coffee-script@^1.9.1
+58 verbose lock coffee-script@^1.9.1 /home/taiga/.npm/b6e5fb94-coffee-script-1-9-1.lock
+59 silly lockFile 7493aa52-del-1-1-1 del@^1.1.1
+60 verbose lock del@^1.1.1 /home/taiga/.npm/7493aa52-del-1-1-1.lock
+61 silly lockFile 5f14d3e1-express-4-12-0 express@^4.12.0
+62 verbose lock express@^4.12.0 /home/taiga/.npm/5f14d3e1-express-4-12-0.lock
+63 verbose cache add [ 'glob@^5.0.3', null ]
+64 verbose cache add name=undefined spec="glob@^5.0.3" args=["glob@^5.0.3",null]
+65 verbose parsed url { protocol: null,
+65 verbose parsed url   slashes: null,
+65 verbose parsed url   auth: null,
+65 verbose parsed url   host: null,
+65 verbose parsed url   port: null,
+65 verbose parsed url   hostname: null,
+65 verbose parsed url   hash: null,
+65 verbose parsed url   search: null,
+65 verbose parsed url   query: null,
+65 verbose parsed url   pathname: 'glob@^5.0.3',
+65 verbose parsed url   path: 'glob@^5.0.3',
+65 verbose parsed url   href: 'glob@^5.0.3' }
+66 verbose cache add name="glob" spec="^5.0.3" args=["glob","^5.0.3"]
+67 verbose parsed url { protocol: null,
+67 verbose parsed url   slashes: null,
+67 verbose parsed url   auth: null,
+67 verbose parsed url   host: null,
+67 verbose parsed url   port: null,
+67 verbose parsed url   hostname: null,
+67 verbose parsed url   hash: null,
+67 verbose parsed url   search: null,
+67 verbose parsed url   query: null,
+67 verbose parsed url   pathname: '^5.0.3',
+67 verbose parsed url   path: '^5.0.3',
+67 verbose parsed url   href: '^5.0.3' }
+68 verbose addNamed [ 'glob', '^5.0.3' ]
+69 verbose addNamed [ null, '>=5.0.3-0 <6.0.0-0' ]
+70 silly lockFile f54df905-glob-5-0-3 glob@^5.0.3
+71 verbose lock glob@^5.0.3 /home/taiga/.npm/f54df905-glob-5-0-3.lock
+72 verbose cache add [ 'gulp@^3.8.11', null ]
+73 verbose cache add name=undefined spec="gulp@^3.8.11" args=["gulp@^3.8.11",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: null,
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'gulp@^3.8.11',
+74 verbose parsed url   path: 'gulp@^3.8.11',
+74 verbose parsed url   href: 'gulp@^3.8.11' }
+75 verbose cache add name="gulp" spec="^3.8.11" args=["gulp","^3.8.11"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '^3.8.11',
+76 verbose parsed url   path: '^3.8.11',
+76 verbose parsed url   href: '^3.8.11' }
+77 verbose addNamed [ 'gulp', '^3.8.11' ]
+78 verbose addNamed [ null, '>=3.8.11-0 <4.0.0-0' ]
+79 silly lockFile 3156ea88-gulp-3-8-11 gulp@^3.8.11
+80 verbose lock gulp@^3.8.11 /home/taiga/.npm/3156ea88-gulp-3-8-11.lock
+81 verbose cache add [ 'gulp-angular-templatecache@^1.5.0', null ]
+82 verbose cache add name=undefined spec="gulp-angular-templatecache@^1.5.0" args=["gulp-angular-templatecache@^1.5.0",null]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: 'gulp-angular-templatecache@^1.5.0',
+83 verbose parsed url   path: 'gulp-angular-templatecache@^1.5.0',
+83 verbose parsed url   href: 'gulp-angular-templatecache@^1.5.0' }
+84 verbose cache add name="gulp-angular-templatecache" spec="^1.5.0" args=["gulp-angular-templatecache","^1.5.0"]
+85 verbose parsed url { protocol: null,
+85 verbose parsed url   slashes: null,
+85 verbose parsed url   auth: null,
+85 verbose parsed url   host: null,
+85 verbose parsed url   port: null,
+85 verbose parsed url   hostname: null,
+85 verbose parsed url   hash: null,
+85 verbose parsed url   search: null,
+85 verbose parsed url   query: null,
+85 verbose parsed url   pathname: '^1.5.0',
+85 verbose parsed url   path: '^1.5.0',
+85 verbose parsed url   href: '^1.5.0' }
+86 verbose addNamed [ 'gulp-angular-templatecache', '^1.5.0' ]
+87 verbose addNamed [ null, '>=1.5.0-0 <2.0.0-0' ]
+88 silly lockFile 938e8618-gulp-angular-templatecache-1-5-0 gulp-angular-templatecache@^1.5.0
+89 verbose lock gulp-angular-templatecache@^1.5.0 /home/taiga/.npm/938e8618-gulp-angular-templatecache-1-5-0.lock
+90 verbose cache add [ 'gulp-autoprefixer@^2.1.0', null ]
+91 verbose cache add name=undefined spec="gulp-autoprefixer@^2.1.0" args=["gulp-autoprefixer@^2.1.0",null]
+92 verbose parsed url { protocol: null,
+92 verbose parsed url   slashes: null,
+92 verbose parsed url   auth: null,
+92 verbose parsed url   host: null,
+92 verbose parsed url   port: null,
+92 verbose parsed url   hostname: null,
+92 verbose parsed url   hash: null,
+92 verbose parsed url   search: null,
+92 verbose parsed url   query: null,
+92 verbose parsed url   pathname: 'gulp-autoprefixer@^2.1.0',
+92 verbose parsed url   path: 'gulp-autoprefixer@^2.1.0',
+92 verbose parsed url   href: 'gulp-autoprefixer@^2.1.0' }
+93 verbose cache add name="gulp-autoprefixer" spec="^2.1.0" args=["gulp-autoprefixer","^2.1.0"]
+94 verbose parsed url { protocol: null,
+94 verbose parsed url   slashes: null,
+94 verbose parsed url   auth: null,
+94 verbose parsed url   host: null,
+94 verbose parsed url   port: null,
+94 verbose parsed url   hostname: null,
+94 verbose parsed url   hash: null,
+94 verbose parsed url   search: null,
+94 verbose parsed url   query: null,
+94 verbose parsed url   pathname: '^2.1.0',
+94 verbose parsed url   path: '^2.1.0',
+94 verbose parsed url   href: '^2.1.0' }
+95 verbose addNamed [ 'gulp-autoprefixer', '^2.1.0' ]
+96 verbose addNamed [ null, '>=2.1.0-0 <3.0.0-0' ]
+97 silly lockFile 7e91f678-gulp-autoprefixer-2-1-0 gulp-autoprefixer@^2.1.0
+98 verbose lock gulp-autoprefixer@^2.1.0 /home/taiga/.npm/7e91f678-gulp-autoprefixer-2-1-0.lock
+99 verbose cache add [ 'gulp-cache@^0.2.8', null ]
+100 verbose cache add name=undefined spec="gulp-cache@^0.2.8" args=["gulp-cache@^0.2.8",null]
+101 verbose parsed url { protocol: null,
+101 verbose parsed url   slashes: null,
+101 verbose parsed url   auth: null,
+101 verbose parsed url   host: null,
+101 verbose parsed url   port: null,
+101 verbose parsed url   hostname: null,
+101 verbose parsed url   hash: null,
+101 verbose parsed url   search: null,
+101 verbose parsed url   query: null,
+101 verbose parsed url   pathname: 'gulp-cache@^0.2.8',
+101 verbose parsed url   path: 'gulp-cache@^0.2.8',
+101 verbose parsed url   href: 'gulp-cache@^0.2.8' }
+102 verbose cache add name="gulp-cache" spec="^0.2.8" args=["gulp-cache","^0.2.8"]
+103 verbose parsed url { protocol: null,
+103 verbose parsed url   slashes: null,
+103 verbose parsed url   auth: null,
+103 verbose parsed url   host: null,
+103 verbose parsed url   port: null,
+103 verbose parsed url   hostname: null,
+103 verbose parsed url   hash: null,
+103 verbose parsed url   search: null,
+103 verbose parsed url   query: null,
+103 verbose parsed url   pathname: '^0.2.8',
+103 verbose parsed url   path: '^0.2.8',
+103 verbose parsed url   href: '^0.2.8' }
+104 verbose addNamed [ 'gulp-cache', '^0.2.8' ]
+105 verbose addNamed [ null, '>=0.2.8-0 <0.3.0-0' ]
+106 silly lockFile 703c8682-gulp-cache-0-2-8 gulp-cache@^0.2.8
+107 verbose lock gulp-cache@^0.2.8 /home/taiga/.npm/703c8682-gulp-cache-0-2-8.lock
+108 verbose cache add [ 'gulp-cached@1.0.2', null ]
+109 verbose cache add name=undefined spec="gulp-cached@1.0.2" args=["gulp-cached@1.0.2",null]
+110 verbose parsed url { protocol: null,
+110 verbose parsed url   slashes: null,
+110 verbose parsed url   auth: null,
+110 verbose parsed url   host: null,
+110 verbose parsed url   port: null,
+110 verbose parsed url   hostname: null,
+110 verbose parsed url   hash: null,
+110 verbose parsed url   search: null,
+110 verbose parsed url   query: null,
+110 verbose parsed url   pathname: 'gulp-cached@1.0.2',
+110 verbose parsed url   path: 'gulp-cached@1.0.2',
+110 verbose parsed url   href: 'gulp-cached@1.0.2' }
+111 verbose cache add name="gulp-cached" spec="1.0.2" args=["gulp-cached","1.0.2"]
+112 verbose parsed url { protocol: null,
+112 verbose parsed url   slashes: null,
+112 verbose parsed url   auth: null,
+112 verbose parsed url   host: null,
+112 verbose parsed url   port: null,
+112 verbose parsed url   hostname: null,
+112 verbose parsed url   hash: null,
+112 verbose parsed url   search: null,
+112 verbose parsed url   query: null,
+112 verbose parsed url   pathname: '1.0.2',
+112 verbose parsed url   path: '1.0.2',
+112 verbose parsed url   href: '1.0.2' }
+113 verbose addNamed [ 'gulp-cached', '1.0.2' ]
+114 verbose addNamed [ '1.0.2', '1.0.2' ]
+115 silly lockFile cd4e1448-gulp-cached-1-0-2 gulp-cached@1.0.2
+116 verbose lock gulp-cached@1.0.2 /home/taiga/.npm/cd4e1448-gulp-cached-1-0-2.lock
+117 verbose cache add [ 'gulp-coffee@^2.3.1', null ]
+118 verbose cache add name=undefined spec="gulp-coffee@^2.3.1" args=["gulp-coffee@^2.3.1",null]
+119 verbose parsed url { protocol: null,
+119 verbose parsed url   slashes: null,
+119 verbose parsed url   auth: null,
+119 verbose parsed url   host: null,
+119 verbose parsed url   port: null,
+119 verbose parsed url   hostname: null,
+119 verbose parsed url   hash: null,
+119 verbose parsed url   search: null,
+119 verbose parsed url   query: null,
+119 verbose parsed url   pathname: 'gulp-coffee@^2.3.1',
+119 verbose parsed url   path: 'gulp-coffee@^2.3.1',
+119 verbose parsed url   href: 'gulp-coffee@^2.3.1' }
+120 verbose cache add name="gulp-coffee" spec="^2.3.1" args=["gulp-coffee","^2.3.1"]
+121 verbose parsed url { protocol: null,
+121 verbose parsed url   slashes: null,
+121 verbose parsed url   auth: null,
+121 verbose parsed url   host: null,
+121 verbose parsed url   port: null,
+121 verbose parsed url   hostname: null,
+121 verbose parsed url   hash: null,
+121 verbose parsed url   search: null,
+121 verbose parsed url   query: null,
+121 verbose parsed url   pathname: '^2.3.1',
+121 verbose parsed url   path: '^2.3.1',
+121 verbose parsed url   href: '^2.3.1' }
+122 verbose addNamed [ 'gulp-coffee', '^2.3.1' ]
+123 verbose addNamed [ null, '>=2.3.1-0 <3.0.0-0' ]
+124 silly lockFile 3cbeb321-gulp-coffee-2-3-1 gulp-coffee@^2.3.1
+125 verbose lock gulp-coffee@^2.3.1 /home/taiga/.npm/3cbeb321-gulp-coffee-2-3-1.lock
+126 verbose cache add [ 'gulp-coffeelint@^0.4.0', null ]
+127 verbose cache add name=undefined spec="gulp-coffeelint@^0.4.0" args=["gulp-coffeelint@^0.4.0",null]
+128 verbose parsed url { protocol: null,
+128 verbose parsed url   slashes: null,
+128 verbose parsed url   auth: null,
+128 verbose parsed url   host: null,
+128 verbose parsed url   port: null,
+128 verbose parsed url   hostname: null,
+128 verbose parsed url   hash: null,
+128 verbose parsed url   search: null,
+128 verbose parsed url   query: null,
+128 verbose parsed url   pathname: 'gulp-coffeelint@^0.4.0',
+128 verbose parsed url   path: 'gulp-coffeelint@^0.4.0',
+128 verbose parsed url   href: 'gulp-coffeelint@^0.4.0' }
+129 verbose cache add name="gulp-coffeelint" spec="^0.4.0" args=["gulp-coffeelint","^0.4.0"]
+130 verbose parsed url { protocol: null,
+130 verbose parsed url   slashes: null,
+130 verbose parsed url   auth: null,
+130 verbose parsed url   host: null,
+130 verbose parsed url   port: null,
+130 verbose parsed url   hostname: null,
+130 verbose parsed url   hash: null,
+130 verbose parsed url   search: null,
+130 verbose parsed url   query: null,
+130 verbose parsed url   pathname: '^0.4.0',
+130 verbose parsed url   path: '^0.4.0',
+130 verbose parsed url   href: '^0.4.0' }
+131 verbose addNamed [ 'gulp-coffeelint', '^0.4.0' ]
+132 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+133 silly lockFile eb24a2ba-gulp-coffeelint-0-4-0 gulp-coffeelint@^0.4.0
+134 verbose lock gulp-coffeelint@^0.4.0 /home/taiga/.npm/eb24a2ba-gulp-coffeelint-0-4-0.lock
+135 verbose cache add [ 'gulp-concat@^2.5.2', null ]
+136 verbose cache add name=undefined spec="gulp-concat@^2.5.2" args=["gulp-concat@^2.5.2",null]
+137 verbose parsed url { protocol: null,
+137 verbose parsed url   slashes: null,
+137 verbose parsed url   auth: null,
+137 verbose parsed url   host: null,
+137 verbose parsed url   port: null,
+137 verbose parsed url   hostname: null,
+137 verbose parsed url   hash: null,
+137 verbose parsed url   search: null,
+137 verbose parsed url   query: null,
+137 verbose parsed url   pathname: 'gulp-concat@^2.5.2',
+137 verbose parsed url   path: 'gulp-concat@^2.5.2',
+137 verbose parsed url   href: 'gulp-concat@^2.5.2' }
+138 verbose cache add name="gulp-concat" spec="^2.5.2" args=["gulp-concat","^2.5.2"]
+139 verbose parsed url { protocol: null,
+139 verbose parsed url   slashes: null,
+139 verbose parsed url   auth: null,
+139 verbose parsed url   host: null,
+139 verbose parsed url   port: null,
+139 verbose parsed url   hostname: null,
+139 verbose parsed url   hash: null,
+139 verbose parsed url   search: null,
+139 verbose parsed url   query: null,
+139 verbose parsed url   pathname: '^2.5.2',
+139 verbose parsed url   path: '^2.5.2',
+139 verbose parsed url   href: '^2.5.2' }
+140 verbose addNamed [ 'gulp-concat', '^2.5.2' ]
+141 verbose addNamed [ null, '>=2.5.2-0 <3.0.0-0' ]
+142 silly lockFile 60a235d6-gulp-concat-2-5-2 gulp-concat@^2.5.2
+143 verbose lock gulp-concat@^2.5.2 /home/taiga/.npm/60a235d6-gulp-concat-2-5-2.lock
+144 verbose cache add [ 'gulp-csslint@^0.1.5', null ]
+145 verbose cache add name=undefined spec="gulp-csslint@^0.1.5" args=["gulp-csslint@^0.1.5",null]
+146 verbose parsed url { protocol: null,
+146 verbose parsed url   slashes: null,
+146 verbose parsed url   auth: null,
+146 verbose parsed url   host: null,
+146 verbose parsed url   port: null,
+146 verbose parsed url   hostname: null,
+146 verbose parsed url   hash: null,
+146 verbose parsed url   search: null,
+146 verbose parsed url   query: null,
+146 verbose parsed url   pathname: 'gulp-csslint@^0.1.5',
+146 verbose parsed url   path: 'gulp-csslint@^0.1.5',
+146 verbose parsed url   href: 'gulp-csslint@^0.1.5' }
+147 verbose cache add name="gulp-csslint" spec="^0.1.5" args=["gulp-csslint","^0.1.5"]
+148 verbose parsed url { protocol: null,
+148 verbose parsed url   slashes: null,
+148 verbose parsed url   auth: null,
+148 verbose parsed url   host: null,
+148 verbose parsed url   port: null,
+148 verbose parsed url   hostname: null,
+148 verbose parsed url   hash: null,
+148 verbose parsed url   search: null,
+148 verbose parsed url   query: null,
+148 verbose parsed url   pathname: '^0.1.5',
+148 verbose parsed url   path: '^0.1.5',
+148 verbose parsed url   href: '^0.1.5' }
+149 verbose addNamed [ 'gulp-csslint', '^0.1.5' ]
+150 verbose addNamed [ null, '>=0.1.5-0 <0.2.0-0' ]
+151 silly lockFile fefab388-gulp-csslint-0-1-5 gulp-csslint@^0.1.5
+152 verbose lock gulp-csslint@^0.1.5 /home/taiga/.npm/fefab388-gulp-csslint-0-1-5.lock
+153 verbose cache add [ 'gulp-flatten@0.0.4', null ]
+154 verbose cache add name=undefined spec="gulp-flatten@0.0.4" args=["gulp-flatten@0.0.4",null]
+155 verbose parsed url { protocol: null,
+155 verbose parsed url   slashes: null,
+155 verbose parsed url   auth: null,
+155 verbose parsed url   host: null,
+155 verbose parsed url   port: null,
+155 verbose parsed url   hostname: null,
+155 verbose parsed url   hash: null,
+155 verbose parsed url   search: null,
+155 verbose parsed url   query: null,
+155 verbose parsed url   pathname: 'gulp-flatten@0.0.4',
+155 verbose parsed url   path: 'gulp-flatten@0.0.4',
+155 verbose parsed url   href: 'gulp-flatten@0.0.4' }
+156 verbose cache add name="gulp-flatten" spec="0.0.4" args=["gulp-flatten","0.0.4"]
+157 verbose parsed url { protocol: null,
+157 verbose parsed url   slashes: null,
+157 verbose parsed url   auth: null,
+157 verbose parsed url   host: null,
+157 verbose parsed url   port: null,
+157 verbose parsed url   hostname: null,
+157 verbose parsed url   hash: null,
+157 verbose parsed url   search: null,
+157 verbose parsed url   query: null,
+157 verbose parsed url   pathname: '0.0.4',
+157 verbose parsed url   path: '0.0.4',
+157 verbose parsed url   href: '0.0.4' }
+158 verbose addNamed [ 'gulp-flatten', '0.0.4' ]
+159 verbose addNamed [ '0.0.4', '0.0.4' ]
+160 silly lockFile 2090ffb6-gulp-flatten-0-0-4 gulp-flatten@0.0.4
+161 verbose lock gulp-flatten@0.0.4 /home/taiga/.npm/2090ffb6-gulp-flatten-0-0-4.lock
+162 verbose cache add [ 'gulp-if@^1.2.5', null ]
+163 verbose cache add name=undefined spec="gulp-if@^1.2.5" args=["gulp-if@^1.2.5",null]
+164 verbose parsed url { protocol: null,
+164 verbose parsed url   slashes: null,
+164 verbose parsed url   auth: null,
+164 verbose parsed url   host: null,
+164 verbose parsed url   port: null,
+164 verbose parsed url   hostname: null,
+164 verbose parsed url   hash: null,
+164 verbose parsed url   search: null,
+164 verbose parsed url   query: null,
+164 verbose parsed url   pathname: 'gulp-if@^1.2.5',
+164 verbose parsed url   path: 'gulp-if@^1.2.5',
+164 verbose parsed url   href: 'gulp-if@^1.2.5' }
+165 verbose cache add name="gulp-if" spec="^1.2.5" args=["gulp-if","^1.2.5"]
+166 verbose parsed url { protocol: null,
+166 verbose parsed url   slashes: null,
+166 verbose parsed url   auth: null,
+166 verbose parsed url   host: null,
+166 verbose parsed url   port: null,
+166 verbose parsed url   hostname: null,
+166 verbose parsed url   hash: null,
+166 verbose parsed url   search: null,
+166 verbose parsed url   query: null,
+166 verbose parsed url   pathname: '^1.2.5',
+166 verbose parsed url   path: '^1.2.5',
+166 verbose parsed url   href: '^1.2.5' }
+167 verbose addNamed [ 'gulp-if', '^1.2.5' ]
+168 verbose addNamed [ null, '>=1.2.5-0 <2.0.0-0' ]
+169 silly lockFile 96ce400c-gulp-if-1-2-5 gulp-if@^1.2.5
+170 verbose lock gulp-if@^1.2.5 /home/taiga/.npm/96ce400c-gulp-if-1-2-5.lock
+171 verbose cache add [ 'gulp-imagemin@^2.2.1', null ]
+172 verbose cache add name=undefined spec="gulp-imagemin@^2.2.1" args=["gulp-imagemin@^2.2.1",null]
+173 verbose parsed url { protocol: null,
+173 verbose parsed url   slashes: null,
+173 verbose parsed url   auth: null,
+173 verbose parsed url   host: null,
+173 verbose parsed url   port: null,
+173 verbose parsed url   hostname: null,
+173 verbose parsed url   hash: null,
+173 verbose parsed url   search: null,
+173 verbose parsed url   query: null,
+173 verbose parsed url   pathname: 'gulp-imagemin@^2.2.1',
+173 verbose parsed url   path: 'gulp-imagemin@^2.2.1',
+173 verbose parsed url   href: 'gulp-imagemin@^2.2.1' }
+174 verbose cache add name="gulp-imagemin" spec="^2.2.1" args=["gulp-imagemin","^2.2.1"]
+175 verbose parsed url { protocol: null,
+175 verbose parsed url   slashes: null,
+175 verbose parsed url   auth: null,
+175 verbose parsed url   host: null,
+175 verbose parsed url   port: null,
+175 verbose parsed url   hostname: null,
+175 verbose parsed url   hash: null,
+175 verbose parsed url   search: null,
+175 verbose parsed url   query: null,
+175 verbose parsed url   pathname: '^2.2.1',
+175 verbose parsed url   path: '^2.2.1',
+175 verbose parsed url   href: '^2.2.1' }
+176 verbose addNamed [ 'gulp-imagemin', '^2.2.1' ]
+177 verbose addNamed [ null, '>=2.2.1-0 <3.0.0-0' ]
+178 silly lockFile 8a3f9a2f-gulp-imagemin-2-2-1 gulp-imagemin@^2.2.1
+179 verbose lock gulp-imagemin@^2.2.1 /home/taiga/.npm/8a3f9a2f-gulp-imagemin-2-2-1.lock
+180 verbose cache add [ 'gulp-insert@^0.4.0', null ]
+181 verbose cache add name=undefined spec="gulp-insert@^0.4.0" args=["gulp-insert@^0.4.0",null]
+182 verbose parsed url { protocol: null,
+182 verbose parsed url   slashes: null,
+182 verbose parsed url   auth: null,
+182 verbose parsed url   host: null,
+182 verbose parsed url   port: null,
+182 verbose parsed url   hostname: null,
+182 verbose parsed url   hash: null,
+182 verbose parsed url   search: null,
+182 verbose parsed url   query: null,
+182 verbose parsed url   pathname: 'gulp-insert@^0.4.0',
+182 verbose parsed url   path: 'gulp-insert@^0.4.0',
+182 verbose parsed url   href: 'gulp-insert@^0.4.0' }
+183 verbose cache add name="gulp-insert" spec="^0.4.0" args=["gulp-insert","^0.4.0"]
+184 verbose parsed url { protocol: null,
+184 verbose parsed url   slashes: null,
+184 verbose parsed url   auth: null,
+184 verbose parsed url   host: null,
+184 verbose parsed url   port: null,
+184 verbose parsed url   hostname: null,
+184 verbose parsed url   hash: null,
+184 verbose parsed url   search: null,
+184 verbose parsed url   query: null,
+184 verbose parsed url   pathname: '^0.4.0',
+184 verbose parsed url   path: '^0.4.0',
+184 verbose parsed url   href: '^0.4.0' }
+185 verbose addNamed [ 'gulp-insert', '^0.4.0' ]
+186 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+187 silly lockFile 2c519655-gulp-insert-0-4-0 gulp-insert@^0.4.0
+188 verbose lock gulp-insert@^0.4.0 /home/taiga/.npm/2c519655-gulp-insert-0-4-0.lock
+189 verbose cache add [ 'gulp-jade@^1.0.0', null ]
+190 verbose cache add name=undefined spec="gulp-jade@^1.0.0" args=["gulp-jade@^1.0.0",null]
+191 verbose parsed url { protocol: null,
+191 verbose parsed url   slashes: null,
+191 verbose parsed url   auth: null,
+191 verbose parsed url   host: null,
+191 verbose parsed url   port: null,
+191 verbose parsed url   hostname: null,
+191 verbose parsed url   hash: null,
+191 verbose parsed url   search: null,
+191 verbose parsed url   query: null,
+191 verbose parsed url   pathname: 'gulp-jade@^1.0.0',
+191 verbose parsed url   path: 'gulp-jade@^1.0.0',
+191 verbose parsed url   href: 'gulp-jade@^1.0.0' }
+192 verbose cache add name="gulp-jade" spec="^1.0.0" args=["gulp-jade","^1.0.0"]
+193 verbose parsed url { protocol: null,
+193 verbose parsed url   slashes: null,
+193 verbose parsed url   auth: null,
+193 verbose parsed url   host: null,
+193 verbose parsed url   port: null,
+193 verbose parsed url   hostname: null,
+193 verbose parsed url   hash: null,
+193 verbose parsed url   search: null,
+193 verbose parsed url   query: null,
+193 verbose parsed url   pathname: '^1.0.0',
+193 verbose parsed url   path: '^1.0.0',
+193 verbose parsed url   href: '^1.0.0' }
+194 verbose addNamed [ 'gulp-jade', '^1.0.0' ]
+195 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+196 silly lockFile f2b6e8fe-gulp-jade-1-0-0 gulp-jade@^1.0.0
+197 verbose lock gulp-jade@^1.0.0 /home/taiga/.npm/f2b6e8fe-gulp-jade-1-0-0.lock
+198 verbose cache add [ 'gulp-jade-inheritance@0.5.0', null ]
+199 verbose cache add name=undefined spec="gulp-jade-inheritance@0.5.0" args=["gulp-jade-inheritance@0.5.0",null]
+200 verbose parsed url { protocol: null,
+200 verbose parsed url   slashes: null,
+200 verbose parsed url   auth: null,
+200 verbose parsed url   host: null,
+200 verbose parsed url   port: null,
+200 verbose parsed url   hostname: null,
+200 verbose parsed url   hash: null,
+200 verbose parsed url   search: null,
+200 verbose parsed url   query: null,
+200 verbose parsed url   pathname: 'gulp-jade-inheritance@0.5.0',
+200 verbose parsed url   path: 'gulp-jade-inheritance@0.5.0',
+200 verbose parsed url   href: 'gulp-jade-inheritance@0.5.0' }
+201 verbose cache add name="gulp-jade-inheritance" spec="0.5.0" args=["gulp-jade-inheritance","0.5.0"]
+202 verbose parsed url { protocol: null,
+202 verbose parsed url   slashes: null,
+202 verbose parsed url   auth: null,
+202 verbose parsed url   host: null,
+202 verbose parsed url   port: null,
+202 verbose parsed url   hostname: null,
+202 verbose parsed url   hash: null,
+202 verbose parsed url   search: null,
+202 verbose parsed url   query: null,
+202 verbose parsed url   pathname: '0.5.0',
+202 verbose parsed url   path: '0.5.0',
+202 verbose parsed url   href: '0.5.0' }
+203 verbose addNamed [ 'gulp-jade-inheritance', '0.5.0' ]
+204 verbose addNamed [ '0.5.0', '0.5.0' ]
+205 silly lockFile 272fa016-gulp-jade-inheritance-0-5-0 gulp-jade-inheritance@0.5.0
+206 verbose lock gulp-jade-inheritance@0.5.0 /home/taiga/.npm/272fa016-gulp-jade-inheritance-0-5-0.lock
+207 verbose cache add [ 'gulp-minify-css@^0.4.6', null ]
+208 verbose cache add name=undefined spec="gulp-minify-css@^0.4.6" args=["gulp-minify-css@^0.4.6",null]
+209 verbose parsed url { protocol: null,
+209 verbose parsed url   slashes: null,
+209 verbose parsed url   auth: null,
+209 verbose parsed url   host: null,
+209 verbose parsed url   port: null,
+209 verbose parsed url   hostname: null,
+209 verbose parsed url   hash: null,
+209 verbose parsed url   search: null,
+209 verbose parsed url   query: null,
+209 verbose parsed url   pathname: 'gulp-minify-css@^0.4.6',
+209 verbose parsed url   path: 'gulp-minify-css@^0.4.6',
+209 verbose parsed url   href: 'gulp-minify-css@^0.4.6' }
+210 verbose cache add name="gulp-minify-css" spec="^0.4.6" args=["gulp-minify-css","^0.4.6"]
+211 verbose parsed url { protocol: null,
+211 verbose parsed url   slashes: null,
+211 verbose parsed url   auth: null,
+211 verbose parsed url   host: null,
+211 verbose parsed url   port: null,
+211 verbose parsed url   hostname: null,
+211 verbose parsed url   hash: null,
+211 verbose parsed url   search: null,
+211 verbose parsed url   query: null,
+211 verbose parsed url   pathname: '^0.4.6',
+211 verbose parsed url   path: '^0.4.6',
+211 verbose parsed url   href: '^0.4.6' }
+212 verbose addNamed [ 'gulp-minify-css', '^0.4.6' ]
+213 verbose addNamed [ null, '>=0.4.6-0 <0.5.0-0' ]
+214 silly lockFile 71b63d7b-gulp-minify-css-0-4-6 gulp-minify-css@^0.4.6
+215 verbose lock gulp-minify-css@^0.4.6 /home/taiga/.npm/71b63d7b-gulp-minify-css-0-4-6.lock
+216 verbose cache add [ 'gulp-order@^1.1.1', null ]
+217 verbose cache add name=undefined spec="gulp-order@^1.1.1" args=["gulp-order@^1.1.1",null]
+218 verbose parsed url { protocol: null,
+218 verbose parsed url   slashes: null,
+218 verbose parsed url   auth: null,
+218 verbose parsed url   host: null,
+218 verbose parsed url   port: null,
+218 verbose parsed url   hostname: null,
+218 verbose parsed url   hash: null,
+218 verbose parsed url   search: null,
+218 verbose parsed url   query: null,
+218 verbose parsed url   pathname: 'gulp-order@^1.1.1',
+218 verbose parsed url   path: 'gulp-order@^1.1.1',
+218 verbose parsed url   href: 'gulp-order@^1.1.1' }
+219 verbose cache add name="gulp-order" spec="^1.1.1" args=["gulp-order","^1.1.1"]
+220 verbose parsed url { protocol: null,
+220 verbose parsed url   slashes: null,
+220 verbose parsed url   auth: null,
+220 verbose parsed url   host: null,
+220 verbose parsed url   port: null,
+220 verbose parsed url   hostname: null,
+220 verbose parsed url   hash: null,
+220 verbose parsed url   search: null,
+220 verbose parsed url   query: null,
+220 verbose parsed url   pathname: '^1.1.1',
+220 verbose parsed url   path: '^1.1.1',
+220 verbose parsed url   href: '^1.1.1' }
+221 verbose addNamed [ 'gulp-order', '^1.1.1' ]
+222 verbose addNamed [ null, '>=1.1.1-0 <2.0.0-0' ]
+223 silly lockFile a57a9c67-gulp-order-1-1-1 gulp-order@^1.1.1
+224 verbose lock gulp-order@^1.1.1 /home/taiga/.npm/a57a9c67-gulp-order-1-1-1.lock
+225 verbose cache add [ 'gulp-plumber@^0.6.6', null ]
+226 verbose cache add name=undefined spec="gulp-plumber@^0.6.6" args=["gulp-plumber@^0.6.6",null]
+227 verbose parsed url { protocol: null,
+227 verbose parsed url   slashes: null,
+227 verbose parsed url   auth: null,
+227 verbose parsed url   host: null,
+227 verbose parsed url   port: null,
+227 verbose parsed url   hostname: null,
+227 verbose parsed url   hash: null,
+227 verbose parsed url   search: null,
+227 verbose parsed url   query: null,
+227 verbose parsed url   pathname: 'gulp-plumber@^0.6.6',
+227 verbose parsed url   path: 'gulp-plumber@^0.6.6',
+227 verbose parsed url   href: 'gulp-plumber@^0.6.6' }
+228 verbose cache add name="gulp-plumber" spec="^0.6.6" args=["gulp-plumber","^0.6.6"]
+229 verbose parsed url { protocol: null,
+229 verbose parsed url   slashes: null,
+229 verbose parsed url   auth: null,
+229 verbose parsed url   host: null,
+229 verbose parsed url   port: null,
+229 verbose parsed url   hostname: null,
+229 verbose parsed url   hash: null,
+229 verbose parsed url   search: null,
+229 verbose parsed url   query: null,
+229 verbose parsed url   pathname: '^0.6.6',
+229 verbose parsed url   path: '^0.6.6',
+229 verbose parsed url   href: '^0.6.6' }
+230 verbose addNamed [ 'gulp-plumber', '^0.6.6' ]
+231 verbose addNamed [ null, '>=0.6.6-0 <0.7.0-0' ]
+232 silly lockFile 525bac9a-gulp-plumber-0-6-6 gulp-plumber@^0.6.6
+233 verbose lock gulp-plumber@^0.6.6 /home/taiga/.npm/525bac9a-gulp-plumber-0-6-6.lock
+234 verbose cache add [ 'gulp-print@^1.1.0', null ]
+235 verbose cache add name=undefined spec="gulp-print@^1.1.0" args=["gulp-print@^1.1.0",null]
+236 verbose parsed url { protocol: null,
+236 verbose parsed url   slashes: null,
+236 verbose parsed url   auth: null,
+236 verbose parsed url   host: null,
+236 verbose parsed url   port: null,
+236 verbose parsed url   hostname: null,
+236 verbose parsed url   hash: null,
+236 verbose parsed url   search: null,
+236 verbose parsed url   query: null,
+236 verbose parsed url   pathname: 'gulp-print@^1.1.0',
+236 verbose parsed url   path: 'gulp-print@^1.1.0',
+236 verbose parsed url   href: 'gulp-print@^1.1.0' }
+237 verbose cache add name="gulp-print" spec="^1.1.0" args=["gulp-print","^1.1.0"]
+238 verbose parsed url { protocol: null,
+238 verbose parsed url   slashes: null,
+238 verbose parsed url   auth: null,
+238 verbose parsed url   host: null,
+238 verbose parsed url   port: null,
+238 verbose parsed url   hostname: null,
+238 verbose parsed url   hash: null,
+238 verbose parsed url   search: null,
+238 verbose parsed url   query: null,
+238 verbose parsed url   pathname: '^1.1.0',
+238 verbose parsed url   path: '^1.1.0',
+238 verbose parsed url   href: '^1.1.0' }
+239 verbose addNamed [ 'gulp-print', '^1.1.0' ]
+240 verbose addNamed [ null, '>=1.1.0-0 <2.0.0-0' ]
+241 silly lockFile 79730ed3-gulp-print-1-1-0 gulp-print@^1.1.0
+242 verbose lock gulp-print@^1.1.0 /home/taiga/.npm/79730ed3-gulp-print-1-1-0.lock
+243 verbose cache add [ 'gulp-rename@^1.2.0', null ]
+244 verbose cache add name=undefined spec="gulp-rename@^1.2.0" args=["gulp-rename@^1.2.0",null]
+245 verbose parsed url { protocol: null,
+245 verbose parsed url   slashes: null,
+245 verbose parsed url   auth: null,
+245 verbose parsed url   host: null,
+245 verbose parsed url   port: null,
+245 verbose parsed url   hostname: null,
+245 verbose parsed url   hash: null,
+245 verbose parsed url   search: null,
+245 verbose parsed url   query: null,
+245 verbose parsed url   pathname: 'gulp-rename@^1.2.0',
+245 verbose parsed url   path: 'gulp-rename@^1.2.0',
+245 verbose parsed url   href: 'gulp-rename@^1.2.0' }
+246 verbose cache add name="gulp-rename" spec="^1.2.0" args=["gulp-rename","^1.2.0"]
+247 verbose parsed url { protocol: null,
+247 verbose parsed url   slashes: null,
+247 verbose parsed url   auth: null,
+247 verbose parsed url   host: null,
+247 verbose parsed url   port: null,
+247 verbose parsed url   hostname: null,
+247 verbose parsed url   hash: null,
+247 verbose parsed url   search: null,
+247 verbose parsed url   query: null,
+247 verbose parsed url   pathname: '^1.2.0',
+247 verbose parsed url   path: '^1.2.0',
+247 verbose parsed url   href: '^1.2.0' }
+248 verbose addNamed [ 'gulp-rename', '^1.2.0' ]
+249 verbose addNamed [ null, '>=1.2.0-0 <2.0.0-0' ]
+250 silly lockFile 31cef36d-gulp-rename-1-2-0 gulp-rename@^1.2.0
+251 verbose lock gulp-rename@^1.2.0 /home/taiga/.npm/31cef36d-gulp-rename-1-2-0.lock
+252 verbose cache add [ 'gulp-replace@^0.5.3', null ]
+253 verbose cache add name=undefined spec="gulp-replace@^0.5.3" args=["gulp-replace@^0.5.3",null]
+254 verbose parsed url { protocol: null,
+254 verbose parsed url   slashes: null,
+254 verbose parsed url   auth: null,
+254 verbose parsed url   host: null,
+254 verbose parsed url   port: null,
+254 verbose parsed url   hostname: null,
+254 verbose parsed url   hash: null,
+254 verbose parsed url   search: null,
+254 verbose parsed url   query: null,
+254 verbose parsed url   pathname: 'gulp-replace@^0.5.3',
+254 verbose parsed url   path: 'gulp-replace@^0.5.3',
+254 verbose parsed url   href: 'gulp-replace@^0.5.3' }
+255 verbose cache add name="gulp-replace" spec="^0.5.3" args=["gulp-replace","^0.5.3"]
+256 verbose parsed url { protocol: null,
+256 verbose parsed url   slashes: null,
+256 verbose parsed url   auth: null,
+256 verbose parsed url   host: null,
+256 verbose parsed url   port: null,
+256 verbose parsed url   hostname: null,
+256 verbose parsed url   hash: null,
+256 verbose parsed url   search: null,
+256 verbose parsed url   query: null,
+256 verbose parsed url   pathname: '^0.5.3',
+256 verbose parsed url   path: '^0.5.3',
+256 verbose parsed url   href: '^0.5.3' }
+257 verbose addNamed [ 'gulp-replace', '^0.5.3' ]
+258 verbose addNamed [ null, '>=0.5.3-0 <0.6.0-0' ]
+259 silly lockFile dd245bf0-gulp-replace-0-5-3 gulp-replace@^0.5.3
+260 verbose lock gulp-replace@^0.5.3 /home/taiga/.npm/dd245bf0-gulp-replace-0-5-3.lock
+261 verbose cache add [ 'gulp-sass@^1.3.3', null ]
+262 verbose cache add name=undefined spec="gulp-sass@^1.3.3" args=["gulp-sass@^1.3.3",null]
+263 verbose parsed url { protocol: null,
+263 verbose parsed url   slashes: null,
+263 verbose parsed url   auth: null,
+263 verbose parsed url   host: null,
+263 verbose parsed url   port: null,
+263 verbose parsed url   hostname: null,
+263 verbose parsed url   hash: null,
+263 verbose parsed url   search: null,
+263 verbose parsed url   query: null,
+263 verbose parsed url   pathname: 'gulp-sass@^1.3.3',
+263 verbose parsed url   path: 'gulp-sass@^1.3.3',
+263 verbose parsed url   href: 'gulp-sass@^1.3.3' }
+264 verbose cache add name="gulp-sass" spec="^1.3.3" args=["gulp-sass","^1.3.3"]
+265 verbose parsed url { protocol: null,
+265 verbose parsed url   slashes: null,
+265 verbose parsed url   auth: null,
+265 verbose parsed url   host: null,
+265 verbose parsed url   port: null,
+265 verbose parsed url   hostname: null,
+265 verbose parsed url   hash: null,
+265 verbose parsed url   search: null,
+265 verbose parsed url   query: null,
+265 verbose parsed url   pathname: '^1.3.3',
+265 verbose parsed url   path: '^1.3.3',
+265 verbose parsed url   href: '^1.3.3' }
+266 verbose addNamed [ 'gulp-sass', '^1.3.3' ]
+267 verbose addNamed [ null, '>=1.3.3-0 <2.0.0-0' ]
+268 silly lockFile c5cae820-gulp-sass-1-3-3 gulp-sass@^1.3.3
+269 verbose lock gulp-sass@^1.3.3 /home/taiga/.npm/c5cae820-gulp-sass-1-3-3.lock
+270 verbose cache add [ 'gulp-scss-lint@0.1.9', null ]
+271 verbose cache add name=undefined spec="gulp-scss-lint@0.1.9" args=["gulp-scss-lint@0.1.9",null]
+272 verbose parsed url { protocol: null,
+272 verbose parsed url   slashes: null,
+272 verbose parsed url   auth: null,
+272 verbose parsed url   host: null,
+272 verbose parsed url   port: null,
+272 verbose parsed url   hostname: null,
+272 verbose parsed url   hash: null,
+272 verbose parsed url   search: null,
+272 verbose parsed url   query: null,
+272 verbose parsed url   pathname: 'gulp-scss-lint@0.1.9',
+272 verbose parsed url   path: 'gulp-scss-lint@0.1.9',
+272 verbose parsed url   href: 'gulp-scss-lint@0.1.9' }
+273 verbose cache add name="gulp-scss-lint" spec="0.1.9" args=["gulp-scss-lint","0.1.9"]
+274 verbose parsed url { protocol: null,
+274 verbose parsed url   slashes: null,
+274 verbose parsed url   auth: null,
+274 verbose parsed url   host: null,
+274 verbose parsed url   port: null,
+274 verbose parsed url   hostname: null,
+274 verbose parsed url   hash: null,
+274 verbose parsed url   search: null,
+274 verbose parsed url   query: null,
+274 verbose parsed url   pathname: '0.1.9',
+274 verbose parsed url   path: '0.1.9',
+274 verbose parsed url   href: '0.1.9' }
+275 verbose addNamed [ 'gulp-scss-lint', '0.1.9' ]
+276 verbose addNamed [ '0.1.9', '0.1.9' ]
+277 silly lockFile 7263477a-gulp-scss-lint-0-1-9 gulp-scss-lint@0.1.9
+278 verbose lock gulp-scss-lint@0.1.9 /home/taiga/.npm/7263477a-gulp-scss-lint-0-1-9.lock
+279 verbose cache add [ 'gulp-sourcemaps@^1.5.0', null ]
+280 verbose cache add name=undefined spec="gulp-sourcemaps@^1.5.0" args=["gulp-sourcemaps@^1.5.0",null]
+281 verbose parsed url { protocol: null,
+281 verbose parsed url   slashes: null,
+281 verbose parsed url   auth: null,
+281 verbose parsed url   host: null,
+281 verbose parsed url   port: null,
+281 verbose parsed url   hostname: null,
+281 verbose parsed url   hash: null,
+281 verbose parsed url   search: null,
+281 verbose parsed url   query: null,
+281 verbose parsed url   pathname: 'gulp-sourcemaps@^1.5.0',
+281 verbose parsed url   path: 'gulp-sourcemaps@^1.5.0',
+281 verbose parsed url   href: 'gulp-sourcemaps@^1.5.0' }
+282 verbose cache add name="gulp-sourcemaps" spec="^1.5.0" args=["gulp-sourcemaps","^1.5.0"]
+283 verbose parsed url { protocol: null,
+283 verbose parsed url   slashes: null,
+283 verbose parsed url   auth: null,
+283 verbose parsed url   host: null,
+283 verbose parsed url   port: null,
+283 verbose parsed url   hostname: null,
+283 verbose parsed url   hash: null,
+283 verbose parsed url   search: null,
+283 verbose parsed url   query: null,
+283 verbose parsed url   pathname: '^1.5.0',
+283 verbose parsed url   path: '^1.5.0',
+283 verbose parsed url   href: '^1.5.0' }
+284 verbose addNamed [ 'gulp-sourcemaps', '^1.5.0' ]
+285 verbose addNamed [ null, '>=1.5.0-0 <2.0.0-0' ]
+286 silly lockFile f3cdc74d-gulp-sourcemaps-1-5-0 gulp-sourcemaps@^1.5.0
+287 verbose lock gulp-sourcemaps@^1.5.0 /home/taiga/.npm/f3cdc74d-gulp-sourcemaps-1-5-0.lock
+288 verbose cache add [ 'gulp-template@^3.0.0', null ]
+289 verbose cache add name=undefined spec="gulp-template@^3.0.0" args=["gulp-template@^3.0.0",null]
+290 verbose parsed url { protocol: null,
+290 verbose parsed url   slashes: null,
+290 verbose parsed url   auth: null,
+290 verbose parsed url   host: null,
+290 verbose parsed url   port: null,
+290 verbose parsed url   hostname: null,
+290 verbose parsed url   hash: null,
+290 verbose parsed url   search: null,
+290 verbose parsed url   query: null,
+290 verbose parsed url   pathname: 'gulp-template@^3.0.0',
+290 verbose parsed url   path: 'gulp-template@^3.0.0',
+290 verbose parsed url   href: 'gulp-template@^3.0.0' }
+291 verbose cache add name="gulp-template" spec="^3.0.0" args=["gulp-template","^3.0.0"]
+292 verbose parsed url { protocol: null,
+292 verbose parsed url   slashes: null,
+292 verbose parsed url   auth: null,
+292 verbose parsed url   host: null,
+292 verbose parsed url   port: null,
+292 verbose parsed url   hostname: null,
+292 verbose parsed url   hash: null,
+292 verbose parsed url   search: null,
+292 verbose parsed url   query: null,
+292 verbose parsed url   pathname: '^3.0.0',
+292 verbose parsed url   path: '^3.0.0',
+292 verbose parsed url   href: '^3.0.0' }
+293 verbose addNamed [ 'gulp-template', '^3.0.0' ]
+294 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+295 silly lockFile c2443ab5-gulp-template-3-0-0 gulp-template@^3.0.0
+296 verbose lock gulp-template@^3.0.0 /home/taiga/.npm/c2443ab5-gulp-template-3-0-0.lock
+297 verbose cache add [ 'gulp-uglify@~1.1.0', null ]
+298 verbose cache add name=undefined spec="gulp-uglify@~1.1.0" args=["gulp-uglify@~1.1.0",null]
+299 verbose parsed url { protocol: null,
+299 verbose parsed url   slashes: null,
+299 verbose parsed url   auth: null,
+299 verbose parsed url   host: null,
+299 verbose parsed url   port: null,
+299 verbose parsed url   hostname: null,
+299 verbose parsed url   hash: null,
+299 verbose parsed url   search: null,
+299 verbose parsed url   query: null,
+299 verbose parsed url   pathname: 'gulp-uglify@~1.1.0',
+299 verbose parsed url   path: 'gulp-uglify@~1.1.0',
+299 verbose parsed url   href: 'gulp-uglify@~1.1.0' }
+300 verbose cache add name="gulp-uglify" spec="~1.1.0" args=["gulp-uglify","~1.1.0"]
+301 verbose parsed url { protocol: null,
+301 verbose parsed url   slashes: null,
+301 verbose parsed url   auth: null,
+301 verbose parsed url   host: null,
+301 verbose parsed url   port: null,
+301 verbose parsed url   hostname: null,
+301 verbose parsed url   hash: null,
+301 verbose parsed url   search: null,
+301 verbose parsed url   query: null,
+301 verbose parsed url   pathname: '~1.1.0',
+301 verbose parsed url   path: '~1.1.0',
+301 verbose parsed url   href: '~1.1.0' }
+302 verbose addNamed [ 'gulp-uglify', '~1.1.0' ]
+303 verbose addNamed [ null, '>=1.1.0-0 <1.2.0-0' ]
+304 silly lockFile 4d3d450f-gulp-uglify-1-1-0 gulp-uglify@~1.1.0
+305 verbose lock gulp-uglify@~1.1.0 /home/taiga/.npm/4d3d450f-gulp-uglify-1-1-0.lock
+306 verbose cache add [ 'gulp-wrap@^0.11.0', null ]
+307 verbose cache add name=undefined spec="gulp-wrap@^0.11.0" args=["gulp-wrap@^0.11.0",null]
+308 verbose parsed url { protocol: null,
+308 verbose parsed url   slashes: null,
+308 verbose parsed url   auth: null,
+308 verbose parsed url   host: null,
+308 verbose parsed url   port: null,
+308 verbose parsed url   hostname: null,
+308 verbose parsed url   hash: null,
+308 verbose parsed url   search: null,
+308 verbose parsed url   query: null,
+308 verbose parsed url   pathname: 'gulp-wrap@^0.11.0',
+308 verbose parsed url   path: 'gulp-wrap@^0.11.0',
+308 verbose parsed url   href: 'gulp-wrap@^0.11.0' }
+309 verbose cache add name="gulp-wrap" spec="^0.11.0" args=["gulp-wrap","^0.11.0"]
+310 verbose parsed url { protocol: null,
+310 verbose parsed url   slashes: null,
+310 verbose parsed url   auth: null,
+310 verbose parsed url   host: null,
+310 verbose parsed url   port: null,
+310 verbose parsed url   hostname: null,
+310 verbose parsed url   hash: null,
+310 verbose parsed url   search: null,
+310 verbose parsed url   query: null,
+310 verbose parsed url   pathname: '^0.11.0',
+310 verbose parsed url   path: '^0.11.0',
+310 verbose parsed url   href: '^0.11.0' }
+311 verbose addNamed [ 'gulp-wrap', '^0.11.0' ]
+312 verbose addNamed [ null, '>=0.11.0-0 <0.12.0-0' ]
+313 silly lockFile bedda83f-gulp-wrap-0-11-0 gulp-wrap@^0.11.0
+314 verbose lock gulp-wrap@^0.11.0 /home/taiga/.npm/bedda83f-gulp-wrap-0-11-0.lock
+315 verbose cache add [ 'inquirer@^0.8.2', null ]
+316 verbose cache add name=undefined spec="inquirer@^0.8.2" args=["inquirer@^0.8.2",null]
+317 verbose parsed url { protocol: null,
+317 verbose parsed url   slashes: null,
+317 verbose parsed url   auth: null,
+317 verbose parsed url   host: null,
+317 verbose parsed url   port: null,
+317 verbose parsed url   hostname: null,
+317 verbose parsed url   hash: null,
+317 verbose parsed url   search: null,
+317 verbose parsed url   query: null,
+317 verbose parsed url   pathname: 'inquirer@^0.8.2',
+317 verbose parsed url   path: 'inquirer@^0.8.2',
+317 verbose parsed url   href: 'inquirer@^0.8.2' }
+318 verbose cache add name="inquirer" spec="^0.8.2" args=["inquirer","^0.8.2"]
+319 verbose parsed url { protocol: null,
+319 verbose parsed url   slashes: null,
+319 verbose parsed url   auth: null,
+319 verbose parsed url   host: null,
+319 verbose parsed url   port: null,
+319 verbose parsed url   hostname: null,
+319 verbose parsed url   hash: null,
+319 verbose parsed url   search: null,
+319 verbose parsed url   query: null,
+319 verbose parsed url   pathname: '^0.8.2',
+319 verbose parsed url   path: '^0.8.2',
+319 verbose parsed url   href: '^0.8.2' }
+320 verbose addNamed [ 'inquirer', '^0.8.2' ]
+321 verbose addNamed [ null, '>=0.8.2-0 <0.9.0-0' ]
+322 silly lockFile 80d4ff69-inquirer-0-8-2 inquirer@^0.8.2
+323 verbose lock inquirer@^0.8.2 /home/taiga/.npm/80d4ff69-inquirer-0-8-2.lock
+324 verbose cache add [ 'karma@^0.12.31', null ]
+325 verbose cache add name=undefined spec="karma@^0.12.31" args=["karma@^0.12.31",null]
+326 verbose parsed url { protocol: null,
+326 verbose parsed url   slashes: null,
+326 verbose parsed url   auth: null,
+326 verbose parsed url   host: null,
+326 verbose parsed url   port: null,
+326 verbose parsed url   hostname: null,
+326 verbose parsed url   hash: null,
+326 verbose parsed url   search: null,
+326 verbose parsed url   query: null,
+326 verbose parsed url   pathname: 'karma@^0.12.31',
+326 verbose parsed url   path: 'karma@^0.12.31',
+326 verbose parsed url   href: 'karma@^0.12.31' }
+327 verbose cache add name="karma" spec="^0.12.31" args=["karma","^0.12.31"]
+328 verbose parsed url { protocol: null,
+328 verbose parsed url   slashes: null,
+328 verbose parsed url   auth: null,
+328 verbose parsed url   host: null,
+328 verbose parsed url   port: null,
+328 verbose parsed url   hostname: null,
+328 verbose parsed url   hash: null,
+328 verbose parsed url   search: null,
+328 verbose parsed url   query: null,
+328 verbose parsed url   pathname: '^0.12.31',
+328 verbose parsed url   path: '^0.12.31',
+328 verbose parsed url   href: '^0.12.31' }
+329 verbose addNamed [ 'karma', '^0.12.31' ]
+330 verbose addNamed [ null, '>=0.12.31-0 <0.13.0-0' ]
+331 silly lockFile 7ba4ac91-karma-0-12-31 karma@^0.12.31
+332 verbose lock karma@^0.12.31 /home/taiga/.npm/7ba4ac91-karma-0-12-31.lock
+333 verbose cache add [ 'karma-chai@^0.1.0', null ]
+334 verbose cache add name=undefined spec="karma-chai@^0.1.0" args=["karma-chai@^0.1.0",null]
+335 verbose parsed url { protocol: null,
+335 verbose parsed url   slashes: null,
+335 verbose parsed url   auth: null,
+335 verbose parsed url   host: null,
+335 verbose parsed url   port: null,
+335 verbose parsed url   hostname: null,
+335 verbose parsed url   hash: null,
+335 verbose parsed url   search: null,
+335 verbose parsed url   query: null,
+335 verbose parsed url   pathname: 'karma-chai@^0.1.0',
+335 verbose parsed url   path: 'karma-chai@^0.1.0',
+335 verbose parsed url   href: 'karma-chai@^0.1.0' }
+336 verbose cache add name="karma-chai" spec="^0.1.0" args=["karma-chai","^0.1.0"]
+337 verbose parsed url { protocol: null,
+337 verbose parsed url   slashes: null,
+337 verbose parsed url   auth: null,
+337 verbose parsed url   host: null,
+337 verbose parsed url   port: null,
+337 verbose parsed url   hostname: null,
+337 verbose parsed url   hash: null,
+337 verbose parsed url   search: null,
+337 verbose parsed url   query: null,
+337 verbose parsed url   pathname: '^0.1.0',
+337 verbose parsed url   path: '^0.1.0',
+337 verbose parsed url   href: '^0.1.0' }
+338 verbose addNamed [ 'karma-chai', '^0.1.0' ]
+339 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+340 silly lockFile f308b65b-karma-chai-0-1-0 karma-chai@^0.1.0
+341 verbose lock karma-chai@^0.1.0 /home/taiga/.npm/f308b65b-karma-chai-0-1-0.lock
+342 verbose cache add [ 'karma-chrome-launcher@^0.1.7', null ]
+343 verbose cache add name=undefined spec="karma-chrome-launcher@^0.1.7" args=["karma-chrome-launcher@^0.1.7",null]
+344 verbose parsed url { protocol: null,
+344 verbose parsed url   slashes: null,
+344 verbose parsed url   auth: null,
+344 verbose parsed url   host: null,
+344 verbose parsed url   port: null,
+344 verbose parsed url   hostname: null,
+344 verbose parsed url   hash: null,
+344 verbose parsed url   search: null,
+344 verbose parsed url   query: null,
+344 verbose parsed url   pathname: 'karma-chrome-launcher@^0.1.7',
+344 verbose parsed url   path: 'karma-chrome-launcher@^0.1.7',
+344 verbose parsed url   href: 'karma-chrome-launcher@^0.1.7' }
+345 verbose cache add name="karma-chrome-launcher" spec="^0.1.7" args=["karma-chrome-launcher","^0.1.7"]
+346 verbose parsed url { protocol: null,
+346 verbose parsed url   slashes: null,
+346 verbose parsed url   auth: null,
+346 verbose parsed url   host: null,
+346 verbose parsed url   port: null,
+346 verbose parsed url   hostname: null,
+346 verbose parsed url   hash: null,
+346 verbose parsed url   search: null,
+346 verbose parsed url   query: null,
+346 verbose parsed url   pathname: '^0.1.7',
+346 verbose parsed url   path: '^0.1.7',
+346 verbose parsed url   href: '^0.1.7' }
+347 verbose addNamed [ 'karma-chrome-launcher', '^0.1.7' ]
+348 verbose addNamed [ null, '>=0.1.7-0 <0.2.0-0' ]
+349 silly lockFile 68a8fe4a-karma-chrome-launcher-0-1-7 karma-chrome-launcher@^0.1.7
+350 verbose lock karma-chrome-launcher@^0.1.7 /home/taiga/.npm/68a8fe4a-karma-chrome-launcher-0-1-7.lock
+351 verbose cache add [ 'karma-coffee-preprocessor@^0.2.1', null ]
+352 verbose cache add name=undefined spec="karma-coffee-preprocessor@^0.2.1" args=["karma-coffee-preprocessor@^0.2.1",null]
+353 verbose parsed url { protocol: null,
+353 verbose parsed url   slashes: null,
+353 verbose parsed url   auth: null,
+353 verbose parsed url   host: null,
+353 verbose parsed url   port: null,
+353 verbose parsed url   hostname: null,
+353 verbose parsed url   hash: null,
+353 verbose parsed url   search: null,
+353 verbose parsed url   query: null,
+353 verbose parsed url   pathname: 'karma-coffee-preprocessor@^0.2.1',
+353 verbose parsed url   path: 'karma-coffee-preprocessor@^0.2.1',
+353 verbose parsed url   href: 'karma-coffee-preprocessor@^0.2.1' }
+354 verbose cache add name="karma-coffee-preprocessor" spec="^0.2.1" args=["karma-coffee-preprocessor","^0.2.1"]
+355 verbose parsed url { protocol: null,
+355 verbose parsed url   slashes: null,
+355 verbose parsed url   auth: null,
+355 verbose parsed url   host: null,
+355 verbose parsed url   port: null,
+355 verbose parsed url   hostname: null,
+355 verbose parsed url   hash: null,
+355 verbose parsed url   search: null,
+355 verbose parsed url   query: null,
+355 verbose parsed url   pathname: '^0.2.1',
+355 verbose parsed url   path: '^0.2.1',
+355 verbose parsed url   href: '^0.2.1' }
+356 verbose addNamed [ 'karma-coffee-preprocessor', '^0.2.1' ]
+357 verbose addNamed [ null, '>=0.2.1-0 <0.3.0-0' ]
+358 silly lockFile 190b9078-karma-coffee-preprocessor-0-2-1 karma-coffee-preprocessor@^0.2.1
+359 verbose lock karma-coffee-preprocessor@^0.2.1 /home/taiga/.npm/190b9078-karma-coffee-preprocessor-0-2-1.lock
+360 verbose cache add [ 'karma-mocha@^0.1.10', null ]
+361 verbose cache add name=undefined spec="karma-mocha@^0.1.10" args=["karma-mocha@^0.1.10",null]
+362 verbose parsed url { protocol: null,
+362 verbose parsed url   slashes: null,
+362 verbose parsed url   auth: null,
+362 verbose parsed url   host: null,
+362 verbose parsed url   port: null,
+362 verbose parsed url   hostname: null,
+362 verbose parsed url   hash: null,
+362 verbose parsed url   search: null,
+362 verbose parsed url   query: null,
+362 verbose parsed url   pathname: 'karma-mocha@^0.1.10',
+362 verbose parsed url   path: 'karma-mocha@^0.1.10',
+362 verbose parsed url   href: 'karma-mocha@^0.1.10' }
+363 verbose cache add name="karma-mocha" spec="^0.1.10" args=["karma-mocha","^0.1.10"]
+364 verbose parsed url { protocol: null,
+364 verbose parsed url   slashes: null,
+364 verbose parsed url   auth: null,
+364 verbose parsed url   host: null,
+364 verbose parsed url   port: null,
+364 verbose parsed url   hostname: null,
+364 verbose parsed url   hash: null,
+364 verbose parsed url   search: null,
+364 verbose parsed url   query: null,
+364 verbose parsed url   pathname: '^0.1.10',
+364 verbose parsed url   path: '^0.1.10',
+364 verbose parsed url   href: '^0.1.10' }
+365 verbose addNamed [ 'karma-mocha', '^0.1.10' ]
+366 verbose addNamed [ null, '>=0.1.10-0 <0.2.0-0' ]
+367 silly lockFile 107ac819-karma-mocha-0-1-10 karma-mocha@^0.1.10
+368 verbose lock karma-mocha@^0.1.10 /home/taiga/.npm/107ac819-karma-mocha-0-1-10.lock
+369 verbose cache add [ 'karma-sinon@^1.0.4', null ]
+370 verbose cache add name=undefined spec="karma-sinon@^1.0.4" args=["karma-sinon@^1.0.4",null]
+371 verbose parsed url { protocol: null,
+371 verbose parsed url   slashes: null,
+371 verbose parsed url   auth: null,
+371 verbose parsed url   host: null,
+371 verbose parsed url   port: null,
+371 verbose parsed url   hostname: null,
+371 verbose parsed url   hash: null,
+371 verbose parsed url   search: null,
+371 verbose parsed url   query: null,
+371 verbose parsed url   pathname: 'karma-sinon@^1.0.4',
+371 verbose parsed url   path: 'karma-sinon@^1.0.4',
+371 verbose parsed url   href: 'karma-sinon@^1.0.4' }
+372 verbose cache add name="karma-sinon" spec="^1.0.4" args=["karma-sinon","^1.0.4"]
+373 verbose parsed url { protocol: null,
+373 verbose parsed url   slashes: null,
+373 verbose parsed url   auth: null,
+373 verbose parsed url   host: null,
+373 verbose parsed url   port: null,
+373 verbose parsed url   hostname: null,
+373 verbose parsed url   hash: null,
+373 verbose parsed url   search: null,
+373 verbose parsed url   query: null,
+373 verbose parsed url   pathname: '^1.0.4',
+373 verbose parsed url   path: '^1.0.4',
+373 verbose parsed url   href: '^1.0.4' }
+374 verbose addNamed [ 'karma-sinon', '^1.0.4' ]
+375 verbose addNamed [ null, '>=1.0.4-0 <2.0.0-0' ]
+376 silly lockFile 247be2bd-karma-sinon-1-0-4 karma-sinon@^1.0.4
+377 verbose lock karma-sinon@^1.0.4 /home/taiga/.npm/247be2bd-karma-sinon-1-0-4.lock
+378 verbose cache add [ 'karma-sinon-chai@^0.3.0', null ]
+379 verbose cache add name=undefined spec="karma-sinon-chai@^0.3.0" args=["karma-sinon-chai@^0.3.0",null]
+380 verbose parsed url { protocol: null,
+380 verbose parsed url   slashes: null,
+380 verbose parsed url   auth: null,
+380 verbose parsed url   host: null,
+380 verbose parsed url   port: null,
+380 verbose parsed url   hostname: null,
+380 verbose parsed url   hash: null,
+380 verbose parsed url   search: null,
+380 verbose parsed url   query: null,
+380 verbose parsed url   pathname: 'karma-sinon-chai@^0.3.0',
+380 verbose parsed url   path: 'karma-sinon-chai@^0.3.0',
+380 verbose parsed url   href: 'karma-sinon-chai@^0.3.0' }
+381 verbose cache add name="karma-sinon-chai" spec="^0.3.0" args=["karma-sinon-chai","^0.3.0"]
+382 verbose parsed url { protocol: null,
+382 verbose parsed url   slashes: null,
+382 verbose parsed url   auth: null,
+382 verbose parsed url   host: null,
+382 verbose parsed url   port: null,
+382 verbose parsed url   hostname: null,
+382 verbose parsed url   hash: null,
+382 verbose parsed url   search: null,
+382 verbose parsed url   query: null,
+382 verbose parsed url   pathname: '^0.3.0',
+382 verbose parsed url   path: '^0.3.0',
+382 verbose parsed url   href: '^0.3.0' }
+383 verbose addNamed [ 'karma-sinon-chai', '^0.3.0' ]
+384 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+385 silly lockFile 0172c654-karma-sinon-chai-0-3-0 karma-sinon-chai@^0.3.0
+386 verbose lock karma-sinon-chai@^0.3.0 /home/taiga/.npm/0172c654-karma-sinon-chai-0-3-0.lock
+387 verbose cache add [ 'karma-sourcemap-loader@^0.3.4', null ]
+388 verbose cache add name=undefined spec="karma-sourcemap-loader@^0.3.4" args=["karma-sourcemap-loader@^0.3.4",null]
+389 verbose parsed url { protocol: null,
+389 verbose parsed url   slashes: null,
+389 verbose parsed url   auth: null,
+389 verbose parsed url   host: null,
+389 verbose parsed url   port: null,
+389 verbose parsed url   hostname: null,
+389 verbose parsed url   hash: null,
+389 verbose parsed url   search: null,
+389 verbose parsed url   query: null,
+389 verbose parsed url   pathname: 'karma-sourcemap-loader@^0.3.4',
+389 verbose parsed url   path: 'karma-sourcemap-loader@^0.3.4',
+389 verbose parsed url   href: 'karma-sourcemap-loader@^0.3.4' }
+390 verbose cache add name="karma-sourcemap-loader" spec="^0.3.4" args=["karma-sourcemap-loader","^0.3.4"]
+391 verbose parsed url { protocol: null,
+391 verbose parsed url   slashes: null,
+391 verbose parsed url   auth: null,
+391 verbose parsed url   host: null,
+391 verbose parsed url   port: null,
+391 verbose parsed url   hostname: null,
+391 verbose parsed url   hash: null,
+391 verbose parsed url   search: null,
+391 verbose parsed url   query: null,
+391 verbose parsed url   pathname: '^0.3.4',
+391 verbose parsed url   path: '^0.3.4',
+391 verbose parsed url   href: '^0.3.4' }
+392 verbose addNamed [ 'karma-sourcemap-loader', '^0.3.4' ]
+393 verbose addNamed [ null, '>=0.3.4-0 <0.4.0-0' ]
+394 silly lockFile d465d7d5-karma-sourcemap-loader-0-3-4 karma-sourcemap-loader@^0.3.4
+395 verbose lock karma-sourcemap-loader@^0.3.4 /home/taiga/.npm/d465d7d5-karma-sourcemap-loader-0-3-4.lock
+396 verbose cache add [ 'mocha@^2.2.4', null ]
+397 verbose cache add name=undefined spec="mocha@^2.2.4" args=["mocha@^2.2.4",null]
+398 verbose parsed url { protocol: null,
+398 verbose parsed url   slashes: null,
+398 verbose parsed url   auth: null,
+398 verbose parsed url   host: null,
+398 verbose parsed url   port: null,
+398 verbose parsed url   hostname: null,
+398 verbose parsed url   hash: null,
+398 verbose parsed url   search: null,
+398 verbose parsed url   query: null,
+398 verbose parsed url   pathname: 'mocha@^2.2.4',
+398 verbose parsed url   path: 'mocha@^2.2.4',
+398 verbose parsed url   href: 'mocha@^2.2.4' }
+399 verbose cache add name="mocha" spec="^2.2.4" args=["mocha","^2.2.4"]
+400 verbose parsed url { protocol: null,
+400 verbose parsed url   slashes: null,
+400 verbose parsed url   auth: null,
+400 verbose parsed url   host: null,
+400 verbose parsed url   port: null,
+400 verbose parsed url   hostname: null,
+400 verbose parsed url   hash: null,
+400 verbose parsed url   search: null,
+400 verbose parsed url   query: null,
+400 verbose parsed url   pathname: '^2.2.4',
+400 verbose parsed url   path: '^2.2.4',
+400 verbose parsed url   href: '^2.2.4' }
+401 verbose addNamed [ 'mocha', '^2.2.4' ]
+402 verbose addNamed [ null, '>=2.2.4-0 <3.0.0-0' ]
+403 silly lockFile 84cee2c9-mocha-2-2-4 mocha@^2.2.4
+404 verbose lock mocha@^2.2.4 /home/taiga/.npm/84cee2c9-mocha-2-2-4.lock
+405 verbose cache add [ 'pre-commit@^1.0.5', null ]
+406 verbose cache add name=undefined spec="pre-commit@^1.0.5" args=["pre-commit@^1.0.5",null]
+407 verbose parsed url { protocol: null,
+407 verbose parsed url   slashes: null,
+407 verbose parsed url   auth: null,
+407 verbose parsed url   host: null,
+407 verbose parsed url   port: null,
+407 verbose parsed url   hostname: null,
+407 verbose parsed url   hash: null,
+407 verbose parsed url   search: null,
+407 verbose parsed url   query: null,
+407 verbose parsed url   pathname: 'pre-commit@^1.0.5',
+407 verbose parsed url   path: 'pre-commit@^1.0.5',
+407 verbose parsed url   href: 'pre-commit@^1.0.5' }
+408 verbose cache add name="pre-commit" spec="^1.0.5" args=["pre-commit","^1.0.5"]
+409 verbose parsed url { protocol: null,
+409 verbose parsed url   slashes: null,
+409 verbose parsed url   auth: null,
+409 verbose parsed url   host: null,
+409 verbose parsed url   port: null,
+409 verbose parsed url   hostname: null,
+409 verbose parsed url   hash: null,
+409 verbose parsed url   search: null,
+409 verbose parsed url   query: null,
+409 verbose parsed url   pathname: '^1.0.5',
+409 verbose parsed url   path: '^1.0.5',
+409 verbose parsed url   href: '^1.0.5' }
+410 verbose addNamed [ 'pre-commit', '^1.0.5' ]
+411 verbose addNamed [ null, '>=1.0.5-0 <2.0.0-0' ]
+412 silly lockFile 9680c7fe-pre-commit-1-0-5 pre-commit@^1.0.5
+413 verbose lock pre-commit@^1.0.5 /home/taiga/.npm/9680c7fe-pre-commit-1-0-5.lock
+414 verbose cache add [ 'readable-stream@~1.0.33', null ]
+415 verbose cache add name=undefined spec="readable-stream@~1.0.33" args=["readable-stream@~1.0.33",null]
+416 verbose parsed url { protocol: null,
+416 verbose parsed url   slashes: null,
+416 verbose parsed url   auth: null,
+416 verbose parsed url   host: null,
+416 verbose parsed url   port: null,
+416 verbose parsed url   hostname: null,
+416 verbose parsed url   hash: null,
+416 verbose parsed url   search: null,
+416 verbose parsed url   query: null,
+416 verbose parsed url   pathname: 'readable-stream@~1.0.33',
+416 verbose parsed url   path: 'readable-stream@~1.0.33',
+416 verbose parsed url   href: 'readable-stream@~1.0.33' }
+417 verbose cache add name="readable-stream" spec="~1.0.33" args=["readable-stream","~1.0.33"]
+418 verbose parsed url { protocol: null,
+418 verbose parsed url   slashes: null,
+418 verbose parsed url   auth: null,
+418 verbose parsed url   host: null,
+418 verbose parsed url   port: null,
+418 verbose parsed url   hostname: null,
+418 verbose parsed url   hash: null,
+418 verbose parsed url   search: null,
+418 verbose parsed url   query: null,
+418 verbose parsed url   pathname: '~1.0.33',
+418 verbose parsed url   path: '~1.0.33',
+418 verbose parsed url   href: '~1.0.33' }
+419 verbose addNamed [ 'readable-stream', '~1.0.33' ]
+420 verbose addNamed [ null, '>=1.0.33-0 <1.1.0-0' ]
+421 silly lockFile 48ac9505-readable-stream-1-0-33 readable-stream@~1.0.33
+422 verbose lock readable-stream@~1.0.33 /home/taiga/.npm/48ac9505-readable-stream-1-0-33.lock
+423 verbose cache add [ 'run-sequence@^1.0.2', null ]
+424 verbose cache add name=undefined spec="run-sequence@^1.0.2" args=["run-sequence@^1.0.2",null]
+425 verbose parsed url { protocol: null,
+425 verbose parsed url   slashes: null,
+425 verbose parsed url   auth: null,
+425 verbose parsed url   host: null,
+425 verbose parsed url   port: null,
+425 verbose parsed url   hostname: null,
+425 verbose parsed url   hash: null,
+425 verbose parsed url   search: null,
+425 verbose parsed url   query: null,
+425 verbose parsed url   pathname: 'run-sequence@^1.0.2',
+425 verbose parsed url   path: 'run-sequence@^1.0.2',
+425 verbose parsed url   href: 'run-sequence@^1.0.2' }
+426 verbose cache add name="run-sequence" spec="^1.0.2" args=["run-sequence","^1.0.2"]
+427 verbose parsed url { protocol: null,
+427 verbose parsed url   slashes: null,
+427 verbose parsed url   auth: null,
+427 verbose parsed url   host: null,
+427 verbose parsed url   port: null,
+427 verbose parsed url   hostname: null,
+427 verbose parsed url   hash: null,
+427 verbose parsed url   search: null,
+427 verbose parsed url   query: null,
+427 verbose parsed url   pathname: '^1.0.2',
+427 verbose parsed url   path: '^1.0.2',
+427 verbose parsed url   href: '^1.0.2' }
+428 verbose addNamed [ 'run-sequence', '^1.0.2' ]
+429 verbose addNamed [ null, '>=1.0.2-0 <2.0.0-0' ]
+430 silly lockFile 95fa9867-run-sequence-1-0-2 run-sequence@^1.0.2
+431 verbose lock run-sequence@^1.0.2 /home/taiga/.npm/95fa9867-run-sequence-1-0-2.lock
+432 verbose cache add [ 'sinon@^1.14.1', null ]
+433 verbose cache add name=undefined spec="sinon@^1.14.1" args=["sinon@^1.14.1",null]
+434 verbose parsed url { protocol: null,
+434 verbose parsed url   slashes: null,
+434 verbose parsed url   auth: null,
+434 verbose parsed url   host: null,
+434 verbose parsed url   port: null,
+434 verbose parsed url   hostname: null,
+434 verbose parsed url   hash: null,
+434 verbose parsed url   search: null,
+434 verbose parsed url   query: null,
+434 verbose parsed url   pathname: 'sinon@^1.14.1',
+434 verbose parsed url   path: 'sinon@^1.14.1',
+434 verbose parsed url   href: 'sinon@^1.14.1' }
+435 verbose cache add name="sinon" spec="^1.14.1" args=["sinon","^1.14.1"]
+436 verbose parsed url { protocol: null,
+436 verbose parsed url   slashes: null,
+436 verbose parsed url   auth: null,
+436 verbose parsed url   host: null,
+436 verbose parsed url   port: null,
+436 verbose parsed url   hostname: null,
+436 verbose parsed url   hash: null,
+436 verbose parsed url   search: null,
+436 verbose parsed url   query: null,
+436 verbose parsed url   pathname: '^1.14.1',
+436 verbose parsed url   path: '^1.14.1',
+436 verbose parsed url   href: '^1.14.1' }
+437 verbose addNamed [ 'sinon', '^1.14.1' ]
+438 verbose addNamed [ null, '>=1.14.1-0 <2.0.0-0' ]
+439 silly lockFile badb42da-sinon-1-14-1 sinon@^1.14.1
+440 verbose lock sinon@^1.14.1 /home/taiga/.npm/badb42da-sinon-1-14-1.lock
+441 verbose cache add [ 'through2@~0.6.3', null ]
+442 verbose cache add name=undefined spec="through2@~0.6.3" args=["through2@~0.6.3",null]
+443 verbose parsed url { protocol: null,
+443 verbose parsed url   slashes: null,
+443 verbose parsed url   auth: null,
+443 verbose parsed url   host: null,
+443 verbose parsed url   port: null,
+443 verbose parsed url   hostname: null,
+443 verbose parsed url   hash: null,
+443 verbose parsed url   search: null,
+443 verbose parsed url   query: null,
+443 verbose parsed url   pathname: 'through2@~0.6.3',
+443 verbose parsed url   path: 'through2@~0.6.3',
+443 verbose parsed url   href: 'through2@~0.6.3' }
+444 verbose cache add name="through2" spec="~0.6.3" args=["through2","~0.6.3"]
+445 verbose parsed url { protocol: null,
+445 verbose parsed url   slashes: null,
+445 verbose parsed url   auth: null,
+445 verbose parsed url   host: null,
+445 verbose parsed url   port: null,
+445 verbose parsed url   hostname: null,
+445 verbose parsed url   hash: null,
+445 verbose parsed url   search: null,
+445 verbose parsed url   query: null,
+445 verbose parsed url   pathname: '~0.6.3',
+445 verbose parsed url   path: '~0.6.3',
+445 verbose parsed url   href: '~0.6.3' }
+446 verbose addNamed [ 'through2', '~0.6.3' ]
+447 verbose addNamed [ null, '>=0.6.3-0 <0.7.0-0' ]
+448 silly lockFile 0e54b0b2-through2-0-6-3 through2@~0.6.3
+449 verbose lock through2@~0.6.3 /home/taiga/.npm/0e54b0b2-through2-0-6-3.lock
+450 verbose cache add [ 'angular-mocks@^1.3.15', null ]
+451 verbose cache add name=undefined spec="angular-mocks@^1.3.15" args=["angular-mocks@^1.3.15",null]
+452 verbose parsed url { protocol: null,
+452 verbose parsed url   slashes: null,
+452 verbose parsed url   auth: null,
+452 verbose parsed url   host: null,
+452 verbose parsed url   port: null,
+452 verbose parsed url   hostname: null,
+452 verbose parsed url   hash: null,
+452 verbose parsed url   search: null,
+452 verbose parsed url   query: null,
+452 verbose parsed url   pathname: 'angular-mocks@^1.3.15',
+452 verbose parsed url   path: 'angular-mocks@^1.3.15',
+452 verbose parsed url   href: 'angular-mocks@^1.3.15' }
+453 verbose cache add name="angular-mocks" spec="^1.3.15" args=["angular-mocks","^1.3.15"]
+454 verbose parsed url { protocol: null,
+454 verbose parsed url   slashes: null,
+454 verbose parsed url   auth: null,
+454 verbose parsed url   host: null,
+454 verbose parsed url   port: null,
+454 verbose parsed url   hostname: null,
+454 verbose parsed url   hash: null,
+454 verbose parsed url   search: null,
+454 verbose parsed url   query: null,
+454 verbose parsed url   pathname: '^1.3.15',
+454 verbose parsed url   path: '^1.3.15',
+454 verbose parsed url   href: '^1.3.15' }
+455 verbose addNamed [ 'angular-mocks', '^1.3.15' ]
+456 verbose addNamed [ null, '>=1.3.15-0 <2.0.0-0' ]
+457 silly lockFile f915db8d-angular-mocks-1-3-15 angular-mocks@^1.3.15
+458 verbose lock angular-mocks@^1.3.15 /home/taiga/.npm/f915db8d-angular-mocks-1-3-15.lock
+459 silly addNameRange { name: 'chai-jquery',
+459 silly addNameRange   range: '>=2.0.0-0 <3.0.0-0',
+459 silly addNameRange   hasData: false }
+460 silly addNameRange { name: 'chai', range: '>=2.2.0-0 <3.0.0-0', hasData: false }
+461 silly addNameRange { name: 'cli-color',
+461 silly addNameRange   range: '>=0.3.3-0 <0.4.0-0',
+461 silly addNameRange   hasData: false }
+462 silly addNameRange { name: 'coffee-script',
+462 silly addNameRange   range: '>=1.9.1-0 <2.0.0-0',
+462 silly addNameRange   hasData: false }
+463 silly addNameRange { name: 'del', range: '>=1.1.1-0 <2.0.0-0', hasData: false }
+464 silly addNameRange { name: 'express', range: '>=4.12.0-0 <5.0.0-0', hasData: false }
+465 silly addNameRange { name: 'glob', range: '>=5.0.3-0 <6.0.0-0', hasData: false }
+466 silly addNameRange { name: 'gulp', range: '>=3.8.11-0 <4.0.0-0', hasData: false }
+467 silly addNameRange { name: 'gulp-angular-templatecache',
+467 silly addNameRange   range: '>=1.5.0-0 <2.0.0-0',
+467 silly addNameRange   hasData: false }
+468 silly addNameRange { name: 'gulp-autoprefixer',
+468 silly addNameRange   range: '>=2.1.0-0 <3.0.0-0',
+468 silly addNameRange   hasData: false }
+469 silly addNameRange { name: 'gulp-cache',
+469 silly addNameRange   range: '>=0.2.8-0 <0.3.0-0',
+469 silly addNameRange   hasData: false }
+470 silly addNameRange { name: 'gulp-coffee',
+470 silly addNameRange   range: '>=2.3.1-0 <3.0.0-0',
+470 silly addNameRange   hasData: false }
+471 silly addNameRange { name: 'gulp-coffeelint',
+471 silly addNameRange   range: '>=0.4.0-0 <0.5.0-0',
+471 silly addNameRange   hasData: false }
+472 silly addNameRange { name: 'gulp-concat',
+472 silly addNameRange   range: '>=2.5.2-0 <3.0.0-0',
+472 silly addNameRange   hasData: false }
+473 silly addNameRange { name: 'gulp-csslint',
+473 silly addNameRange   range: '>=0.1.5-0 <0.2.0-0',
+473 silly addNameRange   hasData: false }
+474 silly addNameRange { name: 'gulp-if', range: '>=1.2.5-0 <2.0.0-0', hasData: false }
+475 silly addNameRange { name: 'gulp-imagemin',
+475 silly addNameRange   range: '>=2.2.1-0 <3.0.0-0',
+475 silly addNameRange   hasData: false }
+476 silly addNameRange { name: 'gulp-insert',
+476 silly addNameRange   range: '>=0.4.0-0 <0.5.0-0',
+476 silly addNameRange   hasData: false }
+477 silly addNameRange { name: 'gulp-jade',
+477 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+477 silly addNameRange   hasData: false }
+478 silly addNameRange { name: 'gulp-minify-css',
+478 silly addNameRange   range: '>=0.4.6-0 <0.5.0-0',
+478 silly addNameRange   hasData: false }
+479 silly addNameRange { name: 'gulp-order',
+479 silly addNameRange   range: '>=1.1.1-0 <2.0.0-0',
+479 silly addNameRange   hasData: false }
+480 silly addNameRange { name: 'gulp-plumber',
+480 silly addNameRange   range: '>=0.6.6-0 <0.7.0-0',
+480 silly addNameRange   hasData: false }
+481 silly addNameRange { name: 'gulp-print',
+481 silly addNameRange   range: '>=1.1.0-0 <2.0.0-0',
+481 silly addNameRange   hasData: false }
+482 silly addNameRange { name: 'gulp-rename',
+482 silly addNameRange   range: '>=1.2.0-0 <2.0.0-0',
+482 silly addNameRange   hasData: false }
+483 silly addNameRange { name: 'gulp-replace',
+483 silly addNameRange   range: '>=0.5.3-0 <0.6.0-0',
+483 silly addNameRange   hasData: false }
+484 silly addNameRange { name: 'gulp-sass',
+484 silly addNameRange   range: '>=1.3.3-0 <2.0.0-0',
+484 silly addNameRange   hasData: false }
+485 silly addNameRange { name: 'gulp-sourcemaps',
+485 silly addNameRange   range: '>=1.5.0-0 <2.0.0-0',
+485 silly addNameRange   hasData: false }
+486 silly addNameRange { name: 'gulp-template',
+486 silly addNameRange   range: '>=3.0.0-0 <4.0.0-0',
+486 silly addNameRange   hasData: false }
+487 silly addNameRange { name: 'gulp-uglify',
+487 silly addNameRange   range: '>=1.1.0-0 <1.2.0-0',
+487 silly addNameRange   hasData: false }
+488 silly addNameRange { name: 'gulp-wrap',
+488 silly addNameRange   range: '>=0.11.0-0 <0.12.0-0',
+488 silly addNameRange   hasData: false }
+489 silly addNameRange { name: 'inquirer', range: '>=0.8.2-0 <0.9.0-0', hasData: false }
+490 silly addNameRange { name: 'karma', range: '>=0.12.31-0 <0.13.0-0', hasData: false }
+491 silly addNameRange { name: 'karma-chai',
+491 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+491 silly addNameRange   hasData: false }
+492 silly addNameRange { name: 'karma-chrome-launcher',
+492 silly addNameRange   range: '>=0.1.7-0 <0.2.0-0',
+492 silly addNameRange   hasData: false }
+493 silly addNameRange { name: 'karma-coffee-preprocessor',
+493 silly addNameRange   range: '>=0.2.1-0 <0.3.0-0',
+493 silly addNameRange   hasData: false }
+494 silly addNameRange { name: 'karma-mocha',
+494 silly addNameRange   range: '>=0.1.10-0 <0.2.0-0',
+494 silly addNameRange   hasData: false }
+495 silly addNameRange { name: 'karma-sinon',
+495 silly addNameRange   range: '>=1.0.4-0 <2.0.0-0',
+495 silly addNameRange   hasData: false }
+496 silly addNameRange { name: 'karma-sinon-chai',
+496 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+496 silly addNameRange   hasData: false }
+497 silly addNameRange { name: 'karma-sourcemap-loader',
+497 silly addNameRange   range: '>=0.3.4-0 <0.4.0-0',
+497 silly addNameRange   hasData: false }
+498 silly addNameRange { name: 'mocha', range: '>=2.2.4-0 <3.0.0-0', hasData: false }
+499 silly addNameRange { name: 'pre-commit',
+499 silly addNameRange   range: '>=1.0.5-0 <2.0.0-0',
+499 silly addNameRange   hasData: false }
+500 silly addNameRange { name: 'readable-stream',
+500 silly addNameRange   range: '>=1.0.33-0 <1.1.0-0',
+500 silly addNameRange   hasData: false }
+501 silly addNameRange { name: 'run-sequence',
+501 silly addNameRange   range: '>=1.0.2-0 <2.0.0-0',
+501 silly addNameRange   hasData: false }
+502 silly addNameRange { name: 'sinon', range: '>=1.14.1-0 <2.0.0-0', hasData: false }
+503 silly addNameRange { name: 'through2', range: '>=0.6.3-0 <0.7.0-0', hasData: false }
+504 silly addNameRange { name: 'angular-mocks',
+504 silly addNameRange   range: '>=1.3.15-0 <2.0.0-0',
+504 silly addNameRange   hasData: false }
+505 verbose url raw cli-color
+506 verbose url resolving [ 'https://registry.npmjs.org/', './cli-color' ]
+507 verbose url resolved https://registry.npmjs.org/cli-color
+508 info trying registry request attempt 1 at 17:33:32
+509 verbose etag "7V0VN1AWCQ8657ZHNNAAKF125"
+510 http GET https://registry.npmjs.org/cli-color
+511 verbose url raw chai-jquery
+512 verbose url resolving [ 'https://registry.npmjs.org/', './chai-jquery' ]
+513 verbose url resolved https://registry.npmjs.org/chai-jquery
+514 info trying registry request attempt 1 at 17:33:32
+515 verbose etag "1JVBRNRNV5UNUGJPU41YHAHXY"
+516 http GET https://registry.npmjs.org/chai-jquery
+517 verbose url raw coffee-script
+518 verbose url resolving [ 'https://registry.npmjs.org/', './coffee-script' ]
+519 verbose url resolved https://registry.npmjs.org/coffee-script
+520 info trying registry request attempt 1 at 17:33:32
+521 verbose etag "51QE2SRG1308OKWQZKY2BCZT6"
+522 http GET https://registry.npmjs.org/coffee-script
+523 verbose url raw chai
+524 verbose url resolving [ 'https://registry.npmjs.org/', './chai' ]
+525 verbose url resolved https://registry.npmjs.org/chai
+526 info trying registry request attempt 1 at 17:33:32
+527 verbose etag "16CYCJ13PH4WFETPP6WET8VII"
+528 http GET https://registry.npmjs.org/chai
+529 verbose url raw del
+530 verbose url resolving [ 'https://registry.npmjs.org/', './del' ]
+531 verbose url resolved https://registry.npmjs.org/del
+532 info trying registry request attempt 1 at 17:33:32
+533 verbose etag "6V2AWU9A6CNQSOWUH79TQNORM"
+534 http GET https://registry.npmjs.org/del
+535 verbose url raw glob
+536 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+537 verbose url resolved https://registry.npmjs.org/glob
+538 info trying registry request attempt 1 at 17:33:32
+539 verbose etag "DYOBCLFEEGGDRE0K223KXV096"
+540 http GET https://registry.npmjs.org/glob
+541 verbose url raw gulp
+542 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+543 verbose url resolved https://registry.npmjs.org/gulp
+544 info trying registry request attempt 1 at 17:33:32
+545 verbose etag "7UQ82M5PZLB9V9OB09FF63XDY"
+546 http GET https://registry.npmjs.org/gulp
+547 verbose url raw gulp-angular-templatecache
+548 verbose url resolving [ 'https://registry.npmjs.org/',
+548 verbose url resolving   './gulp-angular-templatecache' ]
+549 verbose url resolved https://registry.npmjs.org/gulp-angular-templatecache
+550 info trying registry request attempt 1 at 17:33:32
+551 verbose etag "DD8CPGZVG7EDZCR9Q463PW2SM"
+552 http GET https://registry.npmjs.org/gulp-angular-templatecache
+553 verbose url raw express
+554 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+555 verbose url resolved https://registry.npmjs.org/express
+556 info trying registry request attempt 1 at 17:33:32
+557 verbose etag "4SFVU8QZK3V40OVR6VD05DE8C"
+558 http GET https://registry.npmjs.org/express
+559 verbose url raw gulp-autoprefixer
+560 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-autoprefixer' ]
+561 verbose url resolved https://registry.npmjs.org/gulp-autoprefixer
+562 info trying registry request attempt 1 at 17:33:32
+563 verbose etag "97QY3OUXGKJUCV76R3GR5AM35"
+564 http GET https://registry.npmjs.org/gulp-autoprefixer
+565 verbose url raw gulp-cache
+566 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-cache' ]
+567 verbose url resolved https://registry.npmjs.org/gulp-cache
+568 info trying registry request attempt 1 at 17:33:32
+569 verbose etag "8UC34NXP857LLOPB2W9N62ST7"
+570 http GET https://registry.npmjs.org/gulp-cache
+571 verbose url raw gulp-cached/1.0.2
+572 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-cached/1.0.2' ]
+573 verbose url resolved https://registry.npmjs.org/gulp-cached/1.0.2
+574 info trying registry request attempt 1 at 17:33:32
+575 verbose etag "5HRJRLR1A9E5DPRVBARGE8IY9"
+576 http GET https://registry.npmjs.org/gulp-cached/1.0.2
+577 verbose url raw gulp-coffee
+578 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-coffee' ]
+579 verbose url resolved https://registry.npmjs.org/gulp-coffee
+580 info trying registry request attempt 1 at 17:33:32
+581 verbose etag "2XCOV9MZ4NV2G2XV1X2JGB40M"
+582 http GET https://registry.npmjs.org/gulp-coffee
+583 verbose url raw gulp-coffeelint
+584 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-coffeelint' ]
+585 verbose url resolved https://registry.npmjs.org/gulp-coffeelint
+586 info trying registry request attempt 1 at 17:33:32
+587 verbose etag "96YSD4CSPAXNC5KYSBQ7QJ3ID"
+588 http GET https://registry.npmjs.org/gulp-coffeelint
+589 verbose url raw gulp-concat
+590 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-concat' ]
+591 verbose url resolved https://registry.npmjs.org/gulp-concat
+592 info trying registry request attempt 1 at 17:33:32
+593 verbose etag "B1JUXH3T9K4TOLTTOK7PBCRPE"
+594 http GET https://registry.npmjs.org/gulp-concat
+595 verbose url raw gulp-csslint
+596 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-csslint' ]
+597 verbose url resolved https://registry.npmjs.org/gulp-csslint
+598 info trying registry request attempt 1 at 17:33:32
+599 verbose etag "6I4VBRW5GI5E8YQQ79IC08BFI"
+600 http GET https://registry.npmjs.org/gulp-csslint
+601 verbose url raw gulp-flatten/0.0.4
+602 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-flatten/0.0.4' ]
+603 verbose url resolved https://registry.npmjs.org/gulp-flatten/0.0.4
+604 info trying registry request attempt 1 at 17:33:32
+605 verbose etag "BR5XMOFAGRYCAUTR0MRKFV33U"
+606 http GET https://registry.npmjs.org/gulp-flatten/0.0.4
+607 verbose url raw gulp-if
+608 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-if' ]
+609 verbose url resolved https://registry.npmjs.org/gulp-if
+610 info trying registry request attempt 1 at 17:33:32
+611 verbose etag "49Q6CPS02OMKGHJN0LRNAEDFV"
+612 http GET https://registry.npmjs.org/gulp-if
+613 verbose url raw gulp-imagemin
+614 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-imagemin' ]
+615 verbose url resolved https://registry.npmjs.org/gulp-imagemin
+616 info trying registry request attempt 1 at 17:33:32
+617 verbose etag "A1XHRB6JEQFRVKD924RJ76O3E"
+618 http GET https://registry.npmjs.org/gulp-imagemin
+619 verbose url raw gulp-insert
+620 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-insert' ]
+621 verbose url resolved https://registry.npmjs.org/gulp-insert
+622 info trying registry request attempt 1 at 17:33:32
+623 verbose etag "8D5Q0FZQDIFJKFTEWA6TSO8MJ"
+624 http GET https://registry.npmjs.org/gulp-insert
+625 verbose url raw gulp-jade
+626 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-jade' ]
+627 verbose url resolved https://registry.npmjs.org/gulp-jade
+628 info trying registry request attempt 1 at 17:33:32
+629 verbose etag "BRE897F1OWSRSKE56SICVI1E4"
+630 http GET https://registry.npmjs.org/gulp-jade
+631 verbose url raw gulp-jade-inheritance/0.5.0
+632 verbose url resolving [ 'https://registry.npmjs.org/',
+632 verbose url resolving   './gulp-jade-inheritance/0.5.0' ]
+633 verbose url resolved https://registry.npmjs.org/gulp-jade-inheritance/0.5.0
+634 info trying registry request attempt 1 at 17:33:32
+635 verbose etag "12B1JEE1DP87RKX3QP1I4JLEE"
+636 http GET https://registry.npmjs.org/gulp-jade-inheritance/0.5.0
+637 verbose url raw gulp-minify-css
+638 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-minify-css' ]
+639 verbose url resolved https://registry.npmjs.org/gulp-minify-css
+640 info trying registry request attempt 1 at 17:33:32
+641 verbose etag "77SZ8I5EQPWLJIDFN7M8AWR6O"
+642 http GET https://registry.npmjs.org/gulp-minify-css
+643 verbose url raw gulp-order
+644 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-order' ]
+645 verbose url resolved https://registry.npmjs.org/gulp-order
+646 info trying registry request attempt 1 at 17:33:32
+647 verbose etag "9R62URXT8S9RHMGFB2A8CH6OC"
+648 http GET https://registry.npmjs.org/gulp-order
+649 verbose url raw gulp-plumber
+650 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-plumber' ]
+651 verbose url resolved https://registry.npmjs.org/gulp-plumber
+652 info trying registry request attempt 1 at 17:33:32
+653 verbose etag "EJ8HOAK4GO7HFJKOXXKUW2L2Y"
+654 http GET https://registry.npmjs.org/gulp-plumber
+655 verbose url raw gulp-print
+656 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-print' ]
+657 verbose url resolved https://registry.npmjs.org/gulp-print
+658 info trying registry request attempt 1 at 17:33:32
+659 verbose etag "5B468NX3F2QNXV2OZVEU0CZ43"
+660 http GET https://registry.npmjs.org/gulp-print
+661 verbose url raw gulp-rename
+662 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-rename' ]
+663 verbose url resolved https://registry.npmjs.org/gulp-rename
+664 info trying registry request attempt 1 at 17:33:32
+665 verbose etag "1L5FY3T0H3JLZSANYMIFKCK9Q"
+666 http GET https://registry.npmjs.org/gulp-rename
+667 verbose url raw gulp-replace
+668 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-replace' ]
+669 verbose url resolved https://registry.npmjs.org/gulp-replace
+670 info trying registry request attempt 1 at 17:33:32
+671 verbose etag "QM4SZOXTIGPUKCCEG5ZHGN1R"
+672 http GET https://registry.npmjs.org/gulp-replace
+673 verbose url raw gulp-sass
+674 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-sass' ]
+675 verbose url resolved https://registry.npmjs.org/gulp-sass
+676 info trying registry request attempt 1 at 17:33:32
+677 verbose etag "9F286Z0LTI40JZ1AMTYNPBRAE"
+678 http GET https://registry.npmjs.org/gulp-sass
+679 verbose url raw gulp-scss-lint/0.1.9
+680 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-scss-lint/0.1.9' ]
+681 verbose url resolved https://registry.npmjs.org/gulp-scss-lint/0.1.9
+682 info trying registry request attempt 1 at 17:33:32
+683 verbose etag "D75S29NEIYQNZ2R6KXF3OVAGS"
+684 http GET https://registry.npmjs.org/gulp-scss-lint/0.1.9
+685 verbose url raw gulp-sourcemaps
+686 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-sourcemaps' ]
+687 verbose url resolved https://registry.npmjs.org/gulp-sourcemaps
+688 info trying registry request attempt 1 at 17:33:32
+689 verbose etag "5Z68VGISHQFXMWRX5CIWRM147"
+690 http GET https://registry.npmjs.org/gulp-sourcemaps
+691 verbose url raw gulp-template
+692 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-template' ]
+693 verbose url resolved https://registry.npmjs.org/gulp-template
+694 info trying registry request attempt 1 at 17:33:32
+695 verbose etag "9CVFJAZ2DYYB4VUVEUQP67HID"
+696 http GET https://registry.npmjs.org/gulp-template
+697 verbose url raw gulp-uglify
+698 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-uglify' ]
+699 verbose url resolved https://registry.npmjs.org/gulp-uglify
+700 info trying registry request attempt 1 at 17:33:32
+701 verbose etag "EK0US7W72LYX521SNLCXJL513"
+702 http GET https://registry.npmjs.org/gulp-uglify
+703 verbose url raw gulp-wrap
+704 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-wrap' ]
+705 verbose url resolved https://registry.npmjs.org/gulp-wrap
+706 info trying registry request attempt 1 at 17:33:32
+707 verbose etag "696NFZR5VZCMOJ9UNCXNF6XCK"
+708 http GET https://registry.npmjs.org/gulp-wrap
+709 verbose url raw inquirer
+710 verbose url resolving [ 'https://registry.npmjs.org/', './inquirer' ]
+711 verbose url resolved https://registry.npmjs.org/inquirer
+712 info trying registry request attempt 1 at 17:33:32
+713 verbose etag "BGH4O9AENDVCAG2V29GDD4A8J"
+714 http GET https://registry.npmjs.org/inquirer
+715 verbose url raw karma-chai
+716 verbose url resolving [ 'https://registry.npmjs.org/', './karma-chai' ]
+717 verbose url resolved https://registry.npmjs.org/karma-chai
+718 info trying registry request attempt 1 at 17:33:32
+719 verbose etag "4IEZHULZJXL80G6Y7U9GE5RWH"
+720 http GET https://registry.npmjs.org/karma-chai
+721 verbose url raw karma-chrome-launcher
+722 verbose url resolving [ 'https://registry.npmjs.org/', './karma-chrome-launcher' ]
+723 verbose url resolved https://registry.npmjs.org/karma-chrome-launcher
+724 info trying registry request attempt 1 at 17:33:32
+725 verbose etag "5FY7I675W6EOGPEHJGF94JLKK"
+726 http GET https://registry.npmjs.org/karma-chrome-launcher
+727 verbose url raw karma-coffee-preprocessor
+728 verbose url resolving [ 'https://registry.npmjs.org/', './karma-coffee-preprocessor' ]
+729 verbose url resolved https://registry.npmjs.org/karma-coffee-preprocessor
+730 info trying registry request attempt 1 at 17:33:32
+731 verbose etag "3TSPDRQRRYXZFHZM3LCCHFA65"
+732 http GET https://registry.npmjs.org/karma-coffee-preprocessor
+733 verbose url raw karma-sinon
+734 verbose url resolving [ 'https://registry.npmjs.org/', './karma-sinon' ]
+735 verbose url resolved https://registry.npmjs.org/karma-sinon
+736 info trying registry request attempt 1 at 17:33:32
+737 verbose etag "6F3V58246I53MTJ1UOH2V9Q8M"
+738 http GET https://registry.npmjs.org/karma-sinon
+739 verbose url raw karma-mocha
+740 verbose url resolving [ 'https://registry.npmjs.org/', './karma-mocha' ]
+741 verbose url resolved https://registry.npmjs.org/karma-mocha
+742 info trying registry request attempt 1 at 17:33:32
+743 verbose etag "C6ERSZ4L86W7NJTU3H00DLBK2"
+744 http GET https://registry.npmjs.org/karma-mocha
+745 verbose url raw karma-sinon-chai
+746 verbose url resolving [ 'https://registry.npmjs.org/', './karma-sinon-chai' ]
+747 verbose url resolved https://registry.npmjs.org/karma-sinon-chai
+748 info trying registry request attempt 1 at 17:33:32
+749 verbose etag "LRKUNX4VAPKUNZEF2DRF7NJ2"
+750 http GET https://registry.npmjs.org/karma-sinon-chai
+751 verbose url raw karma-sourcemap-loader
+752 verbose url resolving [ 'https://registry.npmjs.org/', './karma-sourcemap-loader' ]
+753 verbose url resolved https://registry.npmjs.org/karma-sourcemap-loader
+754 info trying registry request attempt 1 at 17:33:32
+755 verbose etag "9P8FI6TYCU23DMBVC49YL4ZPA"
+756 http GET https://registry.npmjs.org/karma-sourcemap-loader
+757 verbose url raw readable-stream
+758 verbose url resolving [ 'https://registry.npmjs.org/', './readable-stream' ]
+759 verbose url resolved https://registry.npmjs.org/readable-stream
+760 info trying registry request attempt 1 at 17:33:32
+761 verbose etag "82TTSAI8QQG39EFUWDIODAL81"
+762 http GET https://registry.npmjs.org/readable-stream
+763 verbose url raw mocha
+764 verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
+765 verbose url resolved https://registry.npmjs.org/mocha
+766 info trying registry request attempt 1 at 17:33:32
+767 verbose etag "CMNGSG6GEF2KDSO62MO1NH4VK"
+768 http GET https://registry.npmjs.org/mocha
+769 verbose url raw pre-commit
+770 verbose url resolving [ 'https://registry.npmjs.org/', './pre-commit' ]
+771 verbose url resolved https://registry.npmjs.org/pre-commit
+772 info trying registry request attempt 1 at 17:33:32
+773 verbose etag "6PRO45V7OGZWP2MB8MLN7K1M1"
+774 http GET https://registry.npmjs.org/pre-commit
+775 verbose url raw through2
+776 verbose url resolving [ 'https://registry.npmjs.org/', './through2' ]
+777 verbose url resolved https://registry.npmjs.org/through2
+778 info trying registry request attempt 1 at 17:33:32
+779 verbose etag "45G8WP80CU0KR2TLX74MN7J2G"
+780 http GET https://registry.npmjs.org/through2
+781 verbose url raw run-sequence
+782 verbose url resolving [ 'https://registry.npmjs.org/', './run-sequence' ]
+783 verbose url resolved https://registry.npmjs.org/run-sequence
+784 info trying registry request attempt 1 at 17:33:32
+785 verbose etag "8BMVV6GMT7IB5F5ZND7R0XRNJ"
+786 http GET https://registry.npmjs.org/run-sequence
+787 verbose url raw sinon
+788 verbose url resolving [ 'https://registry.npmjs.org/', './sinon' ]
+789 verbose url resolved https://registry.npmjs.org/sinon
+790 info trying registry request attempt 1 at 17:33:32
+791 verbose etag "322TXV5ALDNGNLHEEKWEAZXXX"
+792 http GET https://registry.npmjs.org/sinon
+793 verbose url raw karma
+794 verbose url resolving [ 'https://registry.npmjs.org/', './karma' ]
+795 verbose url resolved https://registry.npmjs.org/karma
+796 info trying registry request attempt 1 at 17:33:33
+797 verbose etag "3ZOTB5XWB5QVU7YQKQOYYJWPD"
+798 http GET https://registry.npmjs.org/karma
+799 verbose url raw angular-mocks
+800 verbose url resolving [ 'https://registry.npmjs.org/', './angular-mocks' ]
+801 verbose url resolved https://registry.npmjs.org/angular-mocks
+802 info trying registry request attempt 1 at 17:33:33
+803 verbose etag "9EHD5UOYF5WP8O0NQTWP3I1TK"
+804 http GET https://registry.npmjs.org/angular-mocks
+805 http 304 https://registry.npmjs.org/chai-jquery
+806 silly registry.get cb [ 304,
+806 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+806 silly registry.get     via: '1.1 varnish',
+806 silly registry.get     'cache-control': 'max-age=60',
+806 silly registry.get     etag: '"1JVBRNRNV5UNUGJPU41YHAHXY"',
+806 silly registry.get     age: '25',
+806 silly registry.get     connection: 'keep-alive',
+806 silly registry.get     'x-served-by': 'cache-sjc3128-SJC',
+806 silly registry.get     'x-cache': 'HIT',
+806 silly registry.get     'x-cache-hits': '1',
+806 silly registry.get     'x-timer': 'S1442968413.249056,VS0,VE0',
+806 silly registry.get     vary: 'Accept' } ]
+807 verbose etag chai-jquery from cache
+808 http 304 https://registry.npmjs.org/coffee-script
+809 silly registry.get cb [ 304,
+809 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+809 silly registry.get     via: '1.1 varnish',
+809 silly registry.get     'cache-control': 'max-age=60',
+809 silly registry.get     etag: '"51QE2SRG1308OKWQZKY2BCZT6"',
+809 silly registry.get     age: '10',
+809 silly registry.get     connection: 'keep-alive',
+809 silly registry.get     'x-served-by': 'cache-sjc3127-SJC',
+809 silly registry.get     'x-cache': 'HIT',
+809 silly registry.get     'x-cache-hits': '2',
+809 silly registry.get     'x-timer': 'S1442968413.254059,VS0,VE0',
+809 silly registry.get     vary: 'Accept' } ]
+810 verbose etag coffee-script from cache
+811 http 304 https://registry.npmjs.org/del
+812 silly registry.get cb [ 304,
+812 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+812 silly registry.get     via: '1.1 varnish',
+812 silly registry.get     'cache-control': 'max-age=60',
+812 silly registry.get     etag: '"6V2AWU9A6CNQSOWUH79TQNORM"',
+812 silly registry.get     age: '56',
+812 silly registry.get     connection: 'keep-alive',
+812 silly registry.get     'x-served-by': 'cache-sjc3123-SJC',
+812 silly registry.get     'x-cache': 'HIT',
+812 silly registry.get     'x-cache-hits': '38',
+812 silly registry.get     'x-timer': 'S1442968413.270929,VS0,VE0',
+812 silly registry.get     vary: 'Accept' } ]
+813 verbose etag del from cache
+814 http 304 https://registry.npmjs.org/cli-color
+815 silly registry.get cb [ 304,
+815 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+815 silly registry.get     via: '1.1 varnish',
+815 silly registry.get     'cache-control': 'max-age=60',
+815 silly registry.get     etag: '"7V0VN1AWCQ8657ZHNNAAKF125"',
+815 silly registry.get     age: '30',
+815 silly registry.get     connection: 'keep-alive',
+815 silly registry.get     'x-served-by': 'cache-sjc3122-SJC',
+815 silly registry.get     'x-cache': 'HIT',
+815 silly registry.get     'x-cache-hits': '3',
+815 silly registry.get     'x-timer': 'S1442968413.272179,VS0,VE0',
+815 silly registry.get     vary: 'Accept' } ]
+816 verbose etag cli-color from cache
+817 http 304 https://registry.npmjs.org/chai
+818 silly registry.get cb [ 304,
+818 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+818 silly registry.get     via: '1.1 varnish',
+818 silly registry.get     'cache-control': 'max-age=60',
+818 silly registry.get     etag: '"16CYCJ13PH4WFETPP6WET8VII"',
+818 silly registry.get     age: '49',
+818 silly registry.get     connection: 'keep-alive',
+818 silly registry.get     'x-served-by': 'cache-sjc3127-SJC',
+818 silly registry.get     'x-cache': 'HIT',
+818 silly registry.get     'x-cache-hits': '1',
+818 silly registry.get     'x-timer': 'S1442968413.270045,VS0,VE0',
+818 silly registry.get     vary: 'Accept' } ]
+819 verbose etag chai from cache
+820 silly addNameRange number 2 { name: 'chai-jquery',
+820 silly addNameRange   range: '>=2.0.0-0 <3.0.0-0',
+820 silly addNameRange   hasData: true }
+821 silly addNameRange versions [ 'chai-jquery',
+821 silly addNameRange   [ '1.0.0',
+821 silly addNameRange     '1.1.0',
+821 silly addNameRange     '1.1.1',
+821 silly addNameRange     '1.1.2',
+821 silly addNameRange     '1.2.0',
+821 silly addNameRange     '1.2.1',
+821 silly addNameRange     '1.2.2',
+821 silly addNameRange     '1.2.3',
+821 silly addNameRange     '2.0.0' ] ]
+822 verbose addNamed [ 'chai-jquery', '2.0.0' ]
+823 verbose addNamed [ '2.0.0', '2.0.0' ]
+824 silly lockFile a87627d7-chai-jquery-2-0-0 chai-jquery@2.0.0
+825 verbose lock chai-jquery@2.0.0 /home/taiga/.npm/a87627d7-chai-jquery-2-0-0.lock
+826 silly addNameRange number 2 { name: 'coffee-script',
+826 silly addNameRange   range: '>=1.9.1-0 <2.0.0-0',
+826 silly addNameRange   hasData: true }
+827 silly addNameRange versions [ 'coffee-script',
+827 silly addNameRange   [ '0.7.0',
+827 silly addNameRange     '0.7.1',
+827 silly addNameRange     '0.7.2',
+827 silly addNameRange     '0.9.0',
+827 silly addNameRange     '0.9.1',
+827 silly addNameRange     '0.9.2',
+827 silly addNameRange     '0.9.3',
+827 silly addNameRange     '0.9.4',
+827 silly addNameRange     '0.9.5',
+827 silly addNameRange     '0.9.6',
+827 silly addNameRange     '1.0.0',
+827 silly addNameRange     '1.0.1',
+827 silly addNameRange     '1.1.0',
+827 silly addNameRange     '1.1.1',
+827 silly addNameRange     '1.1.2',
+827 silly addNameRange     '1.1.3',
+827 silly addNameRange     '1.2.0',
+827 silly addNameRange     '1.3.0',
+827 silly addNameRange     '1.3.1',
+827 silly addNameRange     '1.3.2',
+827 silly addNameRange     '1.3.3',
+827 silly addNameRange     '1.4.0',
+827 silly addNameRange     '1.5.0',
+827 silly addNameRange     '1.6.0',
+827 silly addNameRange     '1.6.1',
+827 silly addNameRange     '1.6.2',
+827 silly addNameRange     '1.6.3',
+827 silly addNameRange     '1.7.0',
+827 silly addNameRange     '1.7.1',
+827 silly addNameRange     '1.8.0',
+827 silly addNameRange     '1.9.0',
+827 silly addNameRange     '1.9.1',
+827 silly addNameRange     '1.9.2',
+827 silly addNameRange     '1.9.3',
+827 silly addNameRange     '1.10.0' ] ]
+828 verbose addNamed [ 'coffee-script', '1.10.0' ]
+829 verbose addNamed [ '1.10.0', '1.10.0' ]
+830 silly lockFile 202ccfd7-coffee-script-1-10-0 coffee-script@1.10.0
+831 verbose lock coffee-script@1.10.0 /home/taiga/.npm/202ccfd7-coffee-script-1-10-0.lock
+832 silly lockFile df202b4a-hai-jquery-chai-jquery-2-0-0-tgz https://registry.npmjs.org/chai-jquery/-/chai-jquery-2.0.0.tgz
+833 verbose lock https://registry.npmjs.org/chai-jquery/-/chai-jquery-2.0.0.tgz /home/taiga/.npm/df202b4a-hai-jquery-chai-jquery-2-0-0-tgz.lock
+834 silly lockFile 866fbf15--script-coffee-script-1-10-0-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz
+835 verbose lock https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz /home/taiga/.npm/866fbf15--script-coffee-script-1-10-0-tgz.lock
+836 verbose addRemoteTarball [ 'https://registry.npmjs.org/chai-jquery/-/chai-jquery-2.0.0.tgz',
+836 verbose addRemoteTarball   '0f43042308dd746332bd98164aaef4a4f45ba167' ]
+837 verbose addRemoteTarball [ 'https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz',
+837 verbose addRemoteTarball   '12938bcf9be1948fa006f92e0c4c9e81705108c0' ]
+838 silly addNameRange number 2 { name: 'del', range: '>=1.1.1-0 <2.0.0-0', hasData: true }
+839 silly addNameRange versions [ 'del',
+839 silly addNameRange   [ '0.1.0',
+839 silly addNameRange     '0.1.1',
+839 silly addNameRange     '0.1.2',
+839 silly addNameRange     '0.1.3',
+839 silly addNameRange     '1.0.0',
+839 silly addNameRange     '1.1.0',
+839 silly addNameRange     '1.1.1',
+839 silly addNameRange     '1.2.0',
+839 silly addNameRange     '1.2.1',
+839 silly addNameRange     '2.0.0',
+839 silly addNameRange     '2.0.1',
+839 silly addNameRange     '2.0.2' ] ]
+840 verbose addNamed [ 'del', '1.2.1' ]
+841 verbose addNamed [ '1.2.1', '1.2.1' ]
+842 silly lockFile 34263493-del-1-2-1 del@1.2.1
+843 verbose lock del@1.2.1 /home/taiga/.npm/34263493-del-1-2-1.lock
+844 silly addNameRange number 2 { name: 'cli-color', range: '>=0.3.3-0 <0.4.0-0', hasData: true }
+845 silly addNameRange versions [ 'cli-color',
+845 silly addNameRange   [ '0.1.0',
+845 silly addNameRange     '0.1.1',
+845 silly addNameRange     '0.1.2',
+845 silly addNameRange     '0.1.3',
+845 silly addNameRange     '0.1.4',
+845 silly addNameRange     '0.1.5',
+845 silly addNameRange     '0.1.6',
+845 silly addNameRange     '0.1.7',
+845 silly addNameRange     '0.2.0',
+845 silly addNameRange     '0.2.1',
+845 silly addNameRange     '0.2.2',
+845 silly addNameRange     '0.2.3',
+845 silly addNameRange     '0.3.0',
+845 silly addNameRange     '0.3.1',
+845 silly addNameRange     '0.3.2',
+845 silly addNameRange     '0.3.3',
+845 silly addNameRange     '1.0.0' ] ]
+846 verbose addNamed [ 'cli-color', '0.3.3' ]
+847 verbose addNamed [ '0.3.3', '0.3.3' ]
+848 silly lockFile e86e8c39-cli-color-0-3-3 cli-color@0.3.3
+849 verbose lock cli-color@0.3.3 /home/taiga/.npm/e86e8c39-cli-color-0-3-3.lock
+850 silly addNameRange number 2 { name: 'chai', range: '>=2.2.0-0 <3.0.0-0', hasData: true }
+851 silly addNameRange versions [ 'chai',
+851 silly addNameRange   [ '0.0.1',
+851 silly addNameRange     '0.0.2',
+851 silly addNameRange     '0.1.0',
+851 silly addNameRange     '0.1.1',
+851 silly addNameRange     '0.1.2',
+851 silly addNameRange     '0.1.3',
+851 silly addNameRange     '0.1.4',
+851 silly addNameRange     '0.1.5',
+851 silly addNameRange     '0.1.6',
+851 silly addNameRange     '0.1.7',
+851 silly addNameRange     '0.2.0',
+851 silly addNameRange     '0.2.1',
+851 silly addNameRange     '0.2.2',
+851 silly addNameRange     '0.2.3',
+851 silly addNameRange     '0.2.4',
+851 silly addNameRange     '0.3.0',
+851 silly addNameRange     '0.3.1',
+851 silly addNameRange     '0.3.2',
+851 silly addNameRange     '0.3.3',
+851 silly addNameRange     '0.3.4',
+851 silly addNameRange     '0.4.0',
+851 silly addNameRange     '0.4.1',
+851 silly addNameRange     '0.4.2',
+851 silly addNameRange     '0.5.0',
+851 silly addNameRange     '0.5.1',
+851 silly addNameRange     '0.5.2',
+851 silly addNameRange     '0.5.3',
+851 silly addNameRange     '1.0.0',
+851 silly addNameRange     '1.0.1',
+851 silly addNameRange     '1.0.2',
+851 silly addNameRange     '1.0.3',
+851 silly addNameRange     '1.0.4',
+851 silly addNameRange     '1.1.0',
+851 silly addNameRange     '1.1.1',
+851 silly addNameRange     '1.2.0',
+851 silly addNameRange     '1.3.0',
+851 silly addNameRange     '1.4.0',
+851 silly addNameRange     '1.4.1',
+851 silly addNameRange     '1.4.2',
+851 silly addNameRange     '1.5.0',
+851 silly addNameRange     '1.6.0',
+851 silly addNameRange     '1.6.1',
+851 silly addNameRange     '1.7.0',
+851 silly addNameRange     '1.7.1',
+851 silly addNameRange     '1.7.2',
+851 silly addNameRange     '1.8.0',
+851 silly addNameRange     '1.8.1',
+851 silly addNameRange     '1.9.0',
+851 silly addNameRange     '1.9.1',
+851 silly addNameRange     '1.9.2',
+851 silly addNameRange     '1.10.0',
+851 silly addNameRange     '2.0.0',
+851 silly addNameRange     '2.1.0',
+851 silly addNameRange     '2.1.1',
+851 silly addNameRange     '2.1.2',
+851 silly addNameRange     '2.2.0',
+851 silly addNameRange     '2.3.0',
+851 silly addNameRange     '3.0.0',
+851 silly addNameRange     '3.1.0',
+851 silly addNameRange     '3.2.0',
+851 silly addNameRange     '3.3.0' ] ]
+852 verbose addNamed [ 'chai', '2.3.0' ]
+853 verbose addNamed [ '2.3.0', '2.3.0' ]
+854 silly lockFile dc997df9-chai-2-3-0 chai@2.3.0
+855 verbose lock chai@2.3.0 /home/taiga/.npm/dc997df9-chai-2-3-0.lock
+856 http 304 https://registry.npmjs.org/glob
+857 silly registry.get cb [ 304,
+857 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+857 silly registry.get     via: '1.1 varnish',
+857 silly registry.get     'cache-control': 'max-age=60',
+857 silly registry.get     etag: '"DYOBCLFEEGGDRE0K223KXV096"',
+857 silly registry.get     age: '10',
+857 silly registry.get     connection: 'keep-alive',
+857 silly registry.get     'x-served-by': 'cache-sjc3128-SJC',
+857 silly registry.get     'x-cache': 'HIT',
+857 silly registry.get     'x-cache-hits': '1',
+857 silly registry.get     'x-timer': 'S1442968413.341209,VS0,VE1',
+857 silly registry.get     vary: 'Accept' } ]
+858 verbose etag glob from cache
+859 http 304 https://registry.npmjs.org/gulp
+860 silly registry.get cb [ 304,
+860 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+860 silly registry.get     via: '1.1 varnish',
+860 silly registry.get     'cache-control': 'max-age=60',
+860 silly registry.get     etag: '"7UQ82M5PZLB9V9OB09FF63XDY"',
+860 silly registry.get     age: '46',
+860 silly registry.get     connection: 'keep-alive',
+860 silly registry.get     'x-served-by': 'cache-sjc3127-SJC',
+860 silly registry.get     'x-cache': 'HIT',
+860 silly registry.get     'x-cache-hits': '3',
+860 silly registry.get     'x-timer': 'S1442968413.345232,VS0,VE0',
+860 silly registry.get     vary: 'Accept' } ]
+861 verbose etag gulp from cache
+862 silly lockFile df202b4a-hai-jquery-chai-jquery-2-0-0-tgz https://registry.npmjs.org/chai-jquery/-/chai-jquery-2.0.0.tgz
+863 silly lockFile df202b4a-hai-jquery-chai-jquery-2-0-0-tgz https://registry.npmjs.org/chai-jquery/-/chai-jquery-2.0.0.tgz
+864 silly lockFile 866fbf15--script-coffee-script-1-10-0-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz
+865 silly lockFile 866fbf15--script-coffee-script-1-10-0-tgz https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz
+866 silly lockFile a87627d7-chai-jquery-2-0-0 chai-jquery@2.0.0
+867 silly lockFile a87627d7-chai-jquery-2-0-0 chai-jquery@2.0.0
+868 silly lockFile 202ccfd7-coffee-script-1-10-0 coffee-script@1.10.0
+869 silly lockFile 202ccfd7-coffee-script-1-10-0 coffee-script@1.10.0
+870 silly lockFile 3140df31-stry-npmjs-org-del-del-1-2-1-tgz https://registry.npmjs.org/del/-/del-1.2.1.tgz
+871 verbose lock https://registry.npmjs.org/del/-/del-1.2.1.tgz /home/taiga/.npm/3140df31-stry-npmjs-org-del-del-1-2-1-tgz.lock
+872 silly lockFile 989959e9-ry-npmjs-org-chai-chai-2-3-0-tgz https://registry.npmjs.org/chai/-/chai-2.3.0.tgz
+873 verbose lock https://registry.npmjs.org/chai/-/chai-2.3.0.tgz /home/taiga/.npm/989959e9-ry-npmjs-org-chai-chai-2-3-0-tgz.lock
+874 http 304 https://registry.npmjs.org/gulp-angular-templatecache
+875 silly registry.get cb [ 304,
+875 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+875 silly registry.get     via: '1.1 varnish',
+875 silly registry.get     'cache-control': 'max-age=60',
+875 silly registry.get     etag: '"DD8CPGZVG7EDZCR9Q463PW2SM"',
+875 silly registry.get     age: '36',
+875 silly registry.get     connection: 'keep-alive',
+875 silly registry.get     'x-served-by': 'cache-sjc3123-SJC',
+875 silly registry.get     'x-cache': 'HIT',
+875 silly registry.get     'x-cache-hits': '1',
+875 silly registry.get     'x-timer': 'S1442968413.362850,VS0,VE0',
+875 silly registry.get     vary: 'Accept' } ]
+876 verbose etag gulp-angular-templatecache from cache
+877 silly lockFile ff1294d0-chai-jquery-2-0-0 chai-jquery@^2.0.0
+878 silly lockFile ff1294d0-chai-jquery-2-0-0 chai-jquery@^2.0.0
+879 silly lockFile b6e5fb94-coffee-script-1-9-1 coffee-script@^1.9.1
+880 silly lockFile b6e5fb94-coffee-script-1-9-1 coffee-script@^1.9.1
+881 http 304 https://registry.npmjs.org/express
+882 silly registry.get cb [ 304,
+882 silly registry.get   { date: 'Wed, 23 Sep 2015 00:33:33 GMT',
+882 silly registry.get     via: '1.1 varnish',
+882 silly registry.get     'cache-control': 'max-age=60',
+882 silly registry.get     etag: '"4SFVU8QZK3V40OVR6VD05DE8C"',
+882 silly registry.get     age: '11',
+882 silly registry.get     connection: 'keep-alive',
+882 silly registry.get     'x-served-by': 'cache-sjc3122-SJC',
+882 silly registry.get     'x-cache': 'HIT',
+882 silly registry.get     'x-cache-hits': '183',
+882 silly registry.get     'x-timer': 'S1442968413.371216,VS0,VE0',
+882 silly registry.get     vary: 'Accept' } ]
+883 verbose etag express from cache
+884 error Error: EACCES, mkdir '/home/taiga/tmp/npm-2591-0OLLMCI7'
+884 error  { [Error: EACCES, mkdir '/home/taiga/tmp/npm-2591-0OLLMCI7']
+884 error   errno: 3,
+884 error   code: 'EACCES',
+884 error   path: '/home/taiga/tmp/npm-2591-0OLLMCI7' }
+885 error Please try running this command again as root/Administrator.
+886 error System Linux 3.19.0-28-generic
+887 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+888 error cwd /home/taiga/taiga-front
+889 error node -v v0.10.25
+890 error npm -v 1.3.10
+891 error path /home/taiga/tmp/npm-2591-0OLLMCI7
+892 error code EACCES
+893 error errno 3
+894 error stack Error: EACCES, mkdir '/home/taiga/tmp/npm-2591-0OLLMCI7'
+895 verbose exit [ 3, true ]

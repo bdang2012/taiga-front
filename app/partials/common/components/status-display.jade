@@ -1,0 +1,7 @@
+<% if (is_closed) { %>
+span(translate="COMMON.STATUS.CLOSED")
+<% } else { %>
+span(translate="COMMON.STATUS.OPEN")
+<% } %>
+span(class="us-detail-status", style!="color:<%- status.color %>")
+    | <%- status.name %>

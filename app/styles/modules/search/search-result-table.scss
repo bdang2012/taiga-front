@@ -1,0 +1,99 @@
+.search-result-table {
+
+    .empty {
+        .title {
+            border: 0;
+        }
+    }
+
+    .row {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem;
+        &:hover {
+            background: lighten($green-taiga, 60%);
+            transition: background .2s ease-in;
+        }
+        .ref {
+            flex-basis: 30px;
+            flex-grow: 1;
+            padding: 0 1rem;
+        }
+        .user-stories {
+            flex-basis: 300px;
+            flex-grow: 10;
+            flex-shrink: 1;
+        }
+        .status,
+        .points {
+            flex-basis: 150px;
+            flex-grow: 0;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        .assigned-to {
+            flex-basis: 150px;
+            flex-grow: 0;
+            padding: 0 1rem;
+        }
+    }
+    .row-selected {
+        background: lighten($green-taiga, 60%);
+        transition: background .2s ease-in;
+    }
+
+      // TODO: refactor xaviju
+    .user-story-name {
+        input {
+            vertical-align: top;
+        }
+        span {
+            display: inline-block;
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .icon {
+            @extend %medium;
+            color: $gray-light;
+            &:hover {
+                color: $grayer;
+                transition: color .3s linear;
+            }
+        }
+    }
+    .title {
+        @extend %medium;
+        @extend %bold;
+        border-bottom: 1px solid $gray-light;
+        &:hover {
+            background: transparent;
+        }
+    }
+    .table-main {
+        @extend %small;
+        border-bottom: 1px solid $whitish;
+    }
+    .status,
+    .points {
+        position: relative;
+    }
+    .avatar {
+        align-items: center;
+        display: flex;
+        img {
+            width: 35px;
+        }
+        .avatar-caption {
+            display: block;
+            margin-left: .5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 80px;
+        }
+    }
+}

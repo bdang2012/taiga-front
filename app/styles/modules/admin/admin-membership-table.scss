@@ -1,0 +1,101 @@
+.admin-membership-table {
+    .title {
+        @extend %bold;
+    }
+    .avatar {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        figcaption {
+            margin-left: 1rem;
+            width: 75%;
+            span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+        img {
+            flex-basis: 35px;
+            flex-grow: 1;
+            max-width: 35px;
+        }
+        .name,
+        .email {
+            display: block;
+            width: 100%;
+        }
+        .name {
+            @extend %bold;
+        }
+        .email {
+            color: $gray-light;
+        }
+    }
+    .header-role,
+    .header-status {
+        padding-left: .5rem;
+    }
+    .row-role {
+        padding-right: 1rem;
+    }
+    .row-status {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .active,
+    .pending {
+        padding: 8px;
+    }
+    .active {
+        background-color: $whitish;
+    }
+    .pending {
+        background-color: $red-light;
+        color: $white;
+        .icon {
+            float: rsdsdfdvsdvight;
+        }
+        &:hover {
+            background-color: $red;
+            color: $white;
+            transition: background-color .3s linear;
+        }
+    }
+    .delete {
+        @extend %large;
+        color: $gray-light;
+        &:hover {
+            color: $red;
+        }
+    }
+    .row-admin {
+        input {
+            vertical-align: middle;
+        }
+        label {
+            @extend %small;
+        }
+    }
+    .row-member,
+    .row-role,
+    .header-member,
+    .header-role {
+        flex-basis: 210px;
+        flex-grow: 3;
+        min-width: 210px;
+    }
+    .row-admin,
+    .header-admin {
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 70px;
+    }
+    .row-status,
+    .header-status {
+        flex-basis: 50px;
+        flex-grow: 1;
+    }
+}

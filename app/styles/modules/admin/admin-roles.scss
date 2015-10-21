@@ -1,0 +1,50 @@
+.admin-roles {
+    .role-name {
+        @extend %xlarge;
+        @extend %title;
+        color: $grayer;
+    }
+    .edit-value {
+        @extend %medium;
+        color: $gray-light;
+        cursor: pointer;
+        margin-left: .5rem;
+        opacity: 0;
+        transition: opacity .3s linear;
+    }
+    .edit-role {
+        align-items: left;
+        background-color: $whitish;
+        display: none;
+        margin-bottom: 1rem;
+        padding: .5rem;
+        input {
+            background-color: $white;
+            width: 50%;
+        }
+        .icon-floppy {
+            color: $gray-light;
+            margin-left: .5rem;
+            transition: color.3s linear;
+            &:hover {
+                color: $green-taiga;
+                transition: color.3s linear;
+            }
+        }
+    }
+    .any-computable-role {
+        background: $red;
+        color: $white;
+        margin-bottom: .5rem;
+        padding: .5rem;
+    }
+    .general-category {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        .check {
+            margin-left: .5rem;
+        }
+    }
+}
