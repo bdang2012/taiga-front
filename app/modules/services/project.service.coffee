@@ -37,5 +37,5 @@ class ProjectService
     fetchProject: () ->
         return @projectsService.getProjectBySlug(@._pslug).then (project) =>
             @._project = project
-
+    
 angular.module("taigaCommon").service("tgProjectService", ProjectService)

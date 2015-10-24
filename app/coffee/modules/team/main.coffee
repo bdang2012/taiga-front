@@ -111,10 +111,12 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
         _.forEach inventory, (membership) =>
             @scope.totals[membership.user] = 0
   
+        ### binh blocked 
         @scope.inventory = _.filter inventory, (membership) =>
             if membership.user && (not currentUser? or membership.user != currentUser.id)
-                return membership
-
+                return membership 
+        ###
+                
         @scope.inventory = _.filter inventory, (membership) => return membership.is_active
 
         for membership in @scope.inventory
