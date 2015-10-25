@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="fragment" content="!">
+    <!-- Main meta-->
+    <title>Taiga</title>
+    <meta name="description" content="Taiga is a project management platform for startups and agile developers &amp; designers who want a simple, beautiful tool that makes work truly enjoyable.">
+    <meta name="keywords" content="agile, scrum, taiga, management, project, developer, designer, user experience">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <script type="text/javascript">
+      window.prerenderReady = false;
+      
+    </script>
+  </head>
+  <body tg-main>
+    <div tg-navigation-bar></div>
+    <div ng-view class="master"></div>
+    <div class="lightbox lightbox-generic-ask"><a href="" title="{{'COMMON.CLOSE' | translate}}" class="close"><span class="icon icon-delete"></span></a>
+      <form>
+        <h2 class="title"></h2>
+        <p><span class="subtitle"></span><span class="message"></span></p>
+        <div class="options"><a href="" title="{{'COMMON.ACCEPT' | translate}}" class="button-green"><span translate="COMMON.ACCEPT"></span></a><a href="" title="{{'COMMON.CANCEL' | translate}}" class="button-red"><span translate="COMMON.CANCEL"></span></a></div>
+      </form>
+    </div>
+    <div class="lightbox lightbox-ask-choice"><a href="" title="{{'COMMON.CLOSE' | translate}}" class="close"><span class="icon icon-delete"></span></a>
+      <form>
+        <h2 class="title"></h2>
+        <p class="question"></p>
+        <p class="subtitle"></p>
+        <p class="replacement"></p>
+        <select class="choices"></select>
+        <p class="warning"></p>
+        <div class="options"><a href="" title="{{'COMMON.ACCEPT' | translate}}" class="button-green"><span translate="COMMON.ACCEPT"></span></a><a href="" title="{{'COMMON.CANCEL' | translate}}" class="button-red"><span translate="COMMON.CANCEL"></span></a></div>
+      </form>
+    </div>
+    <div class="lightbox lightbox-generic-success"><a href="" title="{{'COMMON.CLOSE' | translate}}" class="close"><span class="icon icon-delete"></span></a>
+      <section>
+        <h2 class="title"></h2>
+        <p class="message"></p>
+        <div class="options"><a href="" title="{{'COMMON.ACCEPT' | translate}}" class="button-green"><span translate="COMMON.ACCEPT"></span></a></div>
+      </section>
+    </div>
+    <div class="lightbox lightbox-generic-error"><a href="" title="{{'COMMON.CLOSE' | translate}}" class="close"><span class="icon icon-delete"></span></a>
+      <section>
+        <h2 class="title"></h2>
+        <div class="options"><a href="" title="{{'COMMON.ACCEPT' | translate}}" class="button-green"><span translate="COMMON.ACCEPT"></span></a></div>
+      </section>
+    </div>
+    <div class="lightbox lightbox-generic-loading">
+      <section>
+        <div class="spin hidden"><img src="/svg/spinner-circle.svg" alt="{{'COMMON.LOADING' | translate}}"></div>
+        <div class="progress-bar-wrapper hidden">
+          <div class="bar"></div><span class="progress"></span>
+        </div>
+        <h2 class="title"></h2>
+        <p class="message"></p>
+      </section>
+    </div>
+    <div tg-loader class="loader">
+      <div class="loading-bar"><span class="item item-1"></span><span class="item item-2"></span><span class="item item-3"></span><span class="item item-4"></span><span class="item item-5"></span></div>
+      <div class="container">
+        <p translate="COMMON.LOADING"></p>
+      </div>
+    </div>
+    <div class="notification-message notification-message-success">
+      <div class="text">
+        <h4 translate="NOTIFICATION.OK" class="warning"></h4>
+        <p translate="NOTIFICATION.SAVED"></p>
+      </div>
+    </div>
+    <div class="notification-message notification-message-error">
+      <div class="icon icon-notification-error"></div>
+      <div class="text">
+        <h4 translate="NOTIFICATION.WARNING" class="warning"></h4>
+        <p translate="NOTIFICATION.WARNING_TEXT"></p>
+      </div><a href="" title="{{'NOTIFICATION.CLOSE' | translate}}" class="icon icon-delete"></a>
+    </div>
+    <div class="notification-light notification-message-light-error">
+      <div class="text">
+        <h4 translate="NOTIFICATION.WARNING" class="warning"></h4>
+        <p translate="NOTIFICATION.WARNING_TEXT"></p>
+      </div><a href="" title="{{'NOTIFICATION.CLOSE' | translate}}" class="icon icon-delete"></a>
+    </div>
+    <script src="/js/libs.js?v=1445670147502"></script>
+    <script src="/js/templates.js?v=1445670147502"></script>
+    <script src="/js/app-loader.js?v=1445670147502"></script>
+  </body>
+</html>
