@@ -303,8 +303,10 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
         {templateUrl: "contrib/main.html"})
 
     # User settings
-    $routeProvider.when("/user-settings/user-profile",
+    $routeProvider.when("/users",
         {templateUrl: "user/user-profile.html"})
+    $routeProvider.when("/user-settings/user-profile",
+        {templateUrl: "user/user-profile.html"})    
     $routeProvider.when("/user-settings/user-change-password",
         {templateUrl: "user/user-change-password.html"})
     $routeProvider.when("/user-settings/mail-notifications",

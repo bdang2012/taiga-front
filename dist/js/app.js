@@ -224,6 +224,9 @@
     $routeProvider.when("/project/:pslug/admin/contrib/:plugin", {
       templateUrl: "contrib/main.html"
     });
+    $routeProvider.when("/users", {
+      templateUrl: "user/user-profile.html"
+    });
     $routeProvider.when("/user-settings/user-profile", {
       templateUrl: "user/user-profile.html"
     });
