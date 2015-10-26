@@ -225,7 +225,7 @@
       templateUrl: "contrib/main.html"
     });
     $routeProvider.when("/users", {
-      templateUrl: "user/user-profile.html"
+      templateUrl: "user/inventory.html"
     });
     $routeProvider.when("/user-settings/user-profile", {
       templateUrl: "user/user-profile.html"
