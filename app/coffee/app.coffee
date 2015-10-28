@@ -622,6 +622,7 @@ modules = [
     "taigaHome",
     "taigaNavigationBar",
     "taigaProjects",
+    "taigaUsers",
     "taigaRelatedTasks",
     "taigaBacklog",
     "taigaTaskboard",

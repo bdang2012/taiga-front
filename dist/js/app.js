@@ -500,7 +500,7 @@
     return plugin.module;
   });
 
-  modules = ["taigaBase", "taigaCommon", "taigaResources", "taigaResources2", "taigaAuth", "taigaEvents", "taigaHome", "taigaNavigationBar", "taigaProjects", "taigaRelatedTasks", "taigaBacklog", "taigaTaskboard", "taigaKanban", "taigaIssues", "taigaUserStories", "taigaTasks", "taigaTeam", "taigaWiki", "taigaSearch", "taigaAdmin", "taigaProject", "taigaUserSettings", "taigaFeedback", "taigaPlugins", "taigaIntegrations", "taigaComponents", "taigaProfile", "taigaHome", "taigaUserTimeline", "templates", "ngRoute", "ngAnimate", "pascalprecht.translate", "infinite-scroll", "tgRepeat"].concat(_.map(pluginsWithModule, function(plugin) {
+  modules = ["taigaBase", "taigaCommon", "taigaResources", "taigaResources2", "taigaAuth", "taigaEvents", "taigaHome", "taigaNavigationBar", "taigaProjects", "taigaUsers", "taigaRelatedTasks", "taigaBacklog", "taigaTaskboard", "taigaKanban", "taigaIssues", "taigaUserStories", "taigaTasks", "taigaTeam", "taigaWiki", "taigaSearch", "taigaAdmin", "taigaProject", "taigaUserSettings", "taigaFeedback", "taigaPlugins", "taigaIntegrations", "taigaComponents", "taigaProfile", "taigaHome", "taigaUserTimeline", "templates", "ngRoute", "ngAnimate", "pascalprecht.translate", "infinite-scroll", "tgRepeat"].concat(_.map(pluginsWithModule, function(plugin) {
     return plugin.module;
   }));
 
@@ -23240,6 +23240,11 @@
 }).call(this);
 
 (function() {
+  angular.module("taigaUsers", []);
+
+}).call(this);
+
+(function() {
   var ProjectMenuController;
 
   ProjectMenuController = (function() {
@@ -25774,6 +25779,11 @@
   })(taiga.Service);
 
   angular.module("taigaUserTimeline").service("tgUserTimelineService", UserTimelineService);
+
+}).call(this);
+
+(function() {
+
 
 }).call(this);
 
