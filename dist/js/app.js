@@ -25783,7 +25783,108 @@
 }).call(this);
 
 (function() {
+  var UsersListingController;
 
+  UsersListingController = (function() {
+    UsersListingController.$inject = ["tgCurrentUserService", "tgUsersService"];
+
+    function UsersListingController(currentUserService, usersService) {
+      this.currentUserService = currentUserService;
+      this.usersService = usersService;
+      taiga.defineImmutableProperty(this, "projects", (function(_this) {
+        return function() {
+          return _this.currentUserService.projects.get("all");
+        };
+      })(this));
+    }
+
+    UsersListingController.prototype.newProject = function() {
+      return this.usersService.newProject();
+    };
+
+    return UsersListingController;
+
+  })();
+
+  angular.module("taigaUsers").controller("UsersListing", UsersListingController);
+
+}).call(this);
+
+(function() {
+  var UsersService, groupBy, taiga,
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
+
+  taiga = this.taiga;
+
+  groupBy = this.taiga.groupBy;
+
+  UsersService = (function(superClass) {
+    extend(UsersService, superClass);
+
+    UsersService.$inject = ["tgResources", "$projectUrl", "tgLightboxFactory"];
+
+    function UsersService(rs, projectUrl, lightboxFactory) {
+      this.rs = rs;
+      this.projectUrl = projectUrl;
+      this.lightboxFactory = lightboxFactory;
+    }
+
+    UsersService.prototype.getProjectBySlug = function(projectSlug) {
+      return this.rs.projects.getProjectBySlug(projectSlug).then((function(_this) {
+        return function(project) {
+          return _this._decorate(project);
+        };
+      })(this));
+    };
+
+    UsersService.prototype.getProjectStats = function(projectId) {
+      return this.rs.projects.getProjectStats(projectId);
+    };
+
+    UsersService.prototype.getProjectsByUserId = function(userId, paginate) {
+      return this.rs.projects.getProjectsByUserId(userId, paginate).then((function(_this) {
+        return function(projects) {
+          return projects.map(_this._decorate.bind(_this));
+        };
+      })(this));
+    };
+
+    UsersService.prototype._decorate = function(project) {
+      var colorized_tags, tags, url;
+      url = this.projectUrl.get(project.toJS());
+      project = project.set("url", url);
+      colorized_tags = [];
+      if (project.get("tags")) {
+        tags = project.get("tags").sort();
+        colorized_tags = tags.map(function(tag) {
+          var color;
+          color = project.get("tags_colors").get(tag);
+          return Immutable.fromJS({
+            name: tag,
+            color: color
+          });
+        });
+        project = project.set("colorized_tags", colorized_tags);
+      }
+      return project;
+    };
+
+    UsersService.prototype.newProject = function() {
+      return this.lightboxFactory.create("tg-lb-create-project", {
+        "class": "wizard-create-project"
+      });
+    };
+
+    UsersService.prototype.bulkUpdateProjectsOrder = function(sortData) {
+      return this.rs.projects.bulkUpdateOrder(sortData);
+    };
+
+    return UsersService;
+
+  })(taiga.Service);
+
+  angular.module("taigaUsers").service("tgUsersService", UsersService);
 
 }).call(this);
 
