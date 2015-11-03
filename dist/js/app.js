@@ -86,6 +86,17 @@
       controller: "ProjectsListing",
       controllerAs: "vm"
     });
+    $routeProvider.when("/users/", {
+      templateUrl: "users/listing/users-listing.html",
+      access: {
+        requiresLogin: true
+      },
+      title: "PROJECTS.PAGE_TITLE",
+      description: "PROJECTS.PAGE_DESCRIPTION",
+      loader: true,
+      controller: "UsersListing",
+      controllerAs: "vm"
+    });
     $routeProvider.when("/project/:pslug/", {
       templateUrl: "projects/project/project.html",
       loader: true,
@@ -223,9 +234,6 @@
     });
     $routeProvider.when("/project/:pslug/admin/contrib/:plugin", {
       templateUrl: "contrib/main.html"
-    });
-    $routeProvider.when("/users", {
-      templateUrl: "user/inventory.html"
     });
     $routeProvider.when("/user-settings/user-profile", {
       templateUrl: "user/user-profile.html"
@@ -25796,6 +25804,11 @@
           return _this.currentUserService.projects.get("all");
         };
       })(this));
+      taiga.defineImmutableProperty(this, "users", (function(_this) {
+        return function() {
+          return _this.usersService.getInventory();
+        };
+      })(this));
     }
 
     UsersListingController.prototype.newProject = function() {
@@ -25848,6 +25861,16 @@
           return projects.map(_this._decorate.bind(_this));
         };
       })(this));
+    };
+
+    UsersService.prototype.getInventory = function() {
+      var names;
+      names = [
+        {
+          'name': 'binh'
+        }
+      ];
+      return Immutable.fromJS(names);
     };
 
     UsersService.prototype._decorate = function(project) {

@@ -86,6 +86,19 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
         }
     )
 
+    $routeProvider.when("/users/",
+        {
+            templateUrl: "users/listing/users-listing.html",
+            access: {
+                requiresLogin: true
+            },
+            title: "PROJECTS.PAGE_TITLE",
+            description: "PROJECTS.PAGE_DESCRIPTION",
+            loader: true,
+            controller: "UsersListing",
+            controllerAs: "vm"
+        }
+    )
     $routeProvider.when("/project/:pslug/",
         {
             templateUrl: "projects/project/project.html",
@@ -303,8 +316,6 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
         {templateUrl: "contrib/main.html"})
 
     # User settings
-    $routeProvider.when("/users",
-        {templateUrl: "user/inventory.html"})
     $routeProvider.when("/user-settings/user-profile",
         {templateUrl: "user/user-profile.html"})    
     $routeProvider.when("/user-settings/user-change-password",

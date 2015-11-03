@@ -11910,5 +11910,212 @@ tg-project-menu {
     max-height: 3rem;
     max-width: 3rem; }
 
+.profile-projects {
+  border-top: 1px solid #f5f5f5; }
+  .profile-projects .project-list-single {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 10rem; }
+
+.project-list-wrapper .help-area {
+  font-size: .9rem; }
+
+.project-list-wrapper .drag {
+  font-size: 1.2rem; }
+
+.project-list-wrapper .project-list-title h1 {
+  font-size: 1.6rem; }
+
+.project-list-wrapper {
+  position: relative; }
+  .project-list-wrapper .project-list-title {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #f5f5f5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 2rem 0 1rem;
+    padding: .9rem 1rem; }
+    .project-list-wrapper .project-list-title h1 {
+      margin: 0; }
+  .project-list-wrapper .create-options a.create-project-btn {
+    margin-right: .25rem;
+    padding: .6rem 2.5rem; }
+  .project-list-wrapper .create-options a.import-project-button {
+    padding: .53rem .8rem; }
+    .project-list-wrapper .create-options a.import-project-button:hover {
+      background: #444; }
+    .project-list-wrapper .create-options a.import-project-button .icon-upload {
+      margin: 0; }
+  .project-list-wrapper .project-list-section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .project-list-wrapper .project-list {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-right: 2rem; }
+  .project-list-wrapper .help-area {
+    color: #b8b8b8;
+    width: 200px; }
+  .project-list-wrapper .placeholder {
+    background-color: #fdfdfd;
+    height: 7rem;
+    width: 100%; }
+  .project-list-wrapper .project-list-single {
+    background: #fff; }
+    .project-list-wrapper .project-list-single:hover {
+      background: #f6fceb;
+      cursor: move;
+      -webkit-transition: background .3s;
+      transition: background .3s; }
+      .project-list-wrapper .project-list-single:hover .drag {
+        opacity: 1; }
+  .project-list-wrapper .drag {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #b8b8b8;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s; }
+
+.project-list-single-left p {
+  font-size: .75rem; }
+
+.project-list-single-left h1 {
+  font-size: 1.6rem; }
+
+.project-list-single-left h1, .project-list-single-left p {
+  font-family: 'opensans-regular', Arial, Helvetica, sans-serif; }
+
+.project-list-single {
+  border-bottom: 1px solid #f5f5f5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 9rem;
+  padding: 1rem;
+  position: relative; }
+
+.project-list-single-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-right: 1rem; }
+  .project-list-single-left h1 {
+    color: #555;
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: nowrap; }
+  .project-list-single-left p {
+    color: #555;
+    margin-bottom: 0; }
+  .project-list-single-left .project-list-single-tags {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: .5rem; }
+  .project-list-single-left .tag {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-right: .5rem;
+    padding: .5rem; }
+
+.project-list-single-right {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 200px; }
+  .project-list-single-right .project-list-single-stats {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .project-list-single-right .project-list-single-stats div {
+      color: #b8b8b8;
+      margin-right: .5rem; }
+      .project-list-single-right .project-list-single-stats div .icon {
+        margin-right: .2rem;
+        vertical-align: center; }
+    .project-list-single-right .project-list-single-stats .active .icon {
+      color: #edd400; }
+  .project-list-single-right .project-list-single-members {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+    margin-top: 1rem; }
+    .project-list-single-right .project-list-single-members a {
+      display: block; }
+    .project-list-single-right .project-list-single-members img {
+      border-radius: .1rem;
+      margin-right: .3rem;
+      width: 34px; }
+
 _:-ms-fullscreen .task-row, :root .taskboard-table-body .task-row {
   min-height: auto; }
