@@ -24741,6 +24741,7 @@
       this._user = null;
       this._projects = Immutable.Map();
       this._projectsById = Immutable.Map();
+      this._inventory = Immutable.Map();
       taiga.defineImmutableProperty(this, "projects", (function(_this) {
         return function() {
           return _this._projects;
@@ -24749,6 +24750,11 @@
       taiga.defineImmutableProperty(this, "projectsById", (function(_this) {
         return function() {
           return _this._projectsById;
+        };
+      })(this));
+      taiga.defineImmutableProperty(this, "inventory", (function(_this) {
+        return function() {
+          return _this._inventory;
         };
       })(this));
     }
@@ -24795,6 +24801,8 @@
       return this.projectsService.getProjectsByUserId(this._user.get("id")).then((function(_this) {
         return function(projects) {
           _this._projects = _this._projects.set("all", projects);
+          console.log('bdlog: ');
+          console.log(_this._projects.toJS());
           _this._projects = _this._projects.set("recents", projects.slice(0, 10));
           _this._projectsById = Immutable.fromJS(groupBy(projects.toJS(), function(p) {
             return p.id;
@@ -24804,7 +24812,19 @@
       })(this));
     };
 
+    CurrentUserService.prototype._loadInventory = function() {
+      return this.projectsService.getProjectsByUserId(this._user.get("id")).then((function(_this) {
+        return function(inventory) {
+          _this._inventory = _this._inventory.set("all", inventory);
+          console.log('bdlog: in loadInventory ');
+          console.log(_this._inventory.toJS());
+          return _this.inventory;
+        };
+      })(this));
+    };
+
     CurrentUserService.prototype._loadUserInfo = function() {
+      this._loadInventory();
       return this._loadProjects();
     };
 
@@ -25804,9 +25824,9 @@
           return _this.currentUserService.projects.get("all");
         };
       })(this));
-      taiga.defineImmutableProperty(this, "users", (function(_this) {
+      taiga.defineImmutableProperty(this, "inventory", (function(_this) {
         return function() {
-          return _this.usersService.getInventory();
+          return _this.currentUserService.inventory.get("all");
         };
       })(this));
     }

@@ -6,7 +6,7 @@ class UsersListingController
 
     constructor: (@currentUserService, @usersService) ->
         taiga.defineImmutableProperty(@, "projects", () => @currentUserService.projects.get("all"))
-        taiga.defineImmutableProperty(@, "users", () => @usersService.getInventory())
+        taiga.defineImmutableProperty(@, "inventory", () => @currentUserService.inventory.get("all"))
 
     newProject: ->
         @usersService.newProject()

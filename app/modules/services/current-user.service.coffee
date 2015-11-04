@@ -12,9 +12,11 @@ class CurrentUserService
         @._user = null
         @._projects = Immutable.Map()
         @._projectsById = Immutable.Map()
+        @._inventory = Immutable.Map()
 
         taiga.defineImmutableProperty @, "projects", () => return @._projects
         taiga.defineImmutableProperty @, "projectsById", () => return @._projectsById
+        taiga.defineImmutableProperty @, "inventory", () => return @._inventory
 
     isAuthenticated: ->
         if @.getUser() != null
@@ -49,13 +51,27 @@ class CurrentUserService
         return @projectsService.getProjectsByUserId(@._user.get("id"))
             .then (projects) =>
                 @._projects = @._projects.set("all", projects)
-                @._projects = @._projects.set("recents", projects.slice(0, 10))
 
+                console.log 'bdlog: '
+                console.log @._projects.toJS()
+
+                @._projects = @._projects.set("recents", projects.slice(0, 10))
                 @._projectsById = Immutable.fromJS(groupBy(projects.toJS(), (p) -> p.id))
 
                 return @.projects
 
+    _loadInventory: () ->
+        return @projectsService.getProjectsByUserId(@._user.get("id"))
+            .then (inventory) =>
+                @._inventory = @._inventory.set("all", inventory)
+
+                console.log 'bdlog: in loadInventory '
+                console.log @._inventory.toJS()
+
+                return @.inventory                
+
     _loadUserInfo: () ->
+        @._loadInventory()
         return @._loadProjects()
 
 angular.module("taigaCommon").service("tgCurrentUserService", CurrentUserService)
