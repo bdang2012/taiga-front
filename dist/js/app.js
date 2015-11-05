@@ -24317,6 +24317,14 @@
       })(this));
     };
 
+    ProjectsService.prototype.getInventory = function(userId, paginate) {
+      return this.rs.projects.getInventory(userId, paginate).then((function(_this) {
+        return function(projects) {
+          return projects.map(_this._decorate.bind(_this));
+        };
+      })(this));
+    };
+
     ProjectsService.prototype._decorate = function(project) {
       var colorized_tags, tags, url;
       url = this.projectUrl.get(project.toJS());
@@ -24410,6 +24418,30 @@
         paginate = false;
       }
       url = urlsService.resolve("projects");
+      httpOptions = {};
+      if (!paginate) {
+        httpOptions.headers = {
+          "x-disable-pagination": "1"
+        };
+      }
+      params = {
+        "member": userId,
+        "order_by": "memberships__user_order"
+      };
+      return http.get(url, params, httpOptions).then(function(result) {
+        return Immutable.fromJS(result.data);
+      });
+    };
+    service.getInventory = function(userId, paginate) {
+      var httpOptions, params, url, url2;
+      if (paginate == null) {
+        paginate = false;
+      }
+      url = urlsService.resolve("projects");
+      url2 = urlsService.resolve("users");
+      console.log('bdlog: ');
+      console.log(url);
+      console.log(url2);
       httpOptions = {};
       if (!paginate) {
         httpOptions.headers = {
@@ -24813,7 +24845,7 @@
     };
 
     CurrentUserService.prototype._loadInventory = function() {
-      return this.projectsService.getProjectsByUserId(this._user.get("id")).then((function(_this) {
+      return this.projectsService.getInventory(this._user.get("id")).then((function(_this) {
         return function(inventory) {
           _this._inventory = _this._inventory.set("all", inventory);
           console.log('bdlog: in loadInventory ');
