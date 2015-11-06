@@ -1,7 +1,7 @@
 (function() {
   var promise, version;
 
-  version = 1446767439468;
+  version = 1446767999226;
 
   window.taigaConfig = {
     "api": "http://localhost:8000/api/v1/",

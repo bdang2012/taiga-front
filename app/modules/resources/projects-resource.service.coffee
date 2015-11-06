@@ -28,11 +28,7 @@ Resource = (urlsService, http, paginateResponseService) ->
                 return Immutable.fromJS(result.data)
 
     service.getInventory = (userId, paginate=false) ->
-        url = urlsService.resolve("projects")
-        url2 = urlsService.resolve("users")
-        console.log 'bdlog: '
-        console.log url
-        console.log url2
+        url = urlsService.resolve("users")
         httpOptions = {}
 
         if !paginate

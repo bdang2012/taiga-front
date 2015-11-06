@@ -24433,15 +24433,11 @@
       });
     };
     service.getInventory = function(userId, paginate) {
-      var httpOptions, params, url, url2;
+      var httpOptions, params, url;
       if (paginate == null) {
         paginate = false;
       }
-      url = urlsService.resolve("projects");
-      url2 = urlsService.resolve("users");
-      console.log('bdlog: ');
-      console.log(url);
-      console.log(url2);
+      url = urlsService.resolve("users");
       httpOptions = {};
       if (!paginate) {
         httpOptions.headers = {
