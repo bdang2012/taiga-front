@@ -250,6 +250,28 @@ module.directive("tgTeamMembers", TeamMembersDirective)
 
 
 #############################################################################
+## Inventory Directive
+#############################################################################
+
+InventoryMembersDirective = () ->
+    template = "team/inventory-members.html"
+
+    return {
+        templateUrl: template
+        scope: {
+            memberships: "=",
+            filtersQ: "=filtersq",
+            filtersRole: "=filtersrole",
+            stats: "="
+            issuesEnabled: "=issuesenabled"
+            tasksEnabled: "=tasksenabled"
+            wikiEnabled: "=wikienabled"
+        }
+    }
+
+module.directive("tgInventoryMembers", InventoryMembersDirective)
+
+#############################################################################
 ## Leave project Directive
 #############################################################################
 

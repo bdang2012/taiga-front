@@ -15120,7 +15120,7 @@
  */
 
 (function() {
-  var LeaveProjectDirective, TeamController, TeamFiltersDirective, TeamMemberCurrentUserDirective, TeamMemberStatsDirective, TeamMembersDirective, membersFilter, mixOf, module, taiga,
+  var InventoryMembersDirective, LeaveProjectDirective, TeamController, TeamFiltersDirective, TeamMemberCurrentUserDirective, TeamMemberStatsDirective, TeamMembersDirective, membersFilter, mixOf, module, taiga,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
@@ -15397,6 +15397,25 @@
   };
 
   module.directive("tgTeamMembers", TeamMembersDirective);
+
+  InventoryMembersDirective = function() {
+    var template;
+    template = "team/inventory-members.html";
+    return {
+      templateUrl: template,
+      scope: {
+        memberships: "=",
+        filtersQ: "=filtersq",
+        filtersRole: "=filtersrole",
+        stats: "=",
+        issuesEnabled: "=issuesenabled",
+        tasksEnabled: "=tasksenabled",
+        wikiEnabled: "=wikienabled"
+      }
+    };
+  };
+
+  module.directive("tgInventoryMembers", InventoryMembersDirective);
 
   LeaveProjectDirective = function($repo, $confirm, $location, $rs, $navurls, $translate) {
     var link;

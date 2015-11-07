@@ -22,7 +22,7 @@ class ProjectsService extends taiga.Service
     getInventory: (userId, paginate) ->
         return @rs.projects.getInventory(userId, paginate)
             .then (projects) =>
-                return projects.map @._decorate.bind(@)            
+                return projects.map @._decorate.bind(@)
 
     _decorate: (project) ->
         url = @projectUrl.get(project.toJS())
@@ -38,7 +38,6 @@ class ProjectsService extends taiga.Service
                 return Immutable.fromJS({name: tag, color: color})
 
             project = project.set("colorized_tags", colorized_tags)
-
         return project
 
     newProject: ->

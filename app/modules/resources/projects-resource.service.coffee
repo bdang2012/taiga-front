@@ -40,7 +40,7 @@ Resource = (urlsService, http, paginateResponseService) ->
 
         return http.get(url, params, httpOptions)
             .then (result) ->
-                return Immutable.fromJS(result.data)            
+                return Immutable.fromJS(result.data)
 
 
     service.getProjectStats = (projectId) ->
