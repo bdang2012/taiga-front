@@ -61,7 +61,7 @@ class CurrentUserService
                 return @.projects
 
     _loadInventory: () ->
-        return @projectsService.getInventory(@._user.get("id"))
+        return @projectsService.getInventory()
             .then (inventory) =>
                 @._inventory = @._inventory.set("all", inventory)
 

@@ -42,11 +42,12 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
         "tgAppMetaService",
         "$tgAuth",
         "$translate",
-        "tgProjectService"
+        "tgProjectService",
+        "tgCurrentUserService"
     ]
 
     constructor: (@scope, @rootscope, @repo, @rs, @params, @q, @location, @navUrls, @appMetaService, @auth,
-                  @translate, @projectService) ->
+                  @translate, @projectService,@currentUserService) ->
         @scope.sectionName = "TEAM.SECTION_NAME"
 
         promise = @.loadInitialData()
@@ -103,9 +104,6 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
 
         inventory = @projectService.project.toJS().memberships
 
-        @scope.currentUser = _.find inventory, (membership) =>
-            return currentUser? and membership.user == currentUser.id
-
         @scope.totals = {}
 
         _.forEach inventory, (membership) =>
@@ -121,7 +119,19 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
 
         for membership in @scope.inventory
             if not membership.photo?
-                membership.photo = "/images/unnamed.png"                
+                membership.photo = "/images/unnamed.png"    
+
+        console.log 'bdlog: line 124 main.coffee'
+        console.log @scope.inventory
+
+        
+        console.log 'bdlog: line 127 main.coffee'
+        inventory2 = @currentUserService.inventory.get("all").toJS()
+        console.log inventory2
+        @scope.inventory = inventory2
+        
+
+
 
     loadProject: ->
         return @rs.projects.getBySlug(@params.pslug).then (project) =>

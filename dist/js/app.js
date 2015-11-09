@@ -15133,9 +15133,9 @@
   TeamController = (function(superClass) {
     extend(TeamController, superClass);
 
-    TeamController.$inject = ["$scope", "$rootScope", "$tgRepo", "$tgResources", "$routeParams", "$q", "$location", "$tgNavUrls", "tgAppMetaService", "$tgAuth", "$translate", "tgProjectService"];
+    TeamController.$inject = ["$scope", "$rootScope", "$tgRepo", "$tgResources", "$routeParams", "$q", "$location", "$tgNavUrls", "tgAppMetaService", "$tgAuth", "$translate", "tgProjectService", "tgCurrentUserService"];
 
-    function TeamController(scope, rootscope, repo, rs, params, q, location, navUrls, appMetaService, auth, translate, projectService) {
+    function TeamController(scope, rootscope, repo, rs, params, q, location, navUrls, appMetaService, auth, translate, projectService, currentUserService) {
       var promise;
       this.scope = scope;
       this.rootscope = rootscope;
@@ -15149,6 +15149,7 @@
       this.auth = auth;
       this.translate = translate;
       this.projectService = projectService;
+      this.currentUserService = currentUserService;
       this.scope.sectionName = "TEAM.SECTION_NAME";
       promise = this.loadInitialData();
       promise.then((function(_this) {
@@ -15219,17 +15220,12 @@
     };
 
     TeamController.prototype.loadInventoryBinhDang = function() {
-      var currentUser, i, inventory, len, membership, ref, results;
+      var currentUser, i, inventory, inventory2, len, membership, ref;
       currentUser = this.auth.getUser();
       if ((currentUser != null) && (currentUser.photo == null)) {
         currentUser.photo = "/images/unnamed.png";
       }
       inventory = this.projectService.project.toJS().memberships;
-      this.scope.currentUser = _.find(inventory, (function(_this) {
-        return function(membership) {
-          return (currentUser != null) && membership.user === currentUser.id;
-        };
-      })(this));
       this.scope.totals = {};
       _.forEach(inventory, (function(_this) {
         return function(membership) {
@@ -15248,16 +15244,18 @@
         };
       })(this));
       ref = this.scope.inventory;
-      results = [];
       for (i = 0, len = ref.length; i < len; i++) {
         membership = ref[i];
         if (membership.photo == null) {
-          results.push(membership.photo = "/images/unnamed.png");
-        } else {
-          results.push(void 0);
+          membership.photo = "/images/unnamed.png";
         }
       }
-      return results;
+      console.log('bdlog: line 124 main.coffee');
+      console.log(this.scope.inventory);
+      console.log('bdlog: line 127 main.coffee');
+      inventory2 = this.currentUserService.inventory.get("all").toJS();
+      console.log(inventory2);
+      return this.scope.inventory = inventory2;
     };
 
     TeamController.prototype.loadProject = function() {
@@ -24336,8 +24334,8 @@
       })(this));
     };
 
-    ProjectsService.prototype.getInventory = function(userId, paginate) {
-      return this.rs.projects.getInventory(userId, paginate).then((function(_this) {
+    ProjectsService.prototype.getInventory = function(paginate) {
+      return this.rs.projects.getInventory(paginate).then((function(_this) {
         return function(projects) {
           return projects.map(_this._decorate.bind(_this));
         };
@@ -24451,7 +24449,7 @@
         return Immutable.fromJS(result.data);
       });
     };
-    service.getInventory = function(userId, paginate) {
+    service.getInventory = function(paginate) {
       var httpOptions, params, url;
       if (paginate == null) {
         paginate = false;
@@ -24464,7 +24462,6 @@
         };
       }
       params = {
-        "member": userId,
         "order_by": "memberships__user_order"
       };
       return http.get(url, params, httpOptions).then(function(result) {
@@ -24860,7 +24857,7 @@
     };
 
     CurrentUserService.prototype._loadInventory = function() {
-      return this.projectsService.getInventory(this._user.get("id")).then((function(_this) {
+      return this.projectsService.getInventory().then((function(_this) {
         return function(inventory) {
           _this._inventory = _this._inventory.set("all", inventory);
           console.log('bdlog: in loadInventory ');

@@ -27,7 +27,7 @@ Resource = (urlsService, http, paginateResponseService) ->
             .then (result) ->
                 return Immutable.fromJS(result.data)
 
-    service.getInventory = (userId, paginate=false) ->
+    service.getInventory = (paginate=false) ->
         url = urlsService.resolve("users")
         httpOptions = {}
 
@@ -36,7 +36,7 @@ Resource = (urlsService, http, paginateResponseService) ->
                 "x-disable-pagination": "1"
             }
 
-        params = {"member": userId, "order_by": "memberships__user_order"}
+        params = {"order_by": "memberships__user_order"}
 
         return http.get(url, params, httpOptions)
             .then (result) ->
