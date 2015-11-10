@@ -102,7 +102,7 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
         if currentUser? and not currentUser.photo?
             currentUser.photo = "/images/unnamed.png"
 
-        inventory = @projectService.project.toJS().memberships
+        inventory = @currentUserService.inventory.get("all").toJS()
 
         @scope.totals = {}
 
@@ -121,17 +121,14 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
             if not membership.photo?
                 membership.photo = "/images/unnamed.png"    
 
-        console.log 'bdlog: line 124 main.coffee'
+        console.log 'bdlog: line 124 main.coffee @scope.inventory'
         console.log @scope.inventory
 
         
-        console.log 'bdlog: line 127 main.coffee'
-        inventory2 = @currentUserService.inventory.get("all").toJS()
-        console.log inventory2
-        @scope.inventory = inventory2
-        
-
-
+        console.log 'bdlog: line 127 main.coffee for @scope.inveotoryRoles'
+        @scope.inventoryRoles = @currentUserService.inventory.get("all").toJS()
+        console.log @scope.inventoryRoles
+    
 
     loadProject: ->
         return @rs.projects.getBySlug(@params.pslug).then (project) =>

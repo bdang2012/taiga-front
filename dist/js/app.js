@@ -958,7 +958,10 @@
       this.scope.usersById = groupBy(this.scope.users, function(e) {
         return e.id;
       });
+      console.log('bdlog: in controllerMixins.coffee - before<<<<');
       this.scope.roles = _.sortBy(roles, "order");
+      console.log(this.scope.roles);
+      console.log('bdlog: after>>>>');
       availableRoles = _(this.scope.project.memberships).map("role").uniq().value();
       return this.scope.computableRoles = _(roles).filter("computable").filter(function(x) {
         return _.contains(availableRoles, x.id);
@@ -15220,12 +15223,12 @@
     };
 
     TeamController.prototype.loadInventoryBinhDang = function() {
-      var currentUser, i, inventory, inventory2, len, membership, ref;
+      var currentUser, i, inventory, len, membership, ref;
       currentUser = this.auth.getUser();
       if ((currentUser != null) && (currentUser.photo == null)) {
         currentUser.photo = "/images/unnamed.png";
       }
-      inventory = this.projectService.project.toJS().memberships;
+      inventory = this.currentUserService.inventory.get("all").toJS();
       this.scope.totals = {};
       _.forEach(inventory, (function(_this) {
         return function(membership) {
@@ -15250,12 +15253,11 @@
           membership.photo = "/images/unnamed.png";
         }
       }
-      console.log('bdlog: line 124 main.coffee');
+      console.log('bdlog: line 124 main.coffee @scope.inventory');
       console.log(this.scope.inventory);
-      console.log('bdlog: line 127 main.coffee');
-      inventory2 = this.currentUserService.inventory.get("all").toJS();
-      console.log(inventory2);
-      return this.scope.inventory = inventory2;
+      console.log('bdlog: line 127 main.coffee for @scope.inveotoryRoles');
+      this.scope.inventoryRoles = this.currentUserService.inventory.get("all").toJS();
+      return console.log(this.scope.inventoryRoles);
     };
 
     TeamController.prototype.loadProject = function() {

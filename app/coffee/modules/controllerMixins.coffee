@@ -40,7 +40,11 @@ class PageMixin
         @scope.users = _.sortBy(users, "full_name_display")
         @scope.usersById = groupBy(@scope.users, (e) -> e.id)
 
+        console.log 'bdlog: in controllerMixins.coffee - before<<<<'
         @scope.roles = _.sortBy(roles, "order")
+        console.log @scope.roles
+        console.log 'bdlog: after>>>>'    
+
         availableRoles = _(@scope.project.memberships).map("role").uniq().value()
         @scope.computableRoles = _(roles).filter("computable")
                                          .filter((x) -> _.contains(availableRoles, x.id))
