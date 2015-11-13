@@ -15123,7 +15123,7 @@
  */
 
 (function() {
-  var InventoryMembersDirective, LeaveProjectDirective, TeamController, TeamFiltersDirective, TeamMemberCurrentUserDirective, TeamMemberStatsDirective, TeamMembersDirective, membersFilter, mixOf, module, taiga,
+  var LeaveProjectDirective, TeamController, TeamFiltersDirective, TeamMemberCurrentUserDirective, TeamMemberStatsDirective, TeamMembersDirective, membersFilter, mixOf, module, taiga,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
@@ -15397,25 +15397,6 @@
   };
 
   module.directive("tgTeamMembers", TeamMembersDirective);
-
-  InventoryMembersDirective = function() {
-    var template;
-    template = "team/inventory-members.html";
-    return {
-      templateUrl: template,
-      scope: {
-        memberships: "=",
-        filtersQ: "=filtersq",
-        filtersRole: "=filtersrole",
-        stats: "=",
-        issuesEnabled: "=issuesenabled",
-        tasksEnabled: "=tasksenabled",
-        wikiEnabled: "=wikienabled"
-      }
-    };
-  };
-
-  module.directive("tgInventoryMembers", InventoryMembersDirective);
 
   LeaveProjectDirective = function($repo, $confirm, $location, $rs, $navurls, $translate) {
     var link;
@@ -26099,6 +26080,275 @@
   };
 
   module.directive("tgTermsNotice", ["$tgConfig", TermsNoticeDirective]);
+
+}).call(this);
+
+
+/*
+ * Copyright (C) 2014 Andrey Antukh <niwi@niwi.be>
+ * Copyright (C) 2014 Jesús Espino Garcia <jespinog@gmail.com>
+ * Copyright (C) 2014 David Barragán Merino <bameda@dbarragan.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * File: modules/team/main.coffee
+ */
+
+(function() {
+  var InventoryController, InventoryFiltersDirective, InventoryMembersDirective, mixOf, module, taiga,
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
+
+  taiga = this.taiga;
+
+  mixOf = this.taiga.mixOf;
+
+  module = angular.module("taigaTeam");
+
+  InventoryController = (function(superClass) {
+    extend(InventoryController, superClass);
+
+    InventoryController.$inject = ["$scope", "$rootScope", "$tgRepo", "$tgResources", "$routeParams", "$q", "$location", "$tgNavUrls", "tgAppMetaService", "$tgAuth", "$translate", "tgProjectService", "tgCurrentUserService"];
+
+    function InventoryController(scope, rootscope, repo, rs, params, q, location, navUrls, appMetaService, auth, translate, projectService, currentUserService) {
+      var promise;
+      this.scope = scope;
+      this.rootscope = rootscope;
+      this.repo = repo;
+      this.rs = rs;
+      this.params = params;
+      this.q = q;
+      this.location = location;
+      this.navUrls = navUrls;
+      this.appMetaService = appMetaService;
+      this.auth = auth;
+      this.translate = translate;
+      this.projectService = projectService;
+      this.currentUserService = currentUserService;
+      this.scope.sectionName = "TEAM.SECTION_NAME";
+      promise = this.loadInitialData();
+      promise.then((function(_this) {
+        return function() {
+          var description, title;
+          title = _this.translate.instant("TEAM.PAGE_TITLE", {
+            projectName: _this.scope.project.name
+          });
+          description = _this.translate.instant("TEAM.PAGE_DESCRIPTION", {
+            projectName: _this.scope.project.name,
+            projectDescription: _this.scope.project.description
+          });
+          return _this.appMetaService.setAll(title, description);
+        };
+      })(this));
+      promise.then(null, this.onInitialDataError.bind(this));
+    }
+
+    InventoryController.prototype.setRole = function(role) {
+      if (role) {
+        return this.scope.filtersRole = role;
+      } else {
+        return this.scope.filtersRole = null;
+      }
+    };
+
+    InventoryController.prototype.loadMembers = function() {
+      var currentUser, i, len, membership, memberships, ref, results;
+      currentUser = this.auth.getUser();
+      if ((currentUser != null) && (currentUser.photo == null)) {
+        currentUser.photo = "/images/unnamed.png";
+      }
+      memberships = this.projectService.project.toJS().memberships;
+      this.scope.currentUser = _.find(memberships, (function(_this) {
+        return function(membership) {
+          return (currentUser != null) && membership.user === currentUser.id;
+        };
+      })(this));
+      this.scope.totals = {};
+      _.forEach(memberships, (function(_this) {
+        return function(membership) {
+          return _this.scope.totals[membership.user] = 0;
+        };
+      })(this));
+      this.scope.memberships = _.filter(memberships, (function(_this) {
+        return function(membership) {
+          if (membership.user && ((currentUser == null) || membership.user !== currentUser.id)) {
+            return membership;
+          }
+        };
+      })(this));
+      this.scope.memberships = _.filter(memberships, (function(_this) {
+        return function(membership) {
+          return membership.is_active;
+        };
+      })(this));
+      ref = this.scope.memberships;
+      results = [];
+      for (i = 0, len = ref.length; i < len; i++) {
+        membership = ref[i];
+        if (membership.photo == null) {
+          results.push(membership.photo = "/images/unnamed.png");
+        } else {
+          results.push(void 0);
+        }
+      }
+      return results;
+    };
+
+    InventoryController.prototype.loadInventoryBinhDang = function() {
+      var currentUser, i, inventory, len, membership, ref;
+      currentUser = this.auth.getUser();
+      if ((currentUser != null) && (currentUser.photo == null)) {
+        currentUser.photo = "/images/unnamed.png";
+      }
+      inventory = this.currentUserService.inventory.get("all").toJS();
+      this.scope.totals = {};
+      _.forEach(inventory, (function(_this) {
+        return function(membership) {
+          return _this.scope.totals[membership.user] = 0;
+        };
+      })(this));
+
+      /* binh blocked 
+      @scope.inventory = _.filter inventory, (membership) =>
+          if membership.user && (not currentUser? or membership.user != currentUser.id)
+              return membership
+       */
+      this.scope.inventory = _.filter(inventory, (function(_this) {
+        return function(membership) {
+          return membership.is_active;
+        };
+      })(this));
+      ref = this.scope.inventory;
+      for (i = 0, len = ref.length; i < len; i++) {
+        membership = ref[i];
+        if (membership.photo == null) {
+          membership.photo = "/images/unnamed.png";
+        }
+      }
+      console.log('bdlog: line 124 main.coffee @scope.inventory');
+      console.log(this.scope.inventory);
+      console.log('bdlog: line 127 main.coffee for @scope.inveotoryRoles');
+      this.scope.inventoryRoles = this.currentUserService.inventory.get("all").toJS();
+      return console.log(this.scope.inventoryRoles);
+    };
+
+    InventoryController.prototype.loadProject = function() {
+      return this.rs.projects.getBySlug(this.params.pslug).then((function(_this) {
+        return function(project) {
+          _this.scope.projectId = project.id;
+          _this.scope.project = project;
+          _this.scope.$emit('project:loaded', project);
+          _this.scope.issuesEnabled = project.is_issues_activated;
+          _this.scope.tasksEnabled = project.is_kanban_activated || project.is_backlog_activated;
+          _this.scope.wikiEnabled = project.is_wiki_activated;
+          return project;
+        };
+      })(this));
+    };
+
+    InventoryController.prototype.loadMemberStats = function() {
+      return this.rs.projects.memberStats(this.scope.projectId).then((function(_this) {
+        return function(stats) {
+          var totals;
+          totals = {};
+          _.forEach(_this.scope.totals, function(total, userId) {
+            var vals;
+            vals = _.map(stats, function(memberStats, statsKey) {
+              return memberStats[userId];
+            });
+            total = _.reduce(vals, function(sum, el) {
+              return sum + el;
+            });
+            return _this.scope.totals[userId] = total;
+          });
+          _this.scope.stats = _this.processStats(stats);
+          return _this.scope.stats.totals = _this.scope.totals;
+        };
+      })(this));
+    };
+
+    InventoryController.prototype.processStat = function(stat) {
+      var max, min, singleStat;
+      max = _.max(stat);
+      min = _.min(stat);
+      singleStat = _.map(stat, function(value, key) {
+        if (value === min) {
+          return [key, 0.1];
+        }
+        if (value === max) {
+          return [key, 1];
+        }
+        return [key, (value * 0.5) / max];
+      });
+      singleStat = _.object(singleStat);
+      return singleStat;
+    };
+
+    InventoryController.prototype.processStats = function(stats) {
+      var key, value;
+      for (key in stats) {
+        value = stats[key];
+        stats[key] = this.processStat(value);
+      }
+      return stats;
+    };
+
+    InventoryController.prototype.loadInitialData = function() {
+      var promise;
+      promise = this.loadProject();
+      return promise.then((function(_this) {
+        return function(project) {
+          _this.fillUsersAndRoles(project.users, project.roles);
+          _this.loadMembers();
+          _this.loadInventoryBinhDang();
+          return _this.loadMemberStats();
+        };
+      })(this));
+    };
+
+    return InventoryController;
+
+  })(mixOf(taiga.Controller, taiga.PageMixin));
+
+  module.controller("InventoryController", InventoryController);
+
+  InventoryFiltersDirective = function() {
+    return {
+      templateUrl: "team/inventory-filter.html"
+    };
+  };
+
+  module.directive("tgInventoryFilters", [InventoryFiltersDirective]);
+
+  InventoryMembersDirective = function() {
+    var template;
+    template = "team/inventory-members.html";
+    return {
+      templateUrl: template,
+      scope: {
+        memberships: "=",
+        filtersQ: "=filtersq",
+        filtersRole: "=filtersrole",
+        stats: "=",
+        issuesEnabled: "=issuesenabled",
+        tasksEnabled: "=tasksenabled",
+        wikiEnabled: "=wikienabled"
+      }
+    };
+  };
+
+  module.directive("tgInventoryMembers", InventoryMembersDirective);
 
 }).call(this);
 

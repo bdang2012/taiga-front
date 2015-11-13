@@ -26,10 +26,10 @@ mixOf = @.taiga.mixOf
 module = angular.module("taigaTeam")
 
 #############################################################################
-##  Team Controller
+##  Inventory Controller
 #############################################################################
 
-class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
+class InventoryController extends mixOf(taiga.Controller, taiga.PageMixin)
     @.$inject = [
         "$scope",
         "$rootScope",
@@ -42,11 +42,12 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
         "tgAppMetaService",
         "$tgAuth",
         "$translate",
-        "tgProjectService"
+        "tgProjectService",
+        "tgCurrentUserService"
     ]
 
     constructor: (@scope, @rootscope, @repo, @rs, @params, @q, @location, @navUrls, @appMetaService, @auth,
-                  @translate, @projectService) ->
+                  @translate, @projectService,@currentUserService) ->
         @scope.sectionName = "TEAM.SECTION_NAME"
 
         promise = @.loadInitialData()
@@ -101,25 +102,32 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
         if currentUser? and not currentUser.photo?
             currentUser.photo = "/images/unnamed.png"
 
-        inventory = @projectService.project.toJS().memberships
-
-        @scope.currentUser = _.find inventory, (membership) =>
-            return currentUser? and membership.user == currentUser.id
+        inventory = @currentUserService.inventory.get("all").toJS()
 
         @scope.totals = {}
 
         _.forEach inventory, (membership) =>
             @scope.totals[membership.user] = 0
-
+  
+        ### binh blocked 
         @scope.inventory = _.filter inventory, (membership) =>
             if membership.user && (not currentUser? or membership.user != currentUser.id)
-                return membership
-
+                return membership 
+        ###
+                
         @scope.inventory = _.filter inventory, (membership) => return membership.is_active
 
         for membership in @scope.inventory
             if not membership.photo?
-                membership.photo = "/images/unnamed.png"                
+                membership.photo = "/images/unnamed.png"    
+
+        console.log 'bdlog: line 124 main.coffee @scope.inventory'
+        console.log @scope.inventory
+
+        
+        console.log 'bdlog: line 127 main.coffee for @scope.inveotoryRoles'
+        @scope.inventoryRoles = @currentUserService.inventory.get("all").toJS()
+        console.log @scope.inventoryRoles
 
     loadProject: ->
         return @rs.projects.getBySlug(@params.pslug).then (project) =>
@@ -170,66 +178,27 @@ class TeamController extends mixOf(taiga.Controller, taiga.PageMixin)
 
             return @.loadMemberStats()
 
-module.controller("TeamController", TeamController)
+module.controller("InventoryController", InventoryController)
 
 
 #############################################################################
-## Team Filters Directive
+## Inventory Filters Directive
 #############################################################################
 
-TeamFiltersDirective = () ->
+InventoryFiltersDirective = () ->
     return {
-        templateUrl: "team/team-filter.html"
+        templateUrl: "team/inventory-filter.html"
     }
 
-module.directive("tgTeamFilters", [TeamFiltersDirective])
+module.directive("tgInventoryFilters", [InventoryFiltersDirective])
 
 
 #############################################################################
-## Team Member Stats Directive
+## Inventory Directive
 #############################################################################
 
-TeamMemberStatsDirective = () ->
-    return {
-        templateUrl: "team/team-member-stats.html",
-        scope: {
-            stats: "=",
-            userId: "=user"
-            issuesEnabled: "=issuesenabled"
-            tasksEnabled: "=tasksenabled"
-            wikiEnabled: "=wikienabled"
-        }
-    }
-
-module.directive("tgTeamMemberStats", TeamMemberStatsDirective)
-
-
-#############################################################################
-## Team Current User Directive
-#############################################################################
-
-TeamMemberCurrentUserDirective = () ->
-    return {
-        templateUrl: "team/team-member-current-user.html"
-        scope: {
-            projectId: "=projectid",
-            currentUser: "=currentuser",
-            stats: "="
-            issuesEnabled: "=issuesenabled"
-            tasksEnabled: "=tasksenabled"
-            wikiEnabled: "=wikienabled"
-        }
-    }
-
-module.directive("tgTeamCurrentUser", TeamMemberCurrentUserDirective)
-
-
-#############################################################################
-## Team Members Directive
-#############################################################################
-
-TeamMembersDirective = () ->
-    template = "team/team-members.html"
+InventoryMembersDirective = () ->
+    template = "team/inventory-members.html"
 
     return {
         templateUrl: template
@@ -244,48 +213,4 @@ TeamMembersDirective = () ->
         }
     }
 
-module.directive("tgTeamMembers", TeamMembersDirective)
-
-
-#############################################################################
-## Leave project Directive
-#############################################################################
-
-LeaveProjectDirective = ($repo, $confirm, $location, $rs, $navurls, $translate) ->
-    link = ($scope, $el, $attrs) ->
-        $scope.leave = () ->
-            leave_project_text = $translate.instant("TEAM.ACTION_LEAVE_PROJECT")
-            confirm_leave_project_text = $translate.instant("TEAM.CONFIRM_LEAVE_PROJECT")
-
-            $confirm.ask(leave_project_text, confirm_leave_project_text).then (finish) =>
-                promise = $rs.projects.leave($attrs.projectid)
-
-                promise.then =>
-                    finish()
-                    $confirm.notify("success")
-                    $location.path($navurls.resolve("home"))
-
-                promise.then null, (response) ->
-                    finish()
-                    $confirm.notify('error', response.data._error_message)
-
-    return {
-        scope: {},
-        templateUrl: "team/leave-project.html",
-        link: link
-    }
-
-module.directive("tgLeaveProject", ["$tgRepo", "$tgConfirm", "$tgLocation", "$tgResources", "$tgNavUrls", "$translate",
-                                    LeaveProjectDirective])
-
-
-#############################################################################
-## Team Filters
-#############################################################################
-
-membersFilter = ->
-    return (members, filtersQ, filtersRole) ->
-        return _.filter members, (m) -> (not filtersRole or m.role == filtersRole.id) and
-                                        (not filtersQ or m.full_name.search(new RegExp(filtersQ, "i")) >= 0)
-
-module.filter('membersFilter', membersFilter)
+module.directive("tgInventoryMembers", InventoryMembersDirective)
