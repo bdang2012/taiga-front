@@ -99,6 +99,19 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
             controllerAs: "vm"
         }
     )
+    $routeProvider.when("/agents/",
+        {
+            templateUrl: "agents/listing/agents-listing.html",
+            access: {
+                requiresLogin: true
+            },
+            title: "Agents Listing",
+            description: "Agents Listing",
+            loader: true,
+            controller: "AgentsListing",
+            controllerAs: "vm"
+        }
+    )
     $routeProvider.when("/project/:pslug/",
         {
             templateUrl: "projects/project/project.html",
@@ -634,6 +647,7 @@ modules = [
     "taigaNavigationBar",
     "taigaProjects",
     "taigaUsers",
+    "taigaAgents",
     "taigaRelatedTasks",
     "taigaBacklog",
     "taigaTaskboard",

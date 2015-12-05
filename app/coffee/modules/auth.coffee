@@ -98,6 +98,7 @@ class AuthService extends taiga.Service
             return true
         return false
 
+
     ## Http interface
 
     login: (data, type) ->
@@ -110,6 +111,10 @@ class AuthService extends taiga.Service
 
         return @http.post(url, data).then (data, status) =>
             user = @model.make_model("users", data.data)
+            console.log '<<<<bdlog: in autho.coffee login:'
+            console.log 'return data:'
+            console.log data.data
+            console.log '>>>>>'
             @.setToken(user.auth_token)
             @.setUser(user)
             return user

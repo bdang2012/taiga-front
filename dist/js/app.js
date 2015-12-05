@@ -97,6 +97,17 @@
       controller: "UsersListing",
       controllerAs: "vm"
     });
+    $routeProvider.when("/agents/", {
+      templateUrl: "agents/listing/agents-listing.html",
+      access: {
+        requiresLogin: true
+      },
+      title: "Agents Listing",
+      description: "Agents Listing",
+      loader: true,
+      controller: "AgentsListing",
+      controllerAs: "vm"
+    });
     $routeProvider.when("/project/:pslug/", {
       templateUrl: "projects/project/project.html",
       loader: true,
@@ -508,7 +519,7 @@
     return plugin.module;
   });
 
-  modules = ["taigaBase", "taigaCommon", "taigaResources", "taigaResources2", "taigaAuth", "taigaEvents", "taigaHome", "taigaNavigationBar", "taigaProjects", "taigaUsers", "taigaRelatedTasks", "taigaBacklog", "taigaTaskboard", "taigaKanban", "taigaIssues", "taigaUserStories", "taigaTasks", "taigaTeam", "taigaWiki", "taigaSearch", "taigaAdmin", "taigaProject", "taigaUserSettings", "taigaFeedback", "taigaPlugins", "taigaIntegrations", "taigaComponents", "taigaProfile", "taigaHome", "taigaUserTimeline", "templates", "ngRoute", "ngAnimate", "pascalprecht.translate", "infinite-scroll", "tgRepeat"].concat(_.map(pluginsWithModule, function(plugin) {
+  modules = ["taigaBase", "taigaCommon", "taigaResources", "taigaResources2", "taigaAuth", "taigaEvents", "taigaHome", "taigaNavigationBar", "taigaProjects", "taigaUsers", "taigaAgents", "taigaRelatedTasks", "taigaBacklog", "taigaTaskboard", "taigaKanban", "taigaIssues", "taigaUserStories", "taigaTasks", "taigaTeam", "taigaWiki", "taigaSearch", "taigaAdmin", "taigaProject", "taigaUserSettings", "taigaFeedback", "taigaPlugins", "taigaIntegrations", "taigaComponents", "taigaProfile", "taigaHome", "taigaUserTimeline", "templates", "ngRoute", "ngAnimate", "pascalprecht.translate", "infinite-scroll", "tgRepeat"].concat(_.map(pluginsWithModule, function(plugin) {
     return plugin.module;
   }));
 
@@ -1223,6 +1234,10 @@
         return function(data, status) {
           var user;
           user = _this.model.make_model("users", data.data);
+          console.log('<<<<bdlog: in autho.coffee login:');
+          console.log('return data:');
+          console.log(data.data);
+          console.log('>>>>>');
           _this.setToken(user.auth_token);
           _this.setUser(user);
           return user;
@@ -23188,6 +23203,11 @@
 
 }).call(this);
 
+(function() {
+  angular.module("taigaAgents", []);
+
+}).call(this);
+
 
 /*
  * Copyright (C) 2015 Taiga Agile LLC
@@ -23249,6 +23269,39 @@
 
 (function() {
   angular.module("taigaUsers", []);
+
+}).call(this);
+
+(function() {
+  var AgentsListingController;
+
+  AgentsListingController = (function() {
+    AgentsListingController.$inject = ["tgCurrentUserService", "tgUsersService"];
+
+    function AgentsListingController(currentUserService, usersService) {
+      this.currentUserService = currentUserService;
+      this.usersService = usersService;
+      taiga.defineImmutableProperty(this, "projects", (function(_this) {
+        return function() {
+          return _this.currentUserService.projects.get("all");
+        };
+      })(this));
+      taiga.defineImmutableProperty(this, "inventory", (function(_this) {
+        return function() {
+          return _this.currentUserService.inventory.get("all");
+        };
+      })(this));
+    }
+
+    AgentsListingController.prototype.newProject = function() {
+      return this.usersService.newProject();
+    };
+
+    return AgentsListingController;
+
+  })();
+
+  angular.module("taigaAgents").controller("AgentsListing", AgentsListingController);
 
 }).call(this);
 
@@ -23796,8 +23849,17 @@
       taiga.defineImmutableProperty(scope.vm, "projects", function() {
         return currentUserService.projects.get("recents");
       });
-      return taiga.defineImmutableProperty(scope.vm, "isAuthenticated", function() {
+      taiga.defineImmutableProperty(scope.vm, "isAuthenticated", function() {
         return currentUserService.isAuthenticated();
+      });
+      taiga.defineImmutableProperty(scope.vm, "isProducer", function() {
+        return currentUserService.isProducer();
+      });
+      taiga.defineImmutableProperty(scope.vm, "isAgent", function() {
+        return currentUserService.isAgent();
+      });
+      return taiga.defineImmutableProperty(scope.vm, "isProducerOrAgent", function() {
+        return currentUserService.isProducerOrAgent();
       });
     };
     directive = {
@@ -24791,6 +24853,24 @@
         return true;
       }
       return false;
+    };
+
+    CurrentUserService.prototype.isProducer = function() {
+      if (!this._user) {
+        return false;
+      }
+      return this._user.get("is_producer");
+    };
+
+    CurrentUserService.prototype.isAgent = function() {
+      if (!this._user) {
+        return false;
+      }
+      return this._user.get("is_agent");
+    };
+
+    CurrentUserService.prototype.isProducerOrAgent = function() {
+      return this.isProducer() || this.isAgent();
     };
 
     CurrentUserService.prototype.getUser = function() {

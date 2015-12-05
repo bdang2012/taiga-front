@@ -23,6 +23,20 @@ class CurrentUserService
             return true
         return false
 
+    isProducer: ->
+        if !@._user
+            return false
+
+        return @._user.get("is_producer")
+
+    isAgent: ->
+        if !@._user
+            return false
+        return @._user.get("is_agent")
+
+    isProducerOrAgent: ->
+        return (@.isProducer() or @.isAgent() )
+
     getUser: () ->
         if !@._user
             userData = @storageService.get("userInfo")
