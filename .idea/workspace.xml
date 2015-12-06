@@ -100,7 +100,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/admin/project-values.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/admin/project-values.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/admin/roles.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/admin/roles.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/admin/third-parties.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/admin/third-parties.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/auth.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/auth.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/backlog.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/backlog.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/backlog/filters.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/backlog/filters.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coffee/modules/backlog/lightboxes.coffee" afterPath="$PROJECT_DIR$/app/coffee/modules/backlog/lightboxes.coffee" />
@@ -844,8 +843,8 @@
       <file leaf-file-name="auth.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/coffee/modules/auth.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34201956">
-              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.4451683">
+              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -872,6 +871,7 @@
         <option value="$PROJECT_DIR$/app/modules/navigation-bar/navigation-bar.directive.coffee" />
         <option value="$PROJECT_DIR$/app/modules/navigation-bar/navigation-bar.jade" />
         <option value="$PROJECT_DIR$/app/modules/services/current-user.service.coffee" />
+        <option value="$PROJECT_DIR$/app/coffee/modules/auth.coffee" />
       </list>
     </option>
   </component>
@@ -888,7 +888,7 @@
     </gulpfiles>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2625" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="2495" />
     <option name="height" value="1395" />
@@ -1184,15 +1184,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2625" y="24" width="2495" height="1395" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="24" width="2495" height="1395" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26546004" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18036072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18036072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1206,6 +1206,14 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1280,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/coffee/modules/auth.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34201956">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.4451683">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
           <folding />
         </state>
       </provider>

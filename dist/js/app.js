@@ -23273,6 +23273,32 @@
 }).call(this);
 
 (function() {
+  var AgentsService, taiga,
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
+
+  taiga = this.taiga;
+
+  AgentsService = (function(superClass) {
+    extend(AgentsService, superClass);
+
+    AgentsService.$inject = ["tgResources", "$projectUrl", "tgLightboxFactory"];
+
+    function AgentsService(rs, projectUrl, lightboxFactory) {
+      this.rs = rs;
+      this.projectUrl = projectUrl;
+      this.lightboxFactory = lightboxFactory;
+    }
+
+    return AgentsService;
+
+  })(taiga.Service);
+
+  angular.module("taigaAgents").service("tgAgentsService", AgentsService);
+
+}).call(this);
+
+(function() {
   var AgentsListingController;
 
   AgentsListingController = (function() {
@@ -24621,6 +24647,43 @@
   Resource = function(urlsService, http, paginateResponseService) {
     var service;
     service = {};
+    service.getInventory = function(paginate) {
+      var httpOptions, params, url;
+      if (paginate == null) {
+        paginate = false;
+      }
+      url = urlsService.resolve("users");
+      httpOptions = {};
+      if (!paginate) {
+        httpOptions.headers = {
+          "x-disable-pagination": "1"
+        };
+      }
+      params = {
+        "order_by": "memberships__user_order"
+      };
+      return http.get(url, params, httpOptions).then(function(result) {
+        return Immutable.fromJS(result.data);
+      });
+    };
+    service.getAgents = function(paginate) {
+      var httpOptions, params, url;
+      if (paginate == null) {
+        paginate = false;
+      }
+      console.log('bdlog in users-resource.service');
+      url = urlsService.resolve("users");
+      httpOptions = {};
+      if (!paginate) {
+        httpOptions.headers = {
+          "x-disable-pagination": "1"
+        };
+      }
+      params = {};
+      return http.get(url, params, httpOptions).then(function(result) {
+        return Immutable.fromJS(result.data);
+      });
+    };
     service.getUserByUsername = function(username) {
       var httpOptions, params, url;
       url = urlsService.resolve("by_username");
@@ -24733,6 +24796,11 @@
 }).call(this);
 
 (function() {
+
+
+}).call(this);
+
+(function() {
   var AppMetaService, taiga, truncate,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
@@ -24822,15 +24890,17 @@
   groupBy = this.taiga.groupBy;
 
   CurrentUserService = (function() {
-    CurrentUserService.$inject = ["tgProjectsService", "$tgStorage"];
+    CurrentUserService.$inject = ["tgProjectsService", "$tgStorage", "tgUsersService"];
 
-    function CurrentUserService(projectsService, storageService) {
+    function CurrentUserService(projectsService, storageService, usersService) {
       this.projectsService = projectsService;
       this.storageService = storageService;
+      this.usersService = usersService;
       this._user = null;
       this._projects = Immutable.Map();
       this._projectsById = Immutable.Map();
       this._inventory = Immutable.Map();
+      this._agents = Immutable.Map();
       taiga.defineImmutableProperty(this, "projects", (function(_this) {
         return function() {
           return _this._projects;
@@ -24844,6 +24914,11 @@
       taiga.defineImmutableProperty(this, "inventory", (function(_this) {
         return function() {
           return _this._inventory;
+        };
+      })(this));
+      taiga.defineImmutableProperty(this, "agents", (function(_this) {
+        return function() {
+          return _this._agents;
         };
       })(this));
     }
@@ -24930,8 +25005,18 @@
       })(this));
     };
 
+    CurrentUserService.prototype._loadAgents = function() {
+      return this.usersService.getAgents().then((function(_this) {
+        return function(agents) {
+          _this._agents = _this._agents.set("all", agents);
+          return _this.agents;
+        };
+      })(this));
+    };
+
     CurrentUserService.prototype._loadUserInfo = function() {
       this._loadInventory();
+      this._loadAgents();
       return this._loadProjects();
     };
 
@@ -25990,14 +26075,20 @@
       })(this));
     };
 
-    UsersService.prototype.getInventory = function() {
-      var names;
-      names = [
-        {
-          'name': 'binh'
-        }
-      ];
-      return Immutable.fromJS(names);
+    UsersService.prototype.getAgents = function(paginate) {
+      return this.rs.users.getAgents(paginate).then((function(_this) {
+        return function(agents) {
+          return agents.map(_this._decorate.bind(_this));
+        };
+      })(this));
+    };
+
+    UsersService.prototype.getInventory = function(paginate) {
+      return this.rs.projects.getInventory(paginate).then((function(_this) {
+        return function(projects) {
+          return projects.map(_this._decorate.bind(_this));
+        };
+      })(this));
     };
 
     UsersService.prototype._decorate = function(project) {

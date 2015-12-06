@@ -5,18 +5,22 @@ groupBy = @.taiga.groupBy
 class CurrentUserService
     @.$inject = [
         "tgProjectsService",
-        "$tgStorage"
+        "$tgStorage",
+        "tgUsersService"
     ]
 
-    constructor: (@projectsService, @storageService) ->
+    constructor: (@projectsService, @storageService,@usersService) ->
         @._user = null
         @._projects = Immutable.Map()
         @._projectsById = Immutable.Map()
         @._inventory = Immutable.Map()
+        @._agents = Immutable.Map()
 
         taiga.defineImmutableProperty @, "projects", () => return @._projects
         taiga.defineImmutableProperty @, "projectsById", () => return @._projectsById
         taiga.defineImmutableProperty @, "inventory", () => return @._inventory
+        taiga.defineImmutableProperty @, "agents", () => return @._agents
+        
 
     isAuthenticated: ->
         if @.getUser() != null
@@ -82,10 +86,19 @@ class CurrentUserService
                 console.log 'bdlog: in loadInventory '
                 console.log @._inventory.toJS()
 
-                return @.inventory                
+                return @.inventory  
+
+    _loadAgents: () ->
+        return @usersService.getAgents()
+            .then (agents) =>
+                @._agents = @._agents.set("all", agents)
+
+                return @.agents  
+
 
     _loadUserInfo: () ->
         @._loadInventory()
+        @._loadAgents()
         return @._loadProjects()
 
 angular.module("taigaCommon").service("tgCurrentUserService", CurrentUserService)

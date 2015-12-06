@@ -19,9 +19,15 @@ class UsersService extends taiga.Service
             .then (projects) =>
                 return projects.map @._decorate.bind(@)
 
-    getInventory: ->
-        names = [{'name': 'binh'}]                       
-        return Immutable.fromJS(names)
+    getAgents: (paginate) ->
+        return @rs.users.getAgents(paginate)
+            .then (agents) =>
+                return agents.map @._decorate.bind(@)
+
+    getInventory: (paginate) ->
+        return @rs.projects.getInventory(paginate)
+            .then (projects) =>
+                return projects.map @._decorate.bind(@)
 
     _decorate: (project) ->
         url = @projectUrl.get(project.toJS())

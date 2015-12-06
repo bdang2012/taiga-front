@@ -1,6 +1,38 @@
 Resource = (urlsService, http, paginateResponseService) ->
     service = {}
 
+
+    service.getInventory = (paginate=false) ->
+        url = urlsService.resolve("users")
+        httpOptions = {}
+
+        if !paginate
+            httpOptions.headers = {
+                "x-disable-pagination": "1"
+            }
+
+        params = {"order_by": "memberships__user_order"}
+
+        return http.get(url, params, httpOptions)
+            .then (result) ->
+                return Immutable.fromJS(result.data)
+
+    service.getAgents = (paginate=false) ->
+        console.log 'bdlog in users-resource.service'
+        url = urlsService.resolve("users")
+        httpOptions = {}
+
+        if !paginate
+            httpOptions.headers = {
+                "x-disable-pagination": "1"
+            }
+
+        params = {}
+
+        return http.get(url, params, httpOptions)
+            .then (result) ->
+                return Immutable.fromJS(result.data)
+
     service.getUserByUsername = (username) ->
         url = urlsService.resolve("by_username")
 
