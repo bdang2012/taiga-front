@@ -18,8 +18,8 @@ Resource = (urlsService, http, paginateResponseService) ->
                 return Immutable.fromJS(result.data)
 
     service.getAgents = (paginate=false) ->
-        console.log 'bdlog in users-resource.service'
-        url = urlsService.resolve("users")
+        url = urlsService.resolve("by_agents")
+        
         httpOptions = {}
 
         if !paginate

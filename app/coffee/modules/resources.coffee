@@ -32,6 +32,7 @@ urls = {
     # User
     "users": "/users"
     "by_username": "/users/by_username"
+    "by_agents": "/users/by_agents"
     "users-password-recovery": "/users/password_recovery"
     "users-change-password-from-recovery": "/users/change_password_from_recovery"
     "users-change-password": "/users/change_password"

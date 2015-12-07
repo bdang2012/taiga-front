@@ -37,11 +37,12 @@ class UrlsService extends taiga.Service
 
     resolve: ->
         args = _.toArray(arguments)
-
+        
         if args.length == 0
             throw Error("wrong arguments to setUrls")
 
         name = args.slice(0, 1)[0]
+
         url = format(@.urls[name], args.slice(1))
 
         return format("%s/%s", [
