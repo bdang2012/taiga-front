@@ -23318,7 +23318,20 @@
           return _this.currentUserService.inventory.get("all");
         };
       })(this));
+      taiga.defineImmutableProperty(this, "agents", (function(_this) {
+        return function() {
+          return _this.currentUserService.agents.get("all");
+        };
+      })(this));
     }
+
+    AgentsListingController.prototype.openDeactivateAgentLightbox = function(user) {
+      if (confirm('Are you sure you want to deactivate Agent ' + user.get("full_name") + "?")) {
+        alert('will do the deactiate and reload page');
+        this.usersService.getAgents();
+        return location.reload();
+      }
+    };
 
     AgentsListingController.prototype.newProject = function() {
       return this.usersService.newProject();
