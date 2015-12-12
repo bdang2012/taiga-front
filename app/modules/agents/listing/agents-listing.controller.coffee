@@ -11,8 +11,8 @@ class AgentsListingController
 
     openDeactivateAgentLightbox: (user) ->
         if confirm 'Are you sure you want to deactivate Agent ' + user.get("full_name") + "?"
-            alert('will do the deactiate and reload page')
-            this.usersService.getAgents()
+            userChanged = user.set("is_agent",false)
+            this.usersService.change_is_agent(userChanged)
             location.reload()
         
     newProject: ->

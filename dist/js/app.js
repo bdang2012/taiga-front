@@ -23326,9 +23326,10 @@
     }
 
     AgentsListingController.prototype.openDeactivateAgentLightbox = function(user) {
+      var userChanged;
       if (confirm('Are you sure you want to deactivate Agent ' + user.get("full_name") + "?")) {
-        alert('will do the deactiate and reload page');
-        this.usersService.getAgents();
+        userChanged = user.set("is_agent", false);
+        this.usersService.change_is_agent(userChanged);
         return location.reload();
       }
     };
@@ -24661,6 +24662,11 @@
   Resource = function(urlsService, http, paginateResponseService) {
     var service;
     service = {};
+    service.change_is_agent = function(user) {
+      var url;
+      url = urlsService.resolve("users") + "/change_is_agent";
+      return http.post(url, user);
+    };
     service.getInventory = function(paginate) {
       var httpOptions, params, url;
       if (paginate == null) {
@@ -26067,6 +26073,10 @@
       this.projectUrl = projectUrl;
       this.lightboxFactory = lightboxFactory;
     }
+
+    UsersService.prototype.change_is_agent = function(user) {
+      return this.rs.users.change_is_agent(user);
+    };
 
     UsersService.prototype.getProjectBySlug = function(projectSlug) {
       return this.rs.projects.getProjectBySlug(projectSlug).then((function(_this) {

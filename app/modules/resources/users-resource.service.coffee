@@ -1,6 +1,10 @@
 Resource = (urlsService, http, paginateResponseService) ->
     service = {}
 
+    service.change_is_agent = (user) ->
+        url =  urlsService.resolve("users") + "/change_is_agent"
+        return http.post(url, user)
+
 
     service.getInventory = (paginate=false) ->
         url = urlsService.resolve("users")

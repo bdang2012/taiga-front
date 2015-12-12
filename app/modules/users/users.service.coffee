@@ -6,6 +6,9 @@ class UsersService extends taiga.Service
 
     constructor: (@rs, @projectUrl, @lightboxFactory) ->
 
+    change_is_agent: (user) ->
+        return @rs.users.change_is_agent(user)
+            
     getProjectBySlug: (projectSlug) ->
         return @rs.projects.getProjectBySlug(projectSlug)
             .then (project) =>
