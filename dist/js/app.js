@@ -23334,6 +23334,15 @@
       }
     };
 
+    AgentsListingController.prototype.openActivateAgentLightbox = function(user) {
+      var userChanged;
+      if (confirm('Promote this user to be Agent: ' + user.get("full_name") + "?")) {
+        userChanged = user.set("is_agent", true);
+        this.usersService.change_is_agent(userChanged);
+        return location.reload();
+      }
+    };
+
     AgentsListingController.prototype.newProject = function() {
       return this.usersService.newProject();
     };
@@ -26041,6 +26050,15 @@
         };
       })(this));
     }
+
+    UsersListingController.prototype.openActivateAgentLightbox = function(user) {
+      var userChanged;
+      if (confirm('Promote this user to be Agent: ' + user.get("full_name") + "?")) {
+        userChanged = user.set("is_agent", true);
+        this.usersService.change_is_agent(userChanged);
+        return location.reload();
+      }
+    };
 
     UsersListingController.prototype.newProject = function() {
       return this.usersService.newProject();

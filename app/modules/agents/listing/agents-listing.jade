@@ -2,8 +2,8 @@ div.project-list-wrapper.centered
 
     div
         h1 Agents
-            table
+            table(style="width: 100%;")
                 tr(tg-repeat="user in vm.agents ")
-                    td(style="text-transform: capitalize", width="90%") {{user.get('full_name')}} 
-                    td(style="text-transform: capitalize; color:blue")
+                    td(style="text-transform: capitalize") {{user.get('full_name')}} 
+                    td(style="text-transform: capitalize; color:blue" align="right")
                         a(href="" ng-click="vm.openDeactivateAgentLightbox(user)") Deactivate

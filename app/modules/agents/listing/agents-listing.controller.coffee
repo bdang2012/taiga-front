@@ -14,7 +14,13 @@ class AgentsListingController
             userChanged = user.set("is_agent",false)
             this.usersService.change_is_agent(userChanged)
             location.reload()
-        
+    
+    openActivateAgentLightbox: (user) ->
+        if confirm 'Promote this user to be Agent: ' + user.get("full_name") + "?"
+            userChanged = user.set("is_agent",true)
+            this.usersService.change_is_agent(userChanged)
+            location.reload()
+       
     newProject: ->
         @usersService.newProject()
 angular.module("taigaAgents").controller("AgentsListing", AgentsListingController)
